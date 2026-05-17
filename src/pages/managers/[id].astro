@@ -1,0 +1,95 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import {
+  buildOwnerLeaderboard,
+  findOwnerByKey,
+  fmtScore,
+  ownerKey,
+  ownerLabel,
+  ownerSeasons,
+} from "../../lib/data";
+
+export function getStaticPaths() {
+  return buildOwnerLeaderboard().map((r) => ({
+    params: { id: ownerKey(r.owner) },
+    props: { ownerKey: ownerKey(r.owner) },
+  }));
+}
+
+interface Props {
+  ownerKey: string;
+}
+
+const { ownerKey: key } = Astro.props as Props;
+const owner = findOwnerByKey(key);
+const history = ownerSeasons(key);
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+let wins = 0,
+  losses = 0,
+  ties = 0,
+  pf = 0,
+  pa = 0,
+  titles = 0;
+for (const { team } of history) {
+  wins += team.wins;
+  losses += team.losses;
+  ties += team.ties;
+  pf += team.points_for;
+  pa += team.points_against;
+  if ((team.final_standing ?? team.standing) === 1) titles += 1;
+}
+---
+
+<Layout title={`${owner ? ownerLabel(owner) : "Manager"} · League History`} active="managers">
+  <p class="muted"><a href={`${base}/managers`}>← All managers</a></p>
+  <h1>{owner ? ownerLabel(owner) : "Unknown manager"}</h1>
+  {owner?.display_name && owner.display_name !== ownerLabel(owner) && (
+    <p class="muted">@{owner.display_name}</p>
+  )}
+
+  <div class="card">
+    <p style="margin:0">
+      <strong>{wins}-{losses}{ties ? `-${ties}` : ""}</strong>
+      <span class="muted"> over {history.length} season(s)</span>
+    </p>
+    <p style="margin:0.25rem 0 0">
+      <span class="muted">PF</span> {fmtScore(pf)} ·
+      <span class="muted">PA</span> {fmtScore(pa)} ·
+      <span class="muted">Titles</span> {titles > 0 ? "🏆".repeat(titles) : "0"}
+    </p>
+  </div>
+
+  <h2>Season-by-Season</h2>
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Team</th>
+          <th class="num">Finish</th>
+          <th class="num">W-L</th>
+          <th class="num">PF</th>
+          <th class="num">PA</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          history.map(({ season, team }) => {
+            const finish = team.final_standing ?? team.standing;
+            return (
+              <tr>
+                <td><a href={`${base}/seasons/${season.year}`}>{season.year}</a></td>
+                <td>{team.name}</td>
+                <td class="num">{finish === 1 ? "🏆" : finish}</td>
+                <td class="num">{team.wins}-{team.losses}{team.ties ? `-${team.ties}` : ""}</td>
+                <td class="num">{fmtScore(team.points_for)}</td>
+                <td class="num">{fmtScore(team.points_against)}</td>
+              </tr>
+            );
+          })
+        }
+      </tbody>
+    </table>
+  </div>
+</Layout>

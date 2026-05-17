@@ -1,0 +1,47 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { buildOwnerLeaderboard, ownerKey, ownerLabel, fmtScore } from "../../lib/data";
+
+const leaderboard = buildOwnerLeaderboard();
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<Layout title="Managers · League History" active="managers">
+  <h1>Managers</h1>
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>Manager</th>
+          <th class="num">Seasons</th>
+          <th class="num">W-L</th>
+          <th class="num">Win %</th>
+          <th class="num">PF</th>
+          <th class="num">Titles</th>
+          <th class="num">Best</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          leaderboard.map((r) => {
+            const games = r.wins + r.losses + r.ties;
+            const pct = games > 0 ? ((r.wins + r.ties * 0.5) / games) : 0;
+            return (
+              <tr>
+                <td>
+                  <a href={`${base}/managers/${ownerKey(r.owner)}`}>{ownerLabel(r.owner)}</a>
+                </td>
+                <td class="num">{r.seasons}</td>
+                <td class="num">{r.wins}-{r.losses}{r.ties ? `-${r.ties}` : ""}</td>
+                <td class="num">{(pct * 100).toFixed(1)}%</td>
+                <td class="num">{fmtScore(r.points_for)}</td>
+                <td class="num">{r.championships}</td>
+                <td class="num">{r.best_finish ?? "—"}</td>
+              </tr>
+            );
+          })
+        }
+      </tbody>
+    </table>
+  </div>
+</Layout>

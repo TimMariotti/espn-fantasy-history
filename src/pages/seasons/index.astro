@@ -1,0 +1,55 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { seasons, fmtScore, ownerLabel } from "../../lib/data";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const ordered = [...seasons].sort((a, b) => b.year - a.year);
+---
+
+<Layout title="Seasons · League History" active="seasons">
+  <h1>Seasons</h1>
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Champion</th>
+          <th>Runner-Up</th>
+          <th class="num">Teams</th>
+          <th class="num">High Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          ordered.map((s) => {
+            const champ = s.teams.find((t) => (t.final_standing ?? t.standing) === 1);
+            const runner = s.teams.find((t) => (t.final_standing ?? t.standing) === 2);
+            let high = 0;
+            for (const w of s.weeks) {
+              for (const m of w.matchups) {
+                if (m.home_score > high) high = m.home_score;
+                if (m.away_score > high) high = m.away_score;
+              }
+            }
+            return (
+              <tr>
+                <td><a href={`${base}/seasons/${s.year}`}>{s.year}</a></td>
+                <td>
+                  {champ ? (
+                    <>
+                      <strong>{champ.name}</strong>
+                      <span class="muted"> · {champ.owners.map(ownerLabel).join(", ")}</span>
+                    </>
+                  ) : "—"}
+                </td>
+                <td>{runner ? runner.name : "—"}</td>
+                <td class="num">{s.teams.length}</td>
+                <td class="num">{fmtScore(high)}</td>
+              </tr>
+            );
+          })
+        }
+      </tbody>
+    </table>
+  </div>
+</Layout>

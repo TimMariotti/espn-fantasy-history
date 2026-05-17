@@ -1,0 +1,128 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { seasons, fmtScore, ownerLabel, ownerKey } from "../../lib/data";
+import type { Season } from "../../lib/types";
+
+export function getStaticPaths() {
+  return seasons.map((s) => ({ params: { year: String(s.year) }, props: { season: s } }));
+}
+
+interface Props {
+  season: Season;
+}
+
+const { season } = Astro.props as Props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const teamMap = new Map(season.teams.map((t) => [t.id, t]));
+const standings = [...season.teams].sort(
+  (a, b) =>
+    (a.final_standing ?? a.standing ?? 99) - (b.final_standing ?? b.standing ?? 99),
+);
+---
+
+<Layout title={`${season.year} · League History`} active="seasons">
+  <p class="muted"><a href={`${base}/seasons`}>← All seasons</a></p>
+  <h1>{season.year} Season</h1>
+  <p class="muted">
+    {season.league_name} · {season.teams.length} teams · {season.settings.reg_season_count} reg-season weeks
+  </p>
+
+  <h2>Final Standings</h2>
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Team</th>
+          <th>Manager</th>
+          <th class="num">W-L</th>
+          <th class="num">PF</th>
+          <th class="num">PA</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          standings.map((t) => {
+            const finish = t.final_standing ?? t.standing;
+            return (
+              <tr>
+                <td>
+                  {finish === 1 ? "🏆" : finish}
+                </td>
+                <td><strong>{t.name}</strong></td>
+                <td>
+                  {t.owners.map((o) => (
+                    <a href={`${base}/managers/${ownerKey(o)}`}>{ownerLabel(o)}</a>
+                  ))}
+                </td>
+                <td class="num">{t.wins}-{t.losses}{t.ties ? `-${t.ties}` : ""}</td>
+                <td class="num">{fmtScore(t.points_for)}</td>
+                <td class="num">{fmtScore(t.points_against)}</td>
+              </tr>
+            );
+          })
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Weekly Results</h2>
+  {
+    season.weeks.map((w) => (
+      <div class="card">
+        <h3 style="margin-top:0">Week {w.week}{w.matchups.some((m) => m.is_playoff) ? " · Playoffs" : ""}</h3>
+        <table>
+          <tbody>
+            {w.matchups.map((m) => {
+              const home = m.home_team_id !== null ? teamMap.get(m.home_team_id) : undefined;
+              const away = m.away_team_id !== null ? teamMap.get(m.away_team_id) : undefined;
+              if (!home || !away) return null;
+              const homeWin = m.home_score > m.away_score;
+              const awayWin = m.away_score > m.home_score;
+              return (
+                <tr>
+                  <td class={homeWin ? "win" : awayWin ? "loss" : ""}>{home.name}</td>
+                  <td class="num">{fmtScore(m.home_score)}</td>
+                  <td class="muted">vs</td>
+                  <td class="num">{fmtScore(m.away_score)}</td>
+                  <td class={awayWin ? "win" : homeWin ? "loss" : ""}>{away.name}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    ))
+  }
+
+  {
+    season.draft.length > 0 && (
+      <>
+        <h2>Draft</h2>
+        <div class="card">
+          <table>
+            <thead>
+              <tr>
+                <th class="num">Pick</th>
+                <th>Player</th>
+                <th>Team</th>
+              </tr>
+            </thead>
+            <tbody>
+              {season.draft.map((p) => {
+                const t = p.team_id !== null ? teamMap.get(p.team_id) : undefined;
+                return (
+                  <tr>
+                    <td class="num">{p.round}.{String(p.pick).padStart(2, "0")}</td>
+                    <td>{p.player_name}</td>
+                    <td>{t?.name ?? "—"}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </>
+    )
+  }
+</Layout>

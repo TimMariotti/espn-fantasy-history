@@ -1,0 +1,121 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {
+  seasons,
+  buildOwnerLeaderboard,
+  buildRecords,
+  fmtScore,
+  ownerKey,
+  ownerLabel,
+} from "../lib/data";
+
+const latest = seasons[seasons.length - 1];
+const champ = latest?.teams.find((t) => (t.final_standing ?? t.standing) === 1);
+const runnerUp = latest?.teams.find((t) => (t.final_standing ?? t.standing) === 2);
+
+const leaderboard = buildOwnerLeaderboard();
+const records = buildRecords();
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const leagueName = seasons[0]?.league_name ?? "League";
+---
+
+<Layout title={`${leagueName} · History`} active="home">
+  <h1>{leagueName}</h1>
+  <p class="muted">
+    {seasons[0].year}–{seasons[seasons.length - 1].year} · {seasons.length} season(s)
+  </p>
+
+  {
+    latest && champ && (
+      <div class="card">
+        <h2 style="border:none;margin-top:0">
+          {latest.year} Champion <span class="pill gold">🏆</span>
+        </h2>
+        <p style="font-size:1.25rem;margin:0.25rem 0">
+          <strong>{champ.name}</strong>
+          <span class="muted">
+            ({champ.owners.map(ownerLabel).join(", ")})
+          </span>
+        </p>
+        <p class="muted" style="margin:0">
+          {champ.wins}-{champ.losses}
+          {champ.ties ? `-${champ.ties}` : ""}
+          · {fmtScore(champ.points_for)} PF
+          {runnerUp && (
+            <span> · beat <strong>{runnerUp.name}</strong> in final</span>
+          )}
+        </p>
+      </div>
+    )
+  }
+
+  <div class="grid">
+    <div class="card">
+      <h2 style="margin-top:0">All-Time Leaderboard</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Manager</th>
+            <th class="num">W-L</th>
+            <th class="num">Titles</th>
+            <th class="num">PF</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            leaderboard.map((r, i) => (
+              <tr>
+                <td>{i + 1}</td>
+                <td>
+                  <a href={`${base}/managers/${ownerKey(r.owner)}`}>
+                    {ownerLabel(r.owner)}
+                  </a>
+                </td>
+                <td class="num">
+                  {r.wins}-{r.losses}
+                  {r.ties ? `-${r.ties}` : ""}
+                </td>
+                <td class="num">
+                  {r.championships > 0 ? "🏆".repeat(r.championships) : "—"}
+                </td>
+                <td class="num">{fmtScore(r.points_for)}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0">Top 5 Single-Week Scores</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Manager</th>
+            <th>Year/Wk</th>
+            <th class="num">Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            records.highestScore.slice(0, 5).map((w, i) => (
+              <tr>
+                <td>{i + 1}</td>
+                <td>{w.team.owners.map(ownerLabel).join(", ")}</td>
+                <td class="muted">
+                  {w.year} · W{w.week}
+                </td>
+                <td class="num">{fmtScore(w.score)}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+      <p style="text-align:right;margin:0.5rem 0 0">
+        <a href={`${base}/records`}>All records →</a>
+      </p>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,122 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { buildRecords, fmtScore, ownerLabel } from "../lib/data";
+
+const r = buildRecords();
+---
+
+<Layout title="Records · League History" active="records">
+  <h1>League Records</h1>
+
+  <div class="grid">
+    <div class="card">
+      <h2 style="margin-top:0">Highest Single-Week Score</h2>
+      <table>
+        <thead><tr><th>#</th><th>Manager</th><th>When</th><th class="num">Score</th></tr></thead>
+        <tbody>
+          {r.highestScore.map((w, i) => (
+            <tr>
+              <td>{i + 1}</td>
+              <td>{w.team.owners.map(ownerLabel).join(", ")}</td>
+              <td class="muted">{w.year} · W{w.week}{w.is_playoff ? " · Playoff" : ""}</td>
+              <td class="num">{fmtScore(w.score)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0">Lowest Single-Week Score</h2>
+      <table>
+        <thead><tr><th>#</th><th>Manager</th><th>When</th><th class="num">Score</th></tr></thead>
+        <tbody>
+          {r.lowestScore.map((w, i) => (
+            <tr>
+              <td>{i + 1}</td>
+              <td>{w.team.owners.map(ownerLabel).join(", ")}</td>
+              <td class="muted">{w.year} · W{w.week}</td>
+              <td class="num">{fmtScore(w.score)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0">Biggest Blowouts</h2>
+      <table>
+        <thead><tr><th>#</th><th>Winner / Loser</th><th>When</th><th class="num">Margin</th></tr></thead>
+        <tbody>
+          {r.biggestBlowout.map((w, i) => (
+            <tr>
+              <td>{i + 1}</td>
+              <td>
+                <span class="win">{ownerLabel(w.team.owners[0] ?? { display_name: "?", first_name: null, last_name: null, id: null })}</span>
+                <span class="muted"> def. </span>
+                <span class="loss">{w.opponent ? ownerLabel(w.opponent.owners[0] ?? { display_name: "?", first_name: null, last_name: null, id: null }) : "?"}</span>
+              </td>
+              <td class="muted">{w.year} · W{w.week} · {fmtScore(w.score)}-{fmtScore(w.opp_score)}</td>
+              <td class="num">+{fmtScore(w.margin)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0">Closest Games</h2>
+      <table>
+        <thead><tr><th>#</th><th>Matchup</th><th>When</th><th class="num">Margin</th></tr></thead>
+        <tbody>
+          {r.closestGame.map((w, i) => (
+            <tr>
+              <td>{i + 1}</td>
+              <td>
+                {ownerLabel(w.team.owners[0] ?? { display_name: "?", first_name: null, last_name: null, id: null })}
+                <span class="muted"> vs </span>
+                {w.opponent ? ownerLabel(w.opponent.owners[0] ?? { display_name: "?", first_name: null, last_name: null, id: null }) : "?"}
+              </td>
+              <td class="muted">{w.year} · W{w.week} · {fmtScore(w.score)}-{fmtScore(w.opp_score)}</td>
+              <td class="num">{fmtScore(Math.abs(w.margin))}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0">Highest Season Points-For</h2>
+      <table>
+        <thead><tr><th>#</th><th>Manager</th><th>Year</th><th class="num">PF</th></tr></thead>
+        <tbody>
+          {r.highestSeasonPF.map((row, i) => (
+            <tr>
+              <td>{i + 1}</td>
+              <td>{row.team.owners.map(ownerLabel).join(", ")}</td>
+              <td class="muted">{row.year}</td>
+              <td class="num">{fmtScore(row.team.points_for)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0">Lowest Season Points-For</h2>
+      <table>
+        <thead><tr><th>#</th><th>Manager</th><th>Year</th><th class="num">PF</th></tr></thead>
+        <tbody>
+          {r.lowestSeasonPF.map((row, i) => (
+            <tr>
+              <td>{i + 1}</td>
+              <td>{row.team.owners.map(ownerLabel).join(", ")}</td>
+              <td class="muted">{row.year}</td>
+              <td class="num">{fmtScore(row.team.points_for)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</Layout>

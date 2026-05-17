@@ -1,0 +1,54 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { buildH2H, ownerKey, ownerLabel } from "../lib/data";
+
+const { owners, matrix } = buildH2H();
+const sorted = [...owners].sort((a, b) => ownerLabel(a).localeCompare(ownerLabel(b)));
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+function cellFor(a: string, b: string) {
+  return matrix.get(a)?.get(b);
+}
+---
+
+<Layout title="Head-to-Head · League History" active="h2h">
+  <h1>All-Time Head-to-Head</h1>
+  <p class="muted">Row beats column. Cell shows W-L (-T). Includes regular season + playoffs.</p>
+
+  <div class="card" style="overflow-x:auto">
+    <table style="min-width:600px">
+      <thead>
+        <tr>
+          <th></th>
+          {sorted.map((o) => <th class="num" title={ownerLabel(o)}>{(o.first_name || o.display_name || "?").slice(0, 6)}</th>)}
+        </tr>
+      </thead>
+      <tbody>
+        {
+          sorted.map((row) => (
+            <tr>
+              <th>
+                <a href={`${base}/managers/${ownerKey(row)}`}>{ownerLabel(row)}</a>
+              </th>
+              {sorted.map((col) => {
+                if (ownerKey(row) === ownerKey(col)) {
+                  return <td class="num muted">—</td>;
+                }
+                const c = cellFor(ownerKey(row), ownerKey(col));
+                if (!c || (c.wins + c.losses + c.ties === 0)) {
+                  return <td class="num muted">·</td>;
+                }
+                const cls = c.wins > c.losses ? "win" : c.wins < c.losses ? "loss" : "";
+                return (
+                  <td class={`num ${cls}`}>
+                    {c.wins}-{c.losses}{c.ties ? `-${c.ties}` : ""}
+                  </td>
+                );
+              })}
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+</Layout>
