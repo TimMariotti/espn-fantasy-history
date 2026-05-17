@@ -202,7 +202,9 @@ export function fmtScore(n: number): string {
 }
 
 export function findOwnerByKey(key: string): Owner | undefined {
-  for (const s of seasons) {
+  // Walk newest → oldest so the latest first_name wins.
+  const ordered = [...seasons].sort((a, b) => b.year - a.year);
+  for (const s of ordered) {
     for (const t of s.teams) {
       for (const o of t.owners) {
         if (ownerKey(o) === key) return o;

@@ -25,6 +25,16 @@ LATEST_YEAR = int(os.environ.get("LATEST_YEAR", str(datetime.now().year)))
 ROOT = Path(__file__).resolve().parent.parent
 OUT_DIR = ROOT / "src" / "data"
 SEASONS_DIR = OUT_DIR / "seasons"
+OVERRIDES_FILE = Path(__file__).resolve().parent / "name_overrides.json"
+
+_overrides_raw = json.loads(OVERRIDES_FILE.read_text()) if OVERRIDES_FILE.exists() else {}
+NAME_OVERRIDES = {k: v for k, v in _overrides_raw.items() if not k.startswith("_")}
+
+
+def apply_override(display_name: str | None, first_name: str | None) -> str | None:
+    if display_name and display_name in NAME_OVERRIDES:
+        return NAME_OVERRIDES[display_name]
+    return first_name
 
 
 def serialize_team(team) -> dict:
@@ -35,8 +45,12 @@ def serialize_team(team) -> dict:
         "owners": [
             {
                 "id": o.get("id") if isinstance(o, dict) else None,
-                "first_name": o.get("firstName") if isinstance(o, dict) else None,
-                "last_name": o.get("lastName") if isinstance(o, dict) else None,
+                "first_name": apply_override(
+                    o.get("displayName") if isinstance(o, dict) else None,
+                    o.get("firstName") if isinstance(o, dict) else None,
+                ),
+                # last_name intentionally stripped for privacy (repo is public).
+                "last_name": None,
                 "display_name": o.get("displayName") if isinstance(o, dict) else str(o),
             }
             for o in (team.owners or [])
