@@ -153,6 +153,7 @@ def main() -> int:
     SEASONS_DIR.mkdir(parents=True, exist_ok=True)
 
     available_years: list[int] = []
+    seasons_data: list[dict] = []
     for year in range(EARLIEST_YEAR, LATEST_YEAR + 1):
         try:
             print(f"Fetching {year}...", flush=True)
@@ -165,8 +166,26 @@ def main() -> int:
             continue
         if not data:
             continue
-        (SEASONS_DIR / f"{year}.json").write_text(json.dumps(data, indent=2, default=str))
-        available_years.append(year)
+        seasons_data.append(data)
+        available_years.append(data["year"])
+
+    # Canonicalize first names: for each owner UUID, use the latest season's first_name
+    # (or override). This prevents stale ESPN aliases from older seasons leaking through.
+    canonical: dict[str, str | None] = {}
+    for data in sorted(seasons_data, key=lambda d: d["year"]):
+        for team in data["teams"]:
+            for o in team["owners"]:
+                if o.get("id") and o.get("first_name"):
+                    canonical[o["id"]] = o["first_name"]
+
+    for data in seasons_data:
+        for team in data["teams"]:
+            for o in team["owners"]:
+                if o.get("id") in canonical:
+                    o["first_name"] = canonical[o["id"]]
+        (SEASONS_DIR / f"{data['year']}.json").write_text(
+            json.dumps(data, indent=2, default=str)
+        )
 
     (OUT_DIR / "index.json").write_text(
         json.dumps(
