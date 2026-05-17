@@ -1,4 +1,4 @@
-import type { IndexFile, Matchup, Owner, Season, Team } from "./types";
+import type { DraftPick, IndexFile, Matchup, Owner, Season, Team } from "./types";
 import indexFile from "../data/index.json";
 
 const seasonModules = import.meta.glob<Season>("../data/seasons/*.json", {
@@ -236,6 +236,98 @@ export function findOwnerByKey(key: string): Owner | undefined {
     }
   }
   return undefined;
+}
+
+const POSITIONS = ["QB", "RB", "WR", "TE", "K", "D/ST"] as const;
+export type Position = (typeof POSITIONS)[number];
+export const TRACKED_POSITIONS = POSITIONS;
+
+export type OwnerDraftStats = {
+  owner: Owner;
+  totalPicks: number;
+  drafts: number;
+  keepers: number;
+  avgPick: number;
+  earliestPick: number;
+  positionCounts: Record<string, number>;
+  firstRoundPositions: Record<string, number>;
+};
+
+export function buildDraftStats(): OwnerDraftStats[] {
+  const map = new Map<string, OwnerDraftStats>();
+  const draftYearsByOwner = new Map<string, Set<number>>();
+
+  for (const season of seasons) {
+    const teamOwners = new Map<number, Owner[]>(
+      season.teams.map((t) => [t.id, t.owners]),
+    );
+    for (const pick of season.draft) {
+      if (pick.team_id === null) continue;
+      const owners = teamOwners.get(pick.team_id) || [];
+      for (const owner of owners) {
+        const key = ownerKey(owner);
+        let rec = map.get(key);
+        if (!rec) {
+          rec = {
+            owner,
+            totalPicks: 0,
+            drafts: 0,
+            keepers: 0,
+            avgPick: 0,
+            earliestPick: Infinity,
+            positionCounts: {},
+            firstRoundPositions: {},
+          };
+          map.set(key, rec);
+        }
+        rec.owner = owner;
+        rec.totalPicks += 1;
+        if (pick.keeper) rec.keepers += 1;
+        const overall = (pick.round - 1) * (season.teams.length || 10) + pick.pick;
+        rec.avgPick += overall;
+        if (overall < rec.earliestPick) rec.earliestPick = overall;
+        const pos = pick.position || "?";
+        rec.positionCounts[pos] = (rec.positionCounts[pos] || 0) + 1;
+        if (pick.round === 1) {
+          rec.firstRoundPositions[pos] = (rec.firstRoundPositions[pos] || 0) + 1;
+        }
+        let years = draftYearsByOwner.get(key);
+        if (!years) {
+          years = new Set<number>();
+          draftYearsByOwner.set(key, years);
+        }
+        years.add(season.year);
+      }
+    }
+  }
+
+  for (const [key, rec] of map) {
+    rec.drafts = draftYearsByOwner.get(key)?.size ?? 0;
+    rec.avgPick = rec.totalPicks > 0 ? rec.avgPick / rec.totalPicks : 0;
+    if (rec.earliestPick === Infinity) rec.earliestPick = 0;
+  }
+
+  return Array.from(map.values()).sort((a, b) => b.totalPicks - a.totalPicks);
+}
+
+export function ownerDraftPicks(key: string): { season: Season; pick: DraftPick }[] {
+  const out: { season: Season; pick: DraftPick }[] = [];
+  for (const s of seasons) {
+    const teamOwners = new Map<number, Owner[]>(
+      s.teams.map((t) => [t.id, t.owners]),
+    );
+    for (const pick of s.draft) {
+      if (pick.team_id === null) continue;
+      const owners = teamOwners.get(pick.team_id) || [];
+      if (owners.some((o) => ownerKey(o) === key)) {
+        out.push({ season: s, pick });
+      }
+    }
+  }
+  return out.sort((a, b) => {
+    if (a.season.year !== b.season.year) return b.season.year - a.season.year;
+    return a.pick.round * 100 + a.pick.pick - (b.pick.round * 100 + b.pick.pick);
+  });
 }
 
 export function ownerSeasons(key: string): { season: Season; team: Team }[] {

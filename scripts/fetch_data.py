@@ -25,10 +25,19 @@ LATEST_YEAR = int(os.environ.get("LATEST_YEAR", str(datetime.now().year)))
 ROOT = Path(__file__).resolve().parent.parent
 OUT_DIR = ROOT / "src" / "data"
 SEASONS_DIR = OUT_DIR / "seasons"
+PLAYERS_FILE = OUT_DIR / "players.json"
 OVERRIDES_FILE = Path(__file__).resolve().parent / "name_overrides.json"
 
 _overrides_raw = json.loads(OVERRIDES_FILE.read_text()) if OVERRIDES_FILE.exists() else {}
 NAME_OVERRIDES = {k: v for k, v in _overrides_raw.items() if not k.startswith("_")}
+
+# Persistent player cache: { player_id (str): { "name": str, "position": str | None, "pro_team": str | None } }
+PLAYERS_CACHE: dict[str, dict] = {}
+if PLAYERS_FILE.exists():
+    try:
+        PLAYERS_CACHE = json.loads(PLAYERS_FILE.read_text())
+    except Exception:
+        PLAYERS_CACHE = {}
 
 
 def apply_override(display_name: str | None, first_name: str | None) -> str | None:
@@ -89,13 +98,35 @@ def serialize_matchup(m) -> dict:
     }
 
 
-def serialize_draft_pick(p) -> dict:
+def lookup_player(league, player_id: int, player_name: str | None) -> dict:
+    """Return cached player info, fetching via espn-api on miss."""
+    sid = str(player_id)
+    cached = PLAYERS_CACHE.get(sid)
+    if cached and cached.get("position"):
+        return cached
+    info = {"name": player_name, "position": None, "pro_team": None}
+    try:
+        p = league.player_info(playerId=player_id)
+        if p is not None:
+            info["name"] = p.name or player_name
+            info["position"] = getattr(p, "position", None)
+            info["pro_team"] = getattr(p, "proTeam", None)
+    except Exception:
+        pass
+    PLAYERS_CACHE[sid] = info
+    return info
+
+
+def serialize_draft_pick(league, p) -> dict:
+    info = lookup_player(league, p.playerId, p.playerName)
     return {
         "round": p.round_num,
         "pick": p.round_pick,
         "team_id": p.team.team_id if p.team else None,
         "player_id": p.playerId,
         "player_name": p.playerName,
+        "position": info.get("position"),
+        "pro_team": info.get("pro_team"),
         "bid_amount": getattr(p, "bid_amount", None),
         "keeper": getattr(p, "keeper_status", False),
     }
@@ -129,7 +160,7 @@ def fetch_season(year: int) -> dict | None:
 
     draft = []
     try:
-        draft = [serialize_draft_pick(p) for p in league.draft]
+        draft = [serialize_draft_pick(league, p) for p in league.draft]
     except Exception:
         pass
 
@@ -206,7 +237,10 @@ def main() -> int:
             indent=2,
         )
     )
+    # Persist player cache so repeat runs skip player_info lookups.
+    PLAYERS_FILE.write_text(json.dumps(PLAYERS_CACHE, indent=2))
     print(f"Wrote {len(available_years)} season(s): {available_years}")
+    print(f"Player cache: {len(PLAYERS_CACHE)} entries")
     return 0 if available_years else 1
 
 

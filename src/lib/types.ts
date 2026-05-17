@@ -51,6 +51,8 @@ export type DraftPick = {
   team_id: number | null;
   player_id: number;
   player_name: string;
+  position: string | null;
+  pro_team: string | null;
   bid_amount: number | null;
   keeper: boolean;
 };

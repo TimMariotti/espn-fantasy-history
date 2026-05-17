@@ -4,6 +4,7 @@ import {
   buildOwnerLeaderboard,
   findOwnerByKey,
   fmtScore,
+  ownerDraftPicks,
   ownerKey,
   ownerLabel,
   ownerSeasons,
@@ -23,6 +24,16 @@ interface Props {
 const { ownerKey: key } = Astro.props as Props;
 const owner = findOwnerByKey(key);
 const history = ownerSeasons(key);
+const draftPicks = ownerDraftPicks(key);
+const posCounts: Record<string, number> = {};
+for (const { pick } of draftPicks) {
+  const pos = pick.position || "?";
+  posCounts[pos] = (posCounts[pos] || 0) + 1;
+}
+const posSummary = Object.entries(posCounts)
+  .sort((a, b) => b[1] - a[1])
+  .map(([p, n]) => `${p} ${n}`)
+  .join(" · ");
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 let wins = 0,
@@ -92,4 +103,37 @@ for (const { team } of history) {
       </tbody>
     </table>
   </div>
+
+  {draftPicks.length > 0 && (
+    <>
+      <h2>Draft History</h2>
+      <p class="muted">{draftPicks.length} picks · {posSummary}</p>
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th class="num">Pick</th>
+              <th>Player</th>
+              <th>Pos</th>
+              <th>NFL</th>
+              <th class="num">Keeper</th>
+            </tr>
+          </thead>
+          <tbody>
+            {draftPicks.map(({ season, pick }) => (
+              <tr>
+                <td><a href={`${base}/seasons/${season.year}`}>{season.year}</a></td>
+                <td class="num">{pick.round}.{String(pick.pick).padStart(2, "0")}</td>
+                <td>{pick.player_name}</td>
+                <td><span class="pill">{pick.position ?? "—"}</span></td>
+                <td class="muted">{pick.pro_team ?? "—"}</td>
+                <td class="num">{pick.keeper ? "K" : ""}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  )}
 </Layout>

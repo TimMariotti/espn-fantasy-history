@@ -105,7 +105,10 @@ const standings = [...season.teams].sort(
               <tr>
                 <th class="num">Pick</th>
                 <th>Player</th>
+                <th>Pos</th>
+                <th>NFL</th>
                 <th>Team</th>
+                <th class="num">Keeper</th>
               </tr>
             </thead>
             <tbody>
@@ -115,7 +118,10 @@ const standings = [...season.teams].sort(
                   <tr>
                     <td class="num">{p.round}.{String(p.pick).padStart(2, "0")}</td>
                     <td>{p.player_name}</td>
+                    <td><span class="pill">{p.position ?? "—"}</span></td>
+                    <td class="muted">{p.pro_team ?? "—"}</td>
                     <td>{t?.name ?? "—"}</td>
+                    <td class="num">{p.keeper ? "K" : ""}</td>
                   </tr>
                 );
               })}

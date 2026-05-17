@@ -1502,6 +1502,8 @@
       "team_id": 4,
       "player_id": 3117251,
       "player_name": "Christian McCaffrey",
+      "position": "RB",
+      "pro_team": "CAR",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1511,6 +1513,8 @@
       "team_id": 7,
       "player_id": 3929630,
       "player_name": "Saquon Barkley",
+      "position": "RB",
+      "pro_team": "NYG",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1520,6 +1524,8 @@
       "team_id": 1,
       "player_id": 3054850,
       "player_name": "Alvin Kamara",
+      "position": "RB",
+      "pro_team": "NO",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1529,6 +1535,8 @@
       "team_id": 2,
       "player_id": 3051392,
       "player_name": "Ezekiel Elliott",
+      "position": "RB",
+      "pro_team": "DAL",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1538,6 +1546,8 @@
       "team_id": 6,
       "player_id": 3116593,
       "player_name": "Dalvin Cook",
+      "position": "RB",
+      "pro_team": "MIN",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1547,6 +1557,8 @@
       "team_id": 3,
       "player_id": 3043078,
       "player_name": "Derrick Henry",
+      "position": "RB",
+      "pro_team": "TEN",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1556,6 +1568,8 @@
       "team_id": 5,
       "player_id": 2976316,
       "player_name": "Michael Thomas",
+      "position": "WR",
+      "pro_team": "NO",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1565,6 +1579,8 @@
       "team_id": 8,
       "player_id": 4047365,
       "player_name": "Josh Jacobs",
+      "position": "RB",
+      "pro_team": "LV",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1574,6 +1590,8 @@
       "team_id": 8,
       "player_id": 3128720,
       "player_name": "Nick Chubb",
+      "position": "RB",
+      "pro_team": "CLE",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1583,6 +1601,8 @@
       "team_id": 5,
       "player_id": 13982,
       "player_name": "Julio Jones",
+      "position": "WR",
+      "pro_team": "ATL",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1592,6 +1612,8 @@
       "team_id": 3,
       "player_id": 16800,
       "player_name": "Davante Adams",
+      "position": "WR",
+      "pro_team": "GB",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1601,6 +1623,8 @@
       "team_id": 6,
       "player_id": 4242214,
       "player_name": "Clyde Edwards-Helaire",
+      "position": "RB",
+      "pro_team": "KC",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1610,6 +1634,8 @@
       "team_id": 2,
       "player_id": 3068267,
       "player_name": "Austin Ekeler",
+      "position": "RB",
+      "pro_team": "LAC",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1619,6 +1645,8 @@
       "team_id": 1,
       "player_id": 3116385,
       "player_name": "Joe Mixon",
+      "position": "RB",
+      "pro_team": "CIN",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1628,6 +1656,8 @@
       "team_id": 7,
       "player_id": 3916387,
       "player_name": "Lamar Jackson",
+      "position": "QB",
+      "pro_team": "BAL",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1637,6 +1667,8 @@
       "team_id": 4,
       "player_id": 15847,
       "player_name": "Travis Kelce",
+      "position": "TE",
+      "pro_team": "KC",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1646,6 +1678,8 @@
       "team_id": 4,
       "player_id": 15825,
       "player_name": "Le'Veon Bell",
+      "position": "RB",
+      "pro_team": "PIT",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1655,6 +1689,8 @@
       "team_id": 7,
       "player_id": 3116406,
       "player_name": "Tyreek Hill",
+      "position": "WR",
+      "pro_team": "KC",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1664,6 +1700,8 @@
       "team_id": 1,
       "player_id": 3139477,
       "player_name": "Patrick Mahomes",
+      "position": "QB",
+      "pro_team": "KC",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1673,6 +1711,8 @@
       "team_id": 2,
       "player_id": 15795,
       "player_name": "DeAndre Hopkins",
+      "position": "WR",
+      "pro_team": "HOU",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1682,6 +1722,8 @@
       "team_id": 6,
       "player_id": 4045163,
       "player_name": "Miles Sanders",
+      "position": "RB",
+      "pro_team": "PHI",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1691,6 +1733,8 @@
       "team_id": 3,
       "player_id": 14881,
       "player_name": "Russell Wilson",
+      "position": "QB",
+      "pro_team": "SEA",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1700,6 +1744,8 @@
       "team_id": 5,
       "player_id": 3042519,
       "player_name": "Aaron Jones",
+      "position": "RB",
+      "pro_team": "GB",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1709,6 +1755,8 @@
       "team_id": 8,
       "player_id": 3116165,
       "player_name": "Chris Godwin",
+      "position": "WR",
+      "pro_team": "TB",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1718,6 +1766,8 @@
       "team_id": 8,
       "player_id": 3040151,
       "player_name": "George Kittle",
+      "position": "TE",
+      "pro_team": "SF",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1727,6 +1777,8 @@
       "team_id": 5,
       "player_id": 3919596,
       "player_name": "Chris Carson",
+      "position": "RB",
+      "pro_team": "SEA",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1736,6 +1788,8 @@
       "team_id": 3,
       "player_id": 16460,
       "player_name": "Adam Thielen",
+      "position": "WR",
+      "pro_team": "MIN",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1745,6 +1799,8 @@
       "team_id": 6,
       "player_id": 2974858,
       "player_name": "Kenny Golladay",
+      "position": "WR",
+      "pro_team": "DET",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1754,6 +1810,8 @@
       "team_id": 2,
       "player_id": 2576434,
       "player_name": "Melvin Gordon III",
+      "position": "RB",
+      "pro_team": "LAC",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1763,6 +1821,8 @@
       "team_id": 1,
       "player_id": 16737,
       "player_name": "Mike Evans",
+      "position": "WR",
+      "pro_team": "TB",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1772,6 +1832,8 @@
       "team_id": 7,
       "player_id": 2979843,
       "player_name": "Kenyan Drake",
+      "position": "RB",
+      "pro_team": "MIA",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1781,6 +1843,8 @@
       "team_id": 4,
       "player_id": 3915416,
       "player_name": "DJ Moore",
+      "position": "WR",
+      "pro_team": "CAR",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1790,6 +1854,8 @@
       "team_id": 4,
       "player_id": 3917315,
       "player_name": "Kyler Murray",
+      "position": "QB",
+      "pro_team": "ARI",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1799,6 +1865,8 @@
       "team_id": 7,
       "player_id": 3115364,
       "player_name": "Leonard Fournette",
+      "position": "RB",
+      "pro_team": "JAX",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1808,6 +1876,8 @@
       "team_id": 1,
       "player_id": 2977644,
       "player_name": "Todd Gurley II",
+      "position": "RB",
+      "pro_team": "LAR",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1817,6 +1887,8 @@
       "team_id": 2,
       "player_id": 2577417,
       "player_name": "Dak Prescott",
+      "position": "QB",
+      "pro_team": "DAL",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1826,6 +1898,8 @@
       "team_id": 6,
       "player_id": 2977187,
       "player_name": "Cooper Kupp",
+      "position": "WR",
+      "pro_team": "LAR",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1835,6 +1909,8 @@
       "team_id": 3,
       "player_id": 4040761,
       "player_name": "Devin Singletary",
+      "position": "RB",
+      "pro_team": "BUF",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1844,6 +1920,8 @@
       "team_id": 5,
       "player_id": 2976499,
       "player_name": "Amari Cooper",
+      "position": "WR",
+      "pro_team": "LV",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1853,6 +1931,8 @@
       "team_id": 8,
       "player_id": 3122840,
       "player_name": "Deshaun Watson",
+      "position": "QB",
+      "pro_team": "HOU",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1862,6 +1942,8 @@
       "team_id": 8,
       "player_id": 16733,
       "player_name": "Odell Beckham Jr.",
+      "position": "WR",
+      "pro_team": "NYG",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1871,6 +1953,8 @@
       "team_id": 5,
       "player_id": 2969962,
       "player_name": "Duke Johnson",
+      "position": "RB",
+      "pro_team": "CLE",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1880,6 +1964,8 @@
       "team_id": 3,
       "player_id": 4047646,
       "player_name": "A.J. Brown",
+      "position": "WR",
+      "pro_team": "TEN",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1889,6 +1975,8 @@
       "team_id": 6,
       "player_id": 2577327,
       "player_name": "Tyler Lockett",
+      "position": "WR",
+      "pro_team": "SEA",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1898,6 +1986,8 @@
       "team_id": 2,
       "player_id": 3925357,
       "player_name": "Calvin Ridley",
+      "position": "WR",
+      "pro_team": "ATL",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1907,6 +1997,8 @@
       "team_id": 1,
       "player_id": 3120348,
       "player_name": "JuJu Smith-Schuster",
+      "position": "WR",
+      "pro_team": "PIT",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1916,6 +2008,8 @@
       "team_id": 7,
       "player_id": 14924,
       "player_name": "T.Y. Hilton",
+      "position": "WR",
+      "pro_team": "IND",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1925,6 +2019,8 @@
       "team_id": 4,
       "player_id": 16799,
       "player_name": "Allen Robinson II",
+      "position": "WR",
+      "pro_team": "JAX",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1934,6 +2030,8 @@
       "team_id": 4,
       "player_id": 3045147,
       "player_name": "James Conner",
+      "position": "RB",
+      "pro_team": "PIT",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1943,6 +2041,8 @@
       "team_id": 7,
       "player_id": 3116365,
       "player_name": "Mark Andrews",
+      "position": "TE",
+      "pro_team": "BAL",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1952,6 +2052,8 @@
       "team_id": 1,
       "player_id": 3128429,
       "player_name": "Courtland Sutton",
+      "position": "WR",
+      "pro_team": "DEN",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1961,6 +2063,8 @@
       "team_id": 2,
       "player_id": 15835,
       "player_name": "Zach Ertz",
+      "position": "TE",
+      "pro_team": "PHI",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1970,6 +2074,8 @@
       "team_id": 6,
       "player_id": 3918298,
       "player_name": "Josh Allen",
+      "position": "QB",
+      "pro_team": "BUF",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1979,6 +2085,8 @@
       "team_id": 3,
       "player_id": 2580,
       "player_name": "Drew Brees",
+      "position": "QB",
+      "pro_team": "NO",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1988,6 +2096,8 @@
       "team_id": 5,
       "player_id": 11237,
       "player_name": "Matt Ryan",
+      "position": "QB",
+      "pro_team": "ATL",
       "bid_amount": 0,
       "keeper": false
     },
@@ -1997,6 +2107,8 @@
       "team_id": 8,
       "player_id": 4035538,
       "player_name": "David Montgomery",
+      "position": "RB",
+      "pro_team": "CHI",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2006,6 +2118,8 @@
       "team_id": 8,
       "player_id": 4047650,
       "player_name": "DK Metcalf",
+      "position": "WR",
+      "pro_team": "SEA",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2015,6 +2129,8 @@
       "team_id": 5,
       "player_id": 2330,
       "player_name": "Tom Brady",
+      "position": "QB",
+      "pro_team": "NE",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2024,6 +2140,8 @@
       "team_id": 3,
       "player_id": 16728,
       "player_name": "Teddy Bridgewater",
+      "position": "QB",
+      "pro_team": "MIN",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2033,6 +2151,8 @@
       "team_id": 6,
       "player_id": 2576925,
       "player_name": "Darren Waller",
+      "position": "TE",
+      "pro_team": "LV",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2042,6 +2162,8 @@
       "team_id": 2,
       "player_id": 15880,
       "player_name": "Robert Woods",
+      "position": "WR",
+      "pro_team": "LAR",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2051,6 +2173,8 @@
       "team_id": 1,
       "player_id": 3059915,
       "player_name": "Kareem Hunt",
+      "position": "RB",
+      "pro_team": "KC",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2060,6 +2184,8 @@
       "team_id": 7,
       "player_id": 15818,
       "player_name": "Keenan Allen",
+      "position": "WR",
+      "pro_team": "LAC",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2069,6 +2195,8 @@
       "team_id": 4,
       "player_id": 3121422,
       "player_name": "Terry McLaurin",
+      "position": "WR",
+      "pro_team": "WSH",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2078,6 +2206,8 @@
       "team_id": 4,
       "player_id": 12483,
       "player_name": "Matthew Stafford",
+      "position": "QB",
+      "pro_team": "DET",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2087,6 +2217,8 @@
       "team_id": 7,
       "player_id": 2576623,
       "player_name": "DeVante Parker",
+      "position": "WR",
+      "pro_team": "MIA",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2096,6 +2228,8 @@
       "team_id": 1,
       "player_id": 2573079,
       "player_name": "Carson Wentz",
+      "position": "QB",
+      "pro_team": "PHI",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2105,6 +2239,8 @@
       "team_id": 2,
       "player_id": 3046779,
       "player_name": "Jared Goff",
+      "position": "QB",
+      "pro_team": "LAR",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2114,6 +2250,8 @@
       "team_id": 6,
       "player_id": 13981,
       "player_name": "Mark Ingram II",
+      "position": "RB",
+      "pro_team": "NO",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2123,6 +2261,8 @@
       "team_id": 3,
       "player_id": 3912550,
       "player_name": "Ronald Jones II",
+      "position": "RB",
+      "pro_team": "TB",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2132,6 +2272,8 @@
       "team_id": 5,
       "player_id": 3066158,
       "player_name": "Tarik Cohen",
+      "position": "RB",
+      "pro_team": "CHI",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2141,6 +2283,8 @@
       "team_id": 8,
       "player_id": 4242335,
       "player_name": "Jonathan Taylor",
+      "position": "RB",
+      "pro_team": "IND",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2150,6 +2294,8 @@
       "team_id": 8,
       "player_id": 2976212,
       "player_name": "Stefon Diggs",
+      "position": "WR",
+      "pro_team": "MIN",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2159,6 +2305,8 @@
       "team_id": 5,
       "player_id": 13229,
       "player_name": "Rob Gronkowski",
+      "position": "TE",
+      "pro_team": "NE",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2168,6 +2316,8 @@
       "team_id": 3,
       "player_id": 13295,
       "player_name": "Emmanuel Sanders",
+      "position": "WR",
+      "pro_team": "DEN",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2177,6 +2327,8 @@
       "team_id": 6,
       "player_id": 8439,
       "player_name": "Aaron Rodgers",
+      "position": "QB",
+      "pro_team": "GB",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2186,6 +2338,8 @@
       "team_id": 2,
       "player_id": 3060022,
       "player_name": "Jordan Howard",
+      "position": "RB",
+      "pro_team": "CHI",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2195,6 +2349,8 @@
       "team_id": 1,
       "player_id": 3051876,
       "player_name": "Evan Engram",
+      "position": "TE",
+      "pro_team": "NYG",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2204,6 +2360,8 @@
       "team_id": 7,
       "player_id": 16731,
       "player_name": "Brandin Cooks",
+      "position": "WR",
+      "pro_team": "NO",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2213,6 +2371,8 @@
       "team_id": 4,
       "player_id": 4259545,
       "player_name": "D'Andre Swift",
+      "position": "RB",
+      "pro_team": "DET",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2222,6 +2382,8 @@
       "team_id": 4,
       "player_id": 3045144,
       "player_name": "Tyler Boyd",
+      "position": "WR",
+      "pro_team": "CIN",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2231,6 +2393,8 @@
       "team_id": 7,
       "player_id": 13994,
       "player_name": "Cam Newton",
+      "position": "QB",
+      "pro_team": "CAR",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2240,6 +2404,8 @@
       "team_id": 1,
       "player_id": 16790,
       "player_name": "Jarvis Landry",
+      "position": "WR",
+      "pro_team": "MIA",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2249,6 +2415,8 @@
       "team_id": 2,
       "player_id": 2576716,
       "player_name": "Jamison Crowder",
+      "position": "WR",
+      "pro_team": "WSH",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2258,6 +2426,8 @@
       "team_id": 6,
       "player_id": 3115394,
       "player_name": "DJ Chark Jr.",
+      "position": "WR",
+      "pro_team": "JAX",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2267,6 +2437,8 @@
       "team_id": 3,
       "player_id": 4241985,
       "player_name": "J.K. Dobbins",
+      "position": "RB",
+      "pro_team": "BAL",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2276,6 +2448,8 @@
       "team_id": 5,
       "player_id": 3052876,
       "player_name": "Will Fuller V",
+      "position": "WR",
+      "pro_team": "HOU",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2285,6 +2459,8 @@
       "team_id": 8,
       "player_id": 4036348,
       "player_name": "Michael Gallup",
+      "position": "WR",
+      "pro_team": "DAL",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2294,6 +2470,8 @@
       "team_id": 8,
       "player_id": 3916925,
       "player_name": "Kerryon Johnson",
+      "position": "RB",
+      "pro_team": "DET",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2303,6 +2481,8 @@
       "team_id": 5,
       "player_id": 3052117,
       "player_name": "Phillip Lindsay",
+      "position": "RB",
+      "pro_team": "DEN",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2312,6 +2492,8 @@
       "team_id": 3,
       "player_id": 3046439,
       "player_name": "Hunter Henry",
+      "position": "TE",
+      "pro_team": "LAC",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2321,6 +2503,8 @@
       "team_id": 6,
       "player_id": 2576414,
       "player_name": "Raheem Mostert",
+      "position": "RB",
+      "pro_team": "SF",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2330,6 +2514,8 @@
       "team_id": 2,
       "player_id": 2979477,
       "player_name": "Tevin Coleman",
+      "position": "RB",
+      "pro_team": "ATL",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2339,6 +2525,8 @@
       "team_id": 1,
       "player_id": 3126486,
       "player_name": "Deebo Samuel",
+      "position": "WR",
+      "pro_team": "SF",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2348,6 +2536,8 @@
       "team_id": 7,
       "player_id": 4240021,
       "player_name": "Cam Akers",
+      "position": "RB",
+      "pro_team": "LAR",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2357,6 +2547,8 @@
       "team_id": 4,
       "player_id": 4360294,
       "player_name": "Antonio Gibson",
+      "position": "RB",
+      "pro_team": "WSH",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2366,6 +2558,8 @@
       "team_id": 4,
       "player_id": 3932905,
       "player_name": "Diontae Johnson",
+      "position": "WR",
+      "pro_team": "PIT",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2375,6 +2569,8 @@
       "team_id": 7,
       "player_id": 3917792,
       "player_name": "Daniel Jones",
+      "position": "QB",
+      "pro_team": "NYG",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2384,6 +2580,8 @@
       "team_id": 1,
       "player_id": 14876,
       "player_name": "Ryan Tannehill",
+      "position": "QB",
+      "pro_team": "MIA",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2393,6 +2591,8 @@
       "team_id": 2,
       "player_id": 13217,
       "player_name": "Golden Tate",
+      "position": "WR",
+      "pro_team": "DET",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2402,6 +2602,8 @@
       "team_id": 6,
       "player_id": 4048244,
       "player_name": "Alexander Mattison",
+      "position": "RB",
+      "pro_team": "MIN",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2411,6 +2613,8 @@
       "team_id": 3,
       "player_id": 4241389,
       "player_name": "CeeDee Lamb",
+      "position": "WR",
+      "pro_team": "DAL",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2420,6 +2624,8 @@
       "team_id": 5,
       "player_id": 12649,
       "player_name": "Julian Edelman",
+      "position": "WR",
+      "pro_team": "NE",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2429,6 +2635,8 @@
       "team_id": 8,
       "player_id": 3924327,
       "player_name": "Drew Lock",
+      "position": "QB",
+      "pro_team": "DEN",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2438,6 +2646,8 @@
       "team_id": 8,
       "player_id": 5536,
       "player_name": "Ben Roethlisberger",
+      "position": "QB",
+      "pro_team": "PIT",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2447,6 +2657,8 @@
       "team_id": 5,
       "player_id": 15072,
       "player_name": "Marvin Jones Jr.",
+      "position": "WR",
+      "pro_team": "DET",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2456,6 +2668,8 @@
       "team_id": 3,
       "player_id": 3916430,
       "player_name": "Nyheim Hines",
+      "position": "RB",
+      "pro_team": "IND",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2465,6 +2679,8 @@
       "team_id": 6,
       "player_id": 3915511,
       "player_name": "Joe Burrow",
+      "position": "QB",
+      "pro_team": "CIN",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2474,6 +2690,8 @@
       "team_id": 2,
       "player_id": 3912547,
       "player_name": "Sam Darnold",
+      "position": "QB",
+      "pro_team": "NYJ",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2483,6 +2701,8 @@
       "team_id": 1,
       "player_id": 4039359,
       "player_name": "Darrell Henderson Jr.",
+      "position": "RB",
+      "pro_team": "LAR",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2492,6 +2712,8 @@
       "team_id": 7,
       "player_id": 3119195,
       "player_name": "Chase Edmonds",
+      "position": "RB",
+      "pro_team": "ARI",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2501,6 +2723,8 @@
       "team_id": 4,
       "player_id": 3139605,
       "player_name": "Marlon Mack",
+      "position": "RB",
+      "pro_team": "IND",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2510,6 +2734,8 @@
       "team_id": 4,
       "player_id": 13983,
       "player_name": "A.J. Green",
+      "position": "WR",
+      "pro_team": "CIN",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2519,6 +2745,8 @@
       "team_id": 7,
       "player_id": 4241372,
       "player_name": "Marquise Brown",
+      "position": "WR",
+      "pro_team": "BAL",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2528,6 +2756,8 @@
       "team_id": 1,
       "player_id": 10452,
       "player_name": "Adrian Peterson",
+      "position": "RB",
+      "pro_team": "MIN",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2537,6 +2767,8 @@
       "team_id": 2,
       "player_id": 2573401,
       "player_name": "Tyler Higbee",
+      "position": "TE",
+      "pro_team": "LAR",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2546,6 +2778,8 @@
       "team_id": 6,
       "player_id": 3916945,
       "player_name": "Darius Slayton",
+      "position": "WR",
+      "pro_team": "NYG",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2555,6 +2789,8 @@
       "team_id": 3,
       "player_id": 2980453,
       "player_name": "Jamaal Williams",
+      "position": "RB",
+      "pro_team": "GB",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2564,6 +2800,8 @@
       "team_id": 5,
       "player_id": 3049916,
       "player_name": "Matt Breida",
+      "position": "RB",
+      "pro_team": "SF",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2573,6 +2811,8 @@
       "team_id": 8,
       "player_id": 4239934,
       "player_name": "AJ Dillon",
+      "position": "RB",
+      "pro_team": "GB",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2582,6 +2822,8 @@
       "team_id": 8,
       "player_id": 4241463,
       "player_name": "Jerry Jeudy",
+      "position": "WR",
+      "pro_team": "DEN",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2591,6 +2833,8 @@
       "team_id": 5,
       "player_id": 2508176,
       "player_name": "David Johnson",
+      "position": "RB",
+      "pro_team": "ARI",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2600,6 +2844,8 @@
       "team_id": 3,
       "player_id": 4241475,
       "player_name": "Henry Ruggs III",
+      "position": "WR",
+      "pro_team": "LV",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2609,6 +2855,8 @@
       "team_id": 6,
       "player_id": 3135321,
       "player_name": "Hunter Renfrow",
+      "position": "WR",
+      "pro_team": "LV",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2618,6 +2866,8 @@
       "team_id": 2,
       "player_id": 3895856,
       "player_name": "Christian Kirk",
+      "position": "WR",
+      "pro_team": "ARI",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2627,6 +2877,8 @@
       "team_id": 1,
       "player_id": 3116136,
       "player_name": "Justin Jackson",
+      "position": "RB",
+      "pro_team": "LAC",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2636,6 +2888,8 @@
       "team_id": 7,
       "player_id": 3055899,
       "player_name": "Harrison Butker",
+      "position": "K",
+      "pro_team": "KC",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2645,6 +2899,8 @@
       "team_id": 4,
       "player_id": 15683,
       "player_name": "Justin Tucker",
+      "position": "K",
+      "pro_team": "BAL",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2654,6 +2910,8 @@
       "team_id": 4,
       "player_id": 3052587,
       "player_name": "Baker Mayfield",
+      "position": "QB",
+      "pro_team": "CLE",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2663,6 +2921,8 @@
       "team_id": 7,
       "player_id": -16002,
       "player_name": "Bills D/ST",
+      "position": "D/ST",
+      "pro_team": "BUF",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2672,6 +2932,8 @@
       "team_id": 1,
       "player_id": 3123969,
       "player_name": "Ito Smith",
+      "position": "RB",
+      "pro_team": "ATL",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2681,6 +2943,8 @@
       "team_id": 2,
       "player_id": 4249087,
       "player_name": "Matt Gay",
+      "position": "K",
+      "pro_team": "LAR",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2690,6 +2954,8 @@
       "team_id": 6,
       "player_id": 4035676,
       "player_name": "Zack Moss",
+      "position": "RB",
+      "pro_team": "BUF",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2699,6 +2965,8 @@
       "team_id": 3,
       "player_id": -16025,
       "player_name": "49ers D/ST",
+      "position": "D/ST",
+      "pro_team": "SF",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2708,6 +2976,8 @@
       "team_id": 5,
       "player_id": -16023,
       "player_name": "Steelers D/ST",
+      "position": "D/ST",
+      "pro_team": "PIT",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2717,6 +2987,8 @@
       "team_id": 8,
       "player_id": 4034952,
       "player_name": "La'Mical Perine",
+      "position": "RB",
+      "pro_team": "NYJ",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2726,6 +2998,8 @@
       "team_id": 8,
       "player_id": 2985659,
       "player_name": "Wil Lutz",
+      "position": "K",
+      "pro_team": "NO",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2735,6 +3009,8 @@
       "team_id": 5,
       "player_id": 14993,
       "player_name": "Greg Zuerlein",
+      "position": "K",
+      "pro_team": "LAR",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2744,6 +3020,8 @@
       "team_id": 3,
       "player_id": 3049899,
       "player_name": "Younghoe Koo",
+      "position": "K",
+      "pro_team": "ATL",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2753,6 +3031,8 @@
       "team_id": 6,
       "player_id": -16033,
       "player_name": "Ravens D/ST",
+      "position": "D/ST",
+      "pro_team": "BAL",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2762,6 +3042,8 @@
       "team_id": 2,
       "player_id": -16017,
       "player_name": "Patriots D/ST",
+      "position": "D/ST",
+      "pro_team": "NE",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2771,6 +3053,8 @@
       "team_id": 1,
       "player_id": -16011,
       "player_name": "Colts D/ST",
+      "position": "D/ST",
+      "pro_team": "IND",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2780,6 +3064,8 @@
       "team_id": 7,
       "player_id": 3923397,
       "player_name": "Ryquell Armstead",
+      "position": "RB",
+      "pro_team": "JAX",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2789,6 +3075,8 @@
       "team_id": 4,
       "player_id": 3915399,
       "player_name": "Preston Williams",
+      "position": "WR",
+      "pro_team": "MIA",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2798,6 +3086,8 @@
       "team_id": 4,
       "player_id": -16006,
       "player_name": "Cowboys D/ST",
+      "position": "D/ST",
+      "pro_team": "DAL",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2807,6 +3097,8 @@
       "team_id": 7,
       "player_id": 16913,
       "player_name": "James White",
+      "position": "RB",
+      "pro_team": "NE",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2816,6 +3108,8 @@
       "team_id": 1,
       "player_id": 11122,
       "player_name": "Matt Prater",
+      "position": "K",
+      "pro_team": "DET",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2825,6 +3119,8 @@
       "team_id": 2,
       "player_id": 3051439,
       "player_name": "Boston Scott",
+      "position": "RB",
+      "pro_team": "PHI",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2834,6 +3130,8 @@
       "team_id": 6,
       "player_id": 3043234,
       "player_name": "Zane Gonzalez",
+      "position": "K",
+      "pro_team": "None",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2843,6 +3141,8 @@
       "team_id": 3,
       "player_id": 4045305,
       "player_name": "Ian Thomas",
+      "position": "TE",
+      "pro_team": "CAR",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2852,6 +3152,8 @@
       "team_id": 5,
       "player_id": 12537,
       "player_name": "Jared Cook",
+      "position": "TE",
+      "pro_team": "NO",
       "bid_amount": 0,
       "keeper": false
     },
@@ -2861,6 +3163,8 @@
       "team_id": 8,
       "player_id": -16007,
       "player_name": "Broncos D/ST",
+      "position": "D/ST",
+      "pro_team": "DEN",
       "bid_amount": 0,
       "keeper": false
     }
