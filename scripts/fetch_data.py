@@ -26,6 +26,7 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT_DIR = ROOT / "src" / "data"
 SEASONS_DIR = OUT_DIR / "seasons"
 PLAYERS_FILE = OUT_DIR / "players.json"
+PLAYER_SEASONS_FILE = OUT_DIR / "player_seasons.json"
 OVERRIDES_FILE = Path(__file__).resolve().parent / "name_overrides.json"
 
 _overrides_raw = json.loads(OVERRIDES_FILE.read_text()) if OVERRIDES_FILE.exists() else {}
@@ -38,6 +39,14 @@ if PLAYERS_FILE.exists():
         PLAYERS_CACHE = json.loads(PLAYERS_FILE.read_text())
     except Exception:
         PLAYERS_CACHE = {}
+
+# Per-(year, player_id) season totals: { "2024:3117251": { "total_points": 40.3, "avg_points": 10.08 } }
+PLAYER_SEASONS_CACHE: dict[str, dict] = {}
+if PLAYER_SEASONS_FILE.exists():
+    try:
+        PLAYER_SEASONS_CACHE = json.loads(PLAYER_SEASONS_FILE.read_text())
+    except Exception:
+        PLAYER_SEASONS_CACHE = {}
 
 
 def apply_override(display_name: str | None, first_name: str | None) -> str | None:
@@ -99,22 +108,42 @@ def serialize_matchup(m) -> dict:
 
 
 def lookup_player(league, player_id: int, player_name: str | None) -> dict:
-    """Return cached player info, fetching via espn-api on miss."""
+    """Return cached player info + that league-year's totals, fetching on miss."""
     sid = str(player_id)
-    cached = PLAYERS_CACHE.get(sid)
-    if cached and cached.get("position"):
-        return cached
-    info = {"name": player_name, "position": None, "pro_team": None}
-    try:
-        p = league.player_info(playerId=player_id)
-        if p is not None:
-            info["name"] = p.name or player_name
-            info["position"] = getattr(p, "position", None)
-            info["pro_team"] = getattr(p, "proTeam", None)
-    except Exception:
-        pass
-    PLAYERS_CACHE[sid] = info
-    return info
+    year_key = f"{league.year}:{sid}"
+    cached_info = PLAYERS_CACHE.get(sid)
+    cached_season = PLAYER_SEASONS_CACHE.get(year_key)
+
+    need_info = not (cached_info and cached_info.get("position"))
+    need_season = cached_season is None
+
+    info = cached_info or {"name": player_name, "position": None, "pro_team": None}
+    season = cached_season or {"total_points": None, "avg_points": None}
+
+    if need_info or need_season:
+        try:
+            p = league.player_info(playerId=player_id)
+            if p is not None:
+                if need_info:
+                    info = {
+                        "name": p.name or player_name,
+                        "position": getattr(p, "position", None),
+                        "pro_team": getattr(p, "proTeam", None),
+                    }
+                    PLAYERS_CACHE[sid] = info
+                # Always refresh season stats from the year's league context.
+                season = {
+                    "total_points": getattr(p, "total_points", None),
+                    "avg_points": getattr(p, "avg_points", None),
+                }
+                PLAYER_SEASONS_CACHE[year_key] = season
+        except Exception:
+            if need_info:
+                PLAYERS_CACHE[sid] = info
+            if need_season:
+                PLAYER_SEASONS_CACHE[year_key] = season
+
+    return {**info, **season}
 
 
 def serialize_draft_pick(league, p) -> dict:
@@ -127,6 +156,8 @@ def serialize_draft_pick(league, p) -> dict:
         "player_name": p.playerName,
         "position": info.get("position"),
         "pro_team": info.get("pro_team"),
+        "season_points": info.get("total_points"),
+        "avg_points": info.get("avg_points"),
         "bid_amount": getattr(p, "bid_amount", None),
         "keeper": getattr(p, "keeper_status", False),
     }
@@ -237,10 +268,11 @@ def main() -> int:
             indent=2,
         )
     )
-    # Persist player cache so repeat runs skip player_info lookups.
+    # Persist caches so repeat runs skip player_info lookups.
     PLAYERS_FILE.write_text(json.dumps(PLAYERS_CACHE, indent=2))
+    PLAYER_SEASONS_FILE.write_text(json.dumps(PLAYER_SEASONS_CACHE, indent=2))
     print(f"Wrote {len(available_years)} season(s): {available_years}")
-    print(f"Player cache: {len(PLAYERS_CACHE)} entries")
+    print(f"Player cache: {len(PLAYERS_CACHE)} entries, season-stats: {len(PLAYER_SEASONS_CACHE)}")
     return 0 if available_years else 1
 
 

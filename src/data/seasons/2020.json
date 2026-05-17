@@ -1504,6 +1504,8 @@
       "player_name": "Christian McCaffrey",
       "position": "RB",
       "pro_team": "CAR",
+      "season_points": 81.9,
+      "avg_points": 27.3,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1515,6 +1517,8 @@
       "player_name": "Saquon Barkley",
       "position": "RB",
       "pro_team": "NYG",
+      "season_points": 12.4,
+      "avg_points": 6.2,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1526,6 +1530,8 @@
       "player_name": "Alvin Kamara",
       "position": "RB",
       "pro_team": "NO",
+      "season_points": 336.3,
+      "avg_points": 22.42,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1537,6 +1543,8 @@
       "player_name": "Ezekiel Elliott",
       "position": "RB",
       "pro_team": "DAL",
+      "season_points": 197.7,
+      "avg_points": 13.18,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1548,6 +1556,8 @@
       "player_name": "Dalvin Cook",
       "position": "RB",
       "pro_team": "MIN",
+      "season_points": 315.8,
+      "avg_points": 22.56,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1559,6 +1569,8 @@
       "player_name": "Derrick Henry",
       "position": "RB",
       "pro_team": "TEN",
+      "season_points": 323.6,
+      "avg_points": 20.23,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1570,6 +1582,8 @@
       "player_name": "Michael Thomas",
       "position": "WR",
       "pro_team": "NO",
+      "season_points": 63.9,
+      "avg_points": 9.13,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1581,6 +1595,8 @@
       "player_name": "Josh Jacobs",
       "position": "RB",
       "pro_team": "LV",
+      "season_points": 214.8,
+      "avg_points": 14.32,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1592,6 +1608,8 @@
       "player_name": "Nick Chubb",
       "position": "RB",
       "pro_team": "CLE",
+      "season_points": 199.7,
+      "avg_points": 16.64,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1603,6 +1621,8 @@
       "player_name": "Julio Jones",
       "position": "WR",
       "pro_team": "ATL",
+      "season_points": 120.6,
+      "avg_points": 13.4,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1614,6 +1634,8 @@
       "player_name": "Davante Adams",
       "position": "WR",
       "pro_team": "GB",
+      "season_points": 300.9,
+      "avg_points": 21.49,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1625,6 +1647,8 @@
       "player_name": "Clyde Edwards-Helaire",
       "position": "RB",
       "pro_team": "KC",
+      "season_points": 158.0,
+      "avg_points": 12.15,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1636,6 +1660,8 @@
       "player_name": "Austin Ekeler",
       "position": "RB",
       "pro_team": "LAC",
+      "season_points": 138.3,
+      "avg_points": 13.83,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1647,6 +1673,8 @@
       "player_name": "Joe Mixon",
       "position": "RB",
       "pro_team": "CIN",
+      "season_points": 89.1,
+      "avg_points": 14.85,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1658,6 +1686,8 @@
       "player_name": "Lamar Jackson",
       "position": "QB",
       "pro_team": "BAL",
+      "season_points": 332.78,
+      "avg_points": 22.19,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1669,6 +1699,8 @@
       "player_name": "Travis Kelce",
       "position": "TE",
       "pro_team": "KC",
+      "season_points": 260.26,
+      "avg_points": 17.35,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1680,6 +1712,8 @@
       "player_name": "Le'Veon Bell",
       "position": "RB",
       "pro_team": "PIT",
+      "season_points": 66.6,
+      "avg_points": 6.05,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1691,6 +1725,8 @@
       "player_name": "Tyreek Hill",
       "position": "WR",
       "pro_team": "KC",
+      "season_points": 285.4,
+      "avg_points": 19.03,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1702,6 +1738,8 @@
       "player_name": "Patrick Mahomes",
       "position": "QB",
       "pro_team": "KC",
+      "season_points": 374.4,
+      "avg_points": 24.96,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1713,6 +1751,8 @@
       "player_name": "DeAndre Hopkins",
       "position": "WR",
       "pro_team": "HOU",
+      "season_points": 230.3,
+      "avg_points": 14.39,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1724,6 +1764,8 @@
       "player_name": "Miles Sanders",
       "position": "RB",
       "pro_team": "PHI",
+      "season_points": 156.4,
+      "avg_points": 13.03,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1735,6 +1777,8 @@
       "player_name": "Russell Wilson",
       "position": "QB",
       "pro_team": "SEA",
+      "season_points": 359.78,
+      "avg_points": 22.49,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1746,6 +1790,8 @@
       "player_name": "Aaron Jones",
       "position": "RB",
       "pro_team": "GB",
+      "season_points": 235.4,
+      "avg_points": 16.81,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1757,6 +1803,8 @@
       "player_name": "Chris Godwin",
       "position": "WR",
       "pro_team": "TB",
+      "season_points": 158.5,
+      "avg_points": 13.21,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1768,6 +1816,8 @@
       "player_name": "George Kittle",
       "position": "TE",
       "pro_team": "SF",
+      "season_points": 101.1,
+      "avg_points": 12.64,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1779,6 +1829,8 @@
       "player_name": "Chris Carson",
       "position": "RB",
       "pro_team": "SEA",
+      "season_points": 169.3,
+      "avg_points": 14.11,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1790,6 +1842,8 @@
       "player_name": "Adam Thielen",
       "position": "WR",
       "pro_team": "MIN",
+      "season_points": 217.0,
+      "avg_points": 14.47,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1801,6 +1855,8 @@
       "player_name": "Kenny Golladay",
       "position": "WR",
       "pro_team": "DET",
+      "season_points": 55.8,
+      "avg_points": 11.16,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1812,6 +1868,8 @@
       "player_name": "Melvin Gordon III",
       "position": "RB",
       "pro_team": "LAC",
+      "season_points": 182.4,
+      "avg_points": 12.16,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1823,6 +1881,8 @@
       "player_name": "Mike Evans",
       "position": "WR",
       "pro_team": "TB",
+      "season_points": 213.6,
+      "avg_points": 13.35,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1834,6 +1894,8 @@
       "player_name": "Kenyan Drake",
       "position": "RB",
       "pro_team": "MIA",
+      "season_points": 179.7,
+      "avg_points": 11.98,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1845,6 +1907,8 @@
       "player_name": "DJ Moore",
       "position": "WR",
       "pro_team": "CAR",
+      "season_points": 178.5,
+      "avg_points": 11.9,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1856,6 +1920,8 @@
       "player_name": "Kyler Murray",
       "position": "QB",
       "pro_team": "ARI",
+      "season_points": 378.74,
+      "avg_points": 23.67,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1867,6 +1933,8 @@
       "player_name": "Leonard Fournette",
       "position": "RB",
       "pro_team": "JAX",
+      "season_points": 114.0,
+      "avg_points": 8.77,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1878,6 +1946,8 @@
       "player_name": "Todd Gurley II",
       "position": "RB",
       "pro_team": "LAR",
+      "season_points": 150.7,
+      "avg_points": 10.05,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1889,6 +1959,8 @@
       "player_name": "Dak Prescott",
       "position": "QB",
       "pro_team": "DAL",
+      "season_points": 135.14,
+      "avg_points": 27.03,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1900,6 +1972,8 @@
       "player_name": "Cooper Kupp",
       "position": "WR",
       "pro_team": "LAR",
+      "season_points": 162.7,
+      "avg_points": 10.85,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1911,6 +1985,8 @@
       "player_name": "Devin Singletary",
       "position": "RB",
       "pro_team": "BUF",
+      "season_points": 124.6,
+      "avg_points": 7.79,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1922,6 +1998,8 @@
       "player_name": "Amari Cooper",
       "position": "WR",
       "pro_team": "LV",
+      "season_points": 190.8,
+      "avg_points": 11.93,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1933,6 +2011,8 @@
       "player_name": "Deshaun Watson",
       "position": "QB",
       "pro_team": "HOU",
+      "season_points": 369.32,
+      "avg_points": 23.08,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1944,6 +2024,8 @@
       "player_name": "Odell Beckham Jr.",
       "position": "WR",
       "pro_team": "NYG",
+      "season_points": 75.32,
+      "avg_points": 10.76,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1955,6 +2037,8 @@
       "player_name": "Duke Johnson",
       "position": "RB",
       "pro_team": "CLE",
+      "season_points": 70.4,
+      "avg_points": 6.4,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1966,6 +2050,8 @@
       "player_name": "A.J. Brown",
       "position": "WR",
       "pro_team": "TEN",
+      "season_points": 212.5,
+      "avg_points": 15.18,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1977,6 +2063,8 @@
       "player_name": "Tyler Lockett",
       "position": "WR",
       "pro_team": "SEA",
+      "season_points": 215.4,
+      "avg_points": 13.46,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1988,6 +2076,8 @@
       "player_name": "Calvin Ridley",
       "position": "WR",
       "pro_team": "ATL",
+      "season_points": 236.5,
+      "avg_points": 15.77,
       "bid_amount": 0,
       "keeper": false
     },
@@ -1999,6 +2089,8 @@
       "player_name": "JuJu Smith-Schuster",
       "position": "WR",
       "pro_team": "PIT",
+      "season_points": 185.6,
+      "avg_points": 11.6,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2010,6 +2102,8 @@
       "player_name": "T.Y. Hilton",
       "position": "WR",
       "pro_team": "IND",
+      "season_points": 136.2,
+      "avg_points": 9.08,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2021,6 +2115,8 @@
       "player_name": "Allen Robinson II",
       "position": "WR",
       "pro_team": "JAX",
+      "season_points": 211.9,
+      "avg_points": 13.24,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2032,6 +2128,8 @@
       "player_name": "James Conner",
       "position": "RB",
       "pro_team": "PIT",
+      "season_points": 147.1,
+      "avg_points": 11.32,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2043,6 +2141,8 @@
       "player_name": "Mark Andrews",
       "position": "TE",
       "pro_team": "BAL",
+      "season_points": 141.1,
+      "avg_points": 10.08,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2054,6 +2154,8 @@
       "player_name": "Courtland Sutton",
       "position": "WR",
       "pro_team": "DEN",
+      "season_points": 8.1,
+      "avg_points": 8.1,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2065,6 +2167,8 @@
       "player_name": "Zach Ertz",
       "position": "TE",
       "pro_team": "PHI",
+      "season_points": 59.5,
+      "avg_points": 5.41,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2076,6 +2180,8 @@
       "player_name": "Josh Allen",
       "position": "QB",
       "pro_team": "BUF",
+      "season_points": 395.56,
+      "avg_points": 24.72,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2087,6 +2193,8 @@
       "player_name": "Drew Brees",
       "position": "QB",
       "pro_team": "NO",
+      "season_points": 209.48,
+      "avg_points": 17.46,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2098,6 +2206,8 @@
       "player_name": "Matt Ryan",
       "position": "QB",
       "pro_team": "ATL",
+      "season_points": 282.44,
+      "avg_points": 17.65,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2109,6 +2219,8 @@
       "player_name": "David Montgomery",
       "position": "RB",
       "pro_team": "CHI",
+      "season_points": 237.8,
+      "avg_points": 15.85,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2120,6 +2232,8 @@
       "player_name": "DK Metcalf",
       "position": "WR",
       "pro_team": "SEA",
+      "season_points": 229.8,
+      "avg_points": 14.36,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2131,6 +2245,8 @@
       "player_name": "Tom Brady",
       "position": "QB",
       "pro_team": "NE",
+      "season_points": 337.92,
+      "avg_points": 21.12,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2142,6 +2258,8 @@
       "player_name": "Teddy Bridgewater",
       "position": "QB",
       "pro_team": "MIN",
+      "season_points": 241.22,
+      "avg_points": 16.08,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2153,6 +2271,8 @@
       "player_name": "Darren Waller",
       "position": "TE",
       "pro_team": "LV",
+      "season_points": 225.1,
+      "avg_points": 14.07,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2164,6 +2284,8 @@
       "player_name": "Robert Woods",
       "position": "WR",
       "pro_team": "LAR",
+      "season_points": 200.1,
+      "avg_points": 12.51,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2175,6 +2297,8 @@
       "player_name": "Kareem Hunt",
       "position": "RB",
       "pro_team": "KC",
+      "season_points": 199.5,
+      "avg_points": 12.47,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2186,6 +2310,8 @@
       "player_name": "Keenan Allen",
       "position": "WR",
       "pro_team": "LAC",
+      "season_points": 195.1,
+      "avg_points": 13.94,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2197,6 +2323,8 @@
       "player_name": "Terry McLaurin",
       "position": "WR",
       "pro_team": "WSH",
+      "season_points": 180.3,
+      "avg_points": 12.02,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2208,6 +2336,8 @@
       "player_name": "Matthew Stafford",
       "position": "QB",
       "pro_team": "DET",
+      "season_points": 260.56,
+      "avg_points": 16.29,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2219,6 +2349,8 @@
       "player_name": "DeVante Parker",
       "position": "WR",
       "pro_team": "MIA",
+      "season_points": 134.8,
+      "avg_points": 9.63,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2230,6 +2362,8 @@
       "player_name": "Carson Wentz",
       "position": "QB",
       "pro_team": "PHI",
+      "season_points": 198.4,
+      "avg_points": 16.53,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2241,6 +2375,8 @@
       "player_name": "Jared Goff",
       "position": "QB",
       "pro_team": "LAR",
+      "season_points": 239.98,
+      "avg_points": 16.0,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2252,6 +2388,8 @@
       "player_name": "Mark Ingram II",
       "position": "RB",
       "pro_team": "NO",
+      "season_points": 49.9,
+      "avg_points": 4.54,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2263,6 +2401,8 @@
       "player_name": "Ronald Jones II",
       "position": "RB",
       "pro_team": "TB",
+      "season_points": 172.3,
+      "avg_points": 12.31,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2274,6 +2414,8 @@
       "player_name": "Tarik Cohen",
       "position": "RB",
       "pro_team": "CHI",
+      "season_points": 14.5,
+      "avg_points": 4.83,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2285,6 +2427,8 @@
       "player_name": "Jonathan Taylor",
       "position": "RB",
       "pro_team": "IND",
+      "season_points": 234.8,
+      "avg_points": 15.65,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2296,6 +2440,8 @@
       "player_name": "Stefon Diggs",
       "position": "WR",
       "pro_team": "MIN",
+      "season_points": 265.1,
+      "avg_points": 16.57,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2307,6 +2453,8 @@
       "player_name": "Rob Gronkowski",
       "position": "TE",
       "pro_team": "NE",
+      "season_points": 126.8,
+      "avg_points": 7.93,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2318,6 +2466,8 @@
       "player_name": "Emmanuel Sanders",
       "position": "WR",
       "pro_team": "DEN",
+      "season_points": 134.3,
+      "avg_points": 9.59,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2329,6 +2479,8 @@
       "player_name": "Aaron Rodgers",
       "position": "QB",
       "pro_team": "GB",
+      "season_points": 382.76,
+      "avg_points": 23.92,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2340,6 +2492,8 @@
       "player_name": "Jordan Howard",
       "position": "RB",
       "pro_team": "CHI",
+      "season_points": 30.2,
+      "avg_points": 4.31,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2351,6 +2505,8 @@
       "player_name": "Evan Engram",
       "position": "TE",
       "pro_team": "NYG",
+      "season_points": 109.5,
+      "avg_points": 6.84,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2362,6 +2518,8 @@
       "player_name": "Brandin Cooks",
       "position": "WR",
       "pro_team": "NO",
+      "season_points": 191.5,
+      "avg_points": 12.77,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2373,6 +2531,8 @@
       "player_name": "D'Andre Swift",
       "position": "RB",
       "pro_team": "DET",
+      "season_points": 166.8,
+      "avg_points": 12.83,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2384,6 +2544,8 @@
       "player_name": "Tyler Boyd",
       "position": "WR",
       "pro_team": "CIN",
+      "season_points": 153.14,
+      "avg_points": 10.21,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2395,6 +2557,8 @@
       "player_name": "Cam Newton",
       "position": "QB",
       "pro_team": "CAR",
+      "season_points": 259.98,
+      "avg_points": 17.33,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2406,6 +2570,8 @@
       "player_name": "Jarvis Landry",
       "position": "WR",
       "pro_team": "MIA",
+      "season_points": 151.96,
+      "avg_points": 10.13,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2417,6 +2583,8 @@
       "player_name": "Jamison Crowder",
       "position": "WR",
       "pro_team": "WSH",
+      "season_points": 142.52,
+      "avg_points": 11.88,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2428,6 +2596,8 @@
       "player_name": "DJ Chark Jr.",
       "position": "WR",
       "pro_team": "JAX",
+      "season_points": 127.1,
+      "avg_points": 9.78,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2439,6 +2609,8 @@
       "player_name": "J.K. Dobbins",
       "position": "RB",
       "pro_team": "BAL",
+      "season_points": 159.5,
+      "avg_points": 10.63,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2450,6 +2622,8 @@
       "player_name": "Will Fuller V",
       "position": "WR",
       "pro_team": "HOU",
+      "season_points": 162.4,
+      "avg_points": 14.76,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2461,6 +2635,8 @@
       "player_name": "Michael Gallup",
       "position": "WR",
       "pro_team": "DAL",
+      "season_points": 143.8,
+      "avg_points": 8.99,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2472,6 +2648,8 @@
       "player_name": "Kerryon Johnson",
       "position": "RB",
       "pro_team": "DET",
+      "season_points": 62.3,
+      "avg_points": 3.89,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2483,6 +2661,8 @@
       "player_name": "Phillip Lindsay",
       "position": "RB",
       "pro_team": "DEN",
+      "season_points": 62.5,
+      "avg_points": 5.68,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2494,6 +2674,8 @@
       "player_name": "Hunter Henry",
       "position": "TE",
       "pro_team": "LAC",
+      "season_points": 115.3,
+      "avg_points": 8.24,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2505,6 +2687,8 @@
       "player_name": "Raheem Mostert",
       "position": "RB",
       "pro_team": "SF",
+      "season_points": 91.7,
+      "avg_points": 11.46,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2516,6 +2700,8 @@
       "player_name": "Tevin Coleman",
       "position": "RB",
       "pro_team": "ATL",
+      "season_points": 10.7,
+      "avg_points": 1.34,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2527,6 +2713,8 @@
       "player_name": "Deebo Samuel",
       "position": "WR",
       "pro_team": "SF",
+      "season_points": 64.2,
+      "avg_points": 9.17,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2538,6 +2726,8 @@
       "player_name": "Cam Akers",
       "position": "RB",
       "pro_team": "LAR",
+      "season_points": 96.3,
+      "avg_points": 7.41,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2549,6 +2739,8 @@
       "player_name": "Antonio Gibson",
       "position": "RB",
       "pro_team": "WSH",
+      "season_points": 184.2,
+      "avg_points": 13.16,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2560,6 +2752,8 @@
       "player_name": "Diontae Johnson",
       "position": "WR",
       "pro_team": "PIT",
+      "season_points": 177.8,
+      "avg_points": 11.85,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2571,6 +2765,8 @@
       "player_name": "Daniel Jones",
       "position": "QB",
       "pro_team": "NYG",
+      "season_points": 180.02,
+      "avg_points": 12.86,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2582,6 +2778,8 @@
       "player_name": "Ryan Tannehill",
       "position": "QB",
       "pro_team": "MIA",
+      "season_points": 343.86,
+      "avg_points": 21.49,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2593,6 +2791,8 @@
       "player_name": "Golden Tate",
       "position": "WR",
       "pro_team": "DET",
+      "season_points": 69.02,
+      "avg_points": 5.75,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2604,6 +2804,8 @@
       "player_name": "Alexander Mattison",
       "position": "RB",
       "pro_team": "MIN",
+      "season_points": 80.4,
+      "avg_points": 6.18,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2615,6 +2817,8 @@
       "player_name": "CeeDee Lamb",
       "position": "WR",
       "pro_team": "DAL",
+      "season_points": 180.7,
+      "avg_points": 11.29,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2626,6 +2830,8 @@
       "player_name": "Julian Edelman",
       "position": "WR",
       "pro_team": "NE",
+      "season_points": 45.72,
+      "avg_points": 7.62,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2637,6 +2843,8 @@
       "player_name": "Drew Lock",
       "position": "QB",
       "pro_team": "DEN",
+      "season_points": 181.32,
+      "avg_points": 13.95,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2648,6 +2856,8 @@
       "player_name": "Ben Roethlisberger",
       "position": "QB",
       "pro_team": "PIT",
+      "season_points": 267.22,
+      "avg_points": 17.81,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2659,6 +2869,8 @@
       "player_name": "Marvin Jones Jr.",
       "position": "WR",
       "pro_team": "DET",
+      "season_points": 189.8,
+      "avg_points": 11.86,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2670,6 +2882,8 @@
       "player_name": "Nyheim Hines",
       "position": "RB",
       "pro_team": "IND",
+      "season_points": 161.7,
+      "avg_points": 10.11,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2681,6 +2895,8 @@
       "player_name": "Joe Burrow",
       "position": "QB",
       "pro_team": "CIN",
+      "season_points": 173.72,
+      "avg_points": 17.37,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2692,6 +2908,8 @@
       "player_name": "Sam Darnold",
       "position": "QB",
       "pro_team": "NYJ",
+      "season_points": 134.02,
+      "avg_points": 11.17,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2703,6 +2921,8 @@
       "player_name": "Darrell Henderson Jr.",
       "position": "RB",
       "pro_team": "LAR",
+      "season_points": 122.3,
+      "avg_points": 8.15,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2714,6 +2934,8 @@
       "player_name": "Chase Edmonds",
       "position": "RB",
       "pro_team": "ARI",
+      "season_points": 141.5,
+      "avg_points": 8.84,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2725,6 +2947,8 @@
       "player_name": "Marlon Mack",
       "position": "RB",
       "pro_team": "IND",
+      "season_points": 7.1,
+      "avg_points": 7.1,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2736,6 +2960,8 @@
       "player_name": "A.J. Green",
       "position": "WR",
       "pro_team": "CIN",
+      "season_points": 87.8,
+      "avg_points": 5.49,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2747,6 +2973,8 @@
       "player_name": "Marquise Brown",
       "position": "WR",
       "pro_team": "BAL",
+      "season_points": 154.0,
+      "avg_points": 9.62,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2758,6 +2986,8 @@
       "player_name": "Adrian Peterson",
       "position": "RB",
       "pro_team": "MIN",
+      "season_points": 118.5,
+      "avg_points": 7.41,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2769,6 +2999,8 @@
       "player_name": "Tyler Higbee",
       "position": "TE",
       "pro_team": "LAR",
+      "season_points": 106.2,
+      "avg_points": 7.08,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2780,6 +3012,8 @@
       "player_name": "Darius Slayton",
       "position": "WR",
       "pro_team": "NYG",
+      "season_points": 116.0,
+      "avg_points": 7.25,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2791,6 +3025,8 @@
       "player_name": "Jamaal Williams",
       "position": "RB",
       "pro_team": "GB",
+      "season_points": 111.6,
+      "avg_points": 7.97,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2802,6 +3038,8 @@
       "player_name": "Matt Breida",
       "position": "RB",
       "pro_team": "SF",
+      "season_points": 37.5,
+      "avg_points": 3.12,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2813,6 +3051,8 @@
       "player_name": "AJ Dillon",
       "position": "RB",
       "pro_team": "GB",
+      "season_points": 39.3,
+      "avg_points": 3.57,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2824,6 +3064,8 @@
       "player_name": "Jerry Jeudy",
       "position": "WR",
       "pro_team": "DEN",
+      "season_points": 131.6,
+      "avg_points": 8.23,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2835,6 +3077,8 @@
       "player_name": "David Johnson",
       "position": "RB",
       "pro_team": "ARI",
+      "season_points": 163.0,
+      "avg_points": 13.58,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2846,6 +3090,8 @@
       "player_name": "Henry Ruggs III",
       "position": "WR",
       "pro_team": "LV",
+      "season_points": 71.1,
+      "avg_points": 5.47,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2857,6 +3103,8 @@
       "player_name": "Hunter Renfrow",
       "position": "WR",
       "pro_team": "LV",
+      "season_points": 103.6,
+      "avg_points": 6.48,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2868,6 +3116,8 @@
       "player_name": "Christian Kirk",
       "position": "WR",
       "pro_team": "ARI",
+      "season_points": 122.4,
+      "avg_points": 8.74,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2879,6 +3129,8 @@
       "player_name": "Justin Jackson",
       "position": "RB",
       "pro_team": "LAC",
+      "season_points": 55.8,
+      "avg_points": 6.2,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2890,6 +3142,8 @@
       "player_name": "Harrison Butker",
       "position": "K",
       "pro_team": "KC",
+      "season_points": 132.0,
+      "avg_points": 8.25,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2901,6 +3155,8 @@
       "player_name": "Justin Tucker",
       "position": "K",
       "pro_team": "BAL",
+      "season_points": 142.0,
+      "avg_points": 8.88,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2912,6 +3168,8 @@
       "player_name": "Baker Mayfield",
       "position": "QB",
       "pro_team": "CLE",
+      "season_points": 248.12,
+      "avg_points": 15.51,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2923,6 +3181,8 @@
       "player_name": "Bills D/ST",
       "position": "D/ST",
       "pro_team": "BUF",
+      "season_points": 96.0,
+      "avg_points": 6.0,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2934,6 +3194,8 @@
       "player_name": "Ito Smith",
       "position": "RB",
       "pro_team": "ATL",
+      "season_points": 48.8,
+      "avg_points": 3.49,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2945,6 +3207,8 @@
       "player_name": "Matt Gay",
       "position": "K",
       "pro_team": "LAR",
+      "season_points": 64.0,
+      "avg_points": 9.14,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2956,6 +3220,8 @@
       "player_name": "Zack Moss",
       "position": "RB",
       "pro_team": "BUF",
+      "season_points": 94.6,
+      "avg_points": 7.28,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2967,6 +3233,8 @@
       "player_name": "49ers D/ST",
       "position": "D/ST",
       "pro_team": "SF",
+      "season_points": 88.0,
+      "avg_points": 5.5,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2978,6 +3246,8 @@
       "player_name": "Steelers D/ST",
       "position": "D/ST",
       "pro_team": "PIT",
+      "season_points": 147.0,
+      "avg_points": 9.19,
       "bid_amount": 0,
       "keeper": false
     },
@@ -2989,6 +3259,8 @@
       "player_name": "La'Mical Perine",
       "position": "RB",
       "pro_team": "NYJ",
+      "season_points": 47.0,
+      "avg_points": 4.7,
       "bid_amount": 0,
       "keeper": false
     },
@@ -3000,6 +3272,8 @@
       "player_name": "Wil Lutz",
       "position": "K",
       "pro_team": "NO",
+      "season_points": 130.0,
+      "avg_points": 8.12,
       "bid_amount": 0,
       "keeper": false
     },
@@ -3011,6 +3285,8 @@
       "player_name": "Greg Zuerlein",
       "position": "K",
       "pro_team": "LAR",
+      "season_points": 146.0,
+      "avg_points": 9.12,
       "bid_amount": 0,
       "keeper": false
     },
@@ -3022,6 +3298,8 @@
       "player_name": "Younghoe Koo",
       "position": "K",
       "pro_team": "ATL",
+      "season_points": 166.0,
+      "avg_points": 11.07,
       "bid_amount": 0,
       "keeper": false
     },
@@ -3033,6 +3311,8 @@
       "player_name": "Ravens D/ST",
       "position": "D/ST",
       "pro_team": "BAL",
+      "season_points": 125.0,
+      "avg_points": 7.81,
       "bid_amount": 0,
       "keeper": false
     },
@@ -3044,6 +3324,8 @@
       "player_name": "Patriots D/ST",
       "position": "D/ST",
       "pro_team": "NE",
+      "season_points": 90.0,
+      "avg_points": 5.62,
       "bid_amount": 0,
       "keeper": false
     },
@@ -3055,6 +3337,8 @@
       "player_name": "Colts D/ST",
       "position": "D/ST",
       "pro_team": "IND",
+      "season_points": 141.0,
+      "avg_points": 8.81,
       "bid_amount": 0,
       "keeper": false
     },
@@ -3066,6 +3350,8 @@
       "player_name": "Ryquell Armstead",
       "position": "RB",
       "pro_team": "JAX",
+      "season_points": 0.0,
+      "avg_points": 0.0,
       "bid_amount": 0,
       "keeper": false
     },
@@ -3077,6 +3363,8 @@
       "player_name": "Preston Williams",
       "position": "WR",
       "pro_team": "MIA",
+      "season_points": 65.8,
+      "avg_points": 8.22,
       "bid_amount": 0,
       "keeper": false
     },
@@ -3088,6 +3376,8 @@
       "player_name": "Cowboys D/ST",
       "position": "D/ST",
       "pro_team": "DAL",
+      "season_points": 47.0,
+      "avg_points": 2.94,
       "bid_amount": 0,
       "keeper": false
     },
@@ -3099,6 +3389,8 @@
       "player_name": "James White",
       "position": "RB",
       "pro_team": "NE",
+      "season_points": 92.1,
+      "avg_points": 6.58,
       "bid_amount": 0,
       "keeper": false
     },
@@ -3110,6 +3402,8 @@
       "player_name": "Matt Prater",
       "position": "K",
       "pro_team": "DET",
+      "season_points": 110.0,
+      "avg_points": 6.88,
       "bid_amount": 0,
       "keeper": false
     },
@@ -3121,6 +3415,8 @@
       "player_name": "Boston Scott",
       "position": "RB",
       "pro_team": "PHI",
+      "season_points": 83.1,
+      "avg_points": 5.19,
       "bid_amount": 0,
       "keeper": false
     },
@@ -3132,6 +3428,8 @@
       "player_name": "Zane Gonzalez",
       "position": "K",
       "pro_team": "None",
+      "season_points": 92.0,
+      "avg_points": 7.67,
       "bid_amount": 0,
       "keeper": false
     },
@@ -3143,6 +3441,8 @@
       "player_name": "Ian Thomas",
       "position": "TE",
       "pro_team": "CAR",
+      "season_points": 30.5,
+      "avg_points": 1.91,
       "bid_amount": 0,
       "keeper": false
     },
@@ -3154,6 +3454,8 @@
       "player_name": "Jared Cook",
       "position": "TE",
       "pro_team": "NO",
+      "season_points": 108.9,
+      "avg_points": 7.26,
       "bid_amount": 0,
       "keeper": false
     },
@@ -3165,6 +3467,8 @@
       "player_name": "Broncos D/ST",
       "position": "D/ST",
       "pro_team": "DEN",
+      "season_points": 59.0,
+      "avg_points": 3.69,
       "bid_amount": 0,
       "keeper": false
     }

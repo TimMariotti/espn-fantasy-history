@@ -345,6 +345,50 @@ export function buildDraftStats(): OwnerDraftStats[] {
   return Array.from(map.values()).sort((a, b) => b.totalPicks - a.totalPicks);
 }
 
+export type DraftValueEntry = {
+  season: Season;
+  pick: DraftPick;
+  overall: number;
+  actualRank: number;
+  vodp: number; // overall pick number - actual scoring rank within the draft pool
+  team: Team | undefined;
+};
+
+/**
+ * Compute "Value Over Draft Position" for every drafted player who has season points.
+ * Higher VODP = steal (drafted late, scored high). Lower VODP = bust.
+ */
+export function buildDraftValues(): DraftValueEntry[] {
+  const out: DraftValueEntry[] = [];
+  for (const season of seasons) {
+    const teamCount = season.teams.length || 10;
+    const teamMap = new Map(season.teams.map((t) => [t.id, t]));
+    // Sort the season's picks by season_points desc to assign actual rank.
+    const scored = season.draft
+      .filter((p) => p.season_points !== null && p.season_points !== undefined)
+      .slice()
+      .sort((a, b) => (b.season_points ?? 0) - (a.season_points ?? 0));
+    const rankByPlayer = new Map<number, number>();
+    scored.forEach((p, i) => rankByPlayer.set(p.player_id, i + 1));
+    for (const p of season.draft) {
+      const rank = rankByPlayer.get(p.player_id);
+      if (rank === undefined) continue;
+      // Exclude keepers — their draft position is locked, not a choice based on value.
+      if (p.keeper) continue;
+      const overall = (p.round - 1) * teamCount + p.pick;
+      out.push({
+        season,
+        pick: p,
+        overall,
+        actualRank: rank,
+        vodp: overall - rank,
+        team: p.team_id !== null ? teamMap.get(p.team_id) : undefined,
+      });
+    }
+  }
+  return out;
+}
+
 export function ownerDraftPicks(key: string): { season: Season; pick: DraftPick }[] {
   const out: { season: Season; pick: DraftPick }[] = [];
   for (const s of seasons) {

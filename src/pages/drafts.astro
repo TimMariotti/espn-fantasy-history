@@ -2,14 +2,44 @@
 import Layout from "../layouts/Layout.astro";
 import {
   buildDraftStats,
+  buildDraftValues,
+  fmtScore,
   ownerKey,
   ownerLabel,
   seasons,
+  teamOwnerLabel,
   TRACKED_POSITIONS,
 } from "../lib/data";
 
 const stats = buildDraftStats();
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+const values = buildDraftValues();
+const biggestSteals = [...values].sort((a, b) => b.vodp - a.vodp).slice(0, 10);
+const biggestBusts = [...values]
+  .filter((v) => v.overall <= 24) // top-2-rounds-ish, captures early-round flops
+  .sort((a, b) => a.vodp - b.vodp)
+  .slice(0, 10);
+const bestLate = [...values]
+  .filter((v) => v.pick.round >= 8)
+  .sort((a, b) => (b.pick.season_points ?? 0) - (a.pick.season_points ?? 0))
+  .slice(0, 10);
+
+// Per-season MVP + bust per year
+type AwardRow = { year: number; steal?: typeof values[number]; bust?: typeof values[number] };
+const byYear = new Map<number, typeof values>();
+for (const v of values) {
+  const arr = byYear.get(v.season.year) ?? [];
+  arr.push(v);
+  byYear.set(v.season.year, arr);
+}
+const yearAwards: AwardRow[] = [];
+for (const [year, vs] of Array.from(byYear.entries()).sort((a, b) => b[0] - a[0])) {
+  const steal = [...vs].sort((a, b) => b.vodp - a.vodp)[0];
+  const early = vs.filter((v) => v.overall <= 24);
+  const bust = early.length ? [...early].sort((a, b) => a.vodp - b.vodp)[0] : undefined;
+  yearAwards.push({ year, steal, bust });
+}
 
 // Aggregate first-round position pie across all drafts
 const firstRoundAllTime: Record<string, number> = {};
@@ -55,6 +85,144 @@ const firstRoundTotal = firstRoundOrdered.reduce((s, [, n]) => s + n, 0);
         }
       </tbody>
     </table>
+  </div>
+
+  <h2>Biggest Steals & Busts</h2>
+  <p class="muted">
+    VODP (Value Over Draft Position) = pick number − actual rank by points that season.
+    High VODP = drafted late, played like a star. Keepers excluded.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3 style="margin-top:0">All-Time Biggest Steals</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Player</th>
+            <th>By</th>
+            <th class="num">Pick</th>
+            <th class="num">Pts</th>
+            <th class="num">VODP</th>
+          </tr>
+        </thead>
+        <tbody>
+          {biggestSteals.map((v, i) => (
+            <tr>
+              <td>{i + 1}</td>
+              <td>
+                <strong>{v.pick.player_name}</strong>
+                <span class="muted"> ({v.pick.position ?? "—"})</span>
+              </td>
+              <td class="muted">{v.team ? teamOwnerLabel(v.team) : "?"} · {v.season.year}</td>
+              <td class="num">#{v.overall}</td>
+              <td class="num">{v.pick.season_points !== null ? fmtScore(v.pick.season_points) : "—"}</td>
+              <td class="num win">+{v.vodp}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">All-Time Biggest Busts</h3>
+      <p class="muted" style="margin-top:-0.5rem;font-size:0.85em">Top-2-rounds-ish picks who flopped.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Player</th>
+            <th>By</th>
+            <th class="num">Pick</th>
+            <th class="num">Pts</th>
+            <th class="num">VODP</th>
+          </tr>
+        </thead>
+        <tbody>
+          {biggestBusts.map((v, i) => (
+            <tr>
+              <td>{i + 1}</td>
+              <td>
+                <strong>{v.pick.player_name}</strong>
+                <span class="muted"> ({v.pick.position ?? "—"})</span>
+              </td>
+              <td class="muted">{v.team ? teamOwnerLabel(v.team) : "?"} · {v.season.year}</td>
+              <td class="num">#{v.overall}</td>
+              <td class="num">{v.pick.season_points !== null ? fmtScore(v.pick.season_points) : "—"}</td>
+              <td class="num loss">{v.vodp}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">Best Late-Round Picks (R8+)</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Player</th>
+            <th>By</th>
+            <th class="num">Pick</th>
+            <th class="num">Pts</th>
+          </tr>
+        </thead>
+        <tbody>
+          {bestLate.map((v, i) => (
+            <tr>
+              <td>{i + 1}</td>
+              <td>
+                <strong>{v.pick.player_name}</strong>
+                <span class="muted"> ({v.pick.position ?? "—"})</span>
+              </td>
+              <td class="muted">{v.team ? teamOwnerLabel(v.team) : "?"} · {v.season.year}</td>
+              <td class="num">R{v.pick.round}.{String(v.pick.pick).padStart(2, "0")}</td>
+              <td class="num">{v.pick.season_points !== null ? fmtScore(v.pick.season_points) : "—"}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">Steal & Bust of the Year</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Steal</th>
+            <th>Bust</th>
+          </tr>
+        </thead>
+        <tbody>
+          {yearAwards.map((a) => (
+            <tr>
+              <td>{a.year}</td>
+              <td>
+                {a.steal ? (
+                  <>
+                    <strong>{a.steal.pick.player_name}</strong>
+                    <span class="muted"> · #{a.steal.overall} · </span>
+                    <span class="win">+{a.steal.vodp}</span>
+                  </>
+                ) : "—"}
+              </td>
+              <td>
+                {a.bust ? (
+                  <>
+                    <strong>{a.bust.pick.player_name}</strong>
+                    <span class="muted"> · #{a.bust.overall} · </span>
+                    <span class="loss">{a.bust.vodp}</span>
+                  </>
+                ) : "—"}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   </div>
 
   <h2>Most-Drafted Players Per Manager</h2>
