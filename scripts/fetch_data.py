@@ -166,6 +166,15 @@ def main() -> int:
             continue
         if not data:
             continue
+        # Skip seasons with no games actually played (e.g., upcoming season pre-kickoff).
+        played = any(
+            m["home_score"] > 0 or m["away_score"] > 0
+            for w in data["weeks"]
+            for m in w["matchups"]
+        )
+        if not played:
+            print(f"  skip {year}: no games played yet", flush=True)
+            continue
         seasons_data.append(data)
         available_years.append(data["year"])
 

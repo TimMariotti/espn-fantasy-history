@@ -88,7 +88,7 @@ const leagueName = seasons[0]?.league_name ?? "League";
     </div>
 
     <div class="card">
-      <h2 style="margin-top:0">Top 5 Single-Week Scores</h2>
+      <h2 style="margin-top:0">Top 5 Regular Season Scores</h2>
       <table>
         <thead>
           <tr>
@@ -100,7 +100,7 @@ const leagueName = seasons[0]?.league_name ?? "League";
         </thead>
         <tbody>
           {
-            records.highestScore.slice(0, 5).map((w, i) => (
+            records.regularSeason.highestScore.slice(0, 5).map((w, i) => (
               <tr>
                 <td>{i + 1}</td>
                 <td>{w.team.owners.map(ownerLabel).join(", ")}</td>

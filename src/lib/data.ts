@@ -97,6 +97,8 @@ export function buildOwnerLeaderboard(): OwnerRecord[] {
   });
 }
 
+export type GameCategory = "regular" | "playoff" | "consolation";
+
 export type WeeklyScore = {
   year: number;
   week: number;
@@ -106,7 +108,15 @@ export type WeeklyScore = {
   opp_score: number;
   margin: number;
   is_playoff: boolean;
+  matchup_type: string | null;
+  category: GameCategory;
 };
+
+export function categorize(matchup_type: string | null): GameCategory {
+  if (!matchup_type || matchup_type === "NONE") return "regular";
+  if (matchup_type === "WINNERS_BRACKET") return "playoff";
+  return "consolation";
+}
 
 export function allWeeklyScores(): WeeklyScore[] {
   const out: WeeklyScore[] = [];
@@ -120,6 +130,7 @@ export function allWeeklyScores(): WeeklyScore[] {
         if (!home || !away) continue;
         // Skip unplayed games
         if (m.home_score === 0 && m.away_score === 0) continue;
+        const category = categorize(m.matchup_type);
         out.push({
           year: season.year,
           week: week.week,
@@ -129,6 +140,8 @@ export function allWeeklyScores(): WeeklyScore[] {
           opp_score: m.away_score,
           margin: m.home_score - m.away_score,
           is_playoff: m.is_playoff,
+          matchup_type: m.matchup_type,
+          category,
         });
         out.push({
           year: season.year,
@@ -139,6 +152,8 @@ export function allWeeklyScores(): WeeklyScore[] {
           opp_score: m.home_score,
           margin: m.away_score - m.home_score,
           is_playoff: m.is_playoff,
+          matchup_type: m.matchup_type,
+          category,
         });
       }
     }
@@ -146,25 +161,28 @@ export function allWeeklyScores(): WeeklyScore[] {
   return out;
 }
 
-export type Records = {
+export type RecordBucket = {
   highestScore: WeeklyScore[];
   lowestScore: WeeklyScore[];
   biggestBlowout: WeeklyScore[];
   closestGame: WeeklyScore[];
+};
+
+export type Records = {
+  regularSeason: RecordBucket;
+  playoffs: RecordBucket;
   highestSeasonPF: { year: number; team: Team }[];
   lowestSeasonPF: { year: number; team: Team }[];
 };
 
-export function buildRecords(): Records {
-  const weekly = allWeeklyScores();
-
-  const sortedHigh = [...weekly].sort((a, b) => b.score - a.score).slice(0, 10);
-  const sortedLow = [...weekly].sort((a, b) => a.score - b.score).slice(0, 10);
+function bucketFor(weekly: WeeklyScore[]): RecordBucket {
+  const high = [...weekly].sort((a, b) => b.score - a.score).slice(0, 10);
+  const low = [...weekly].sort((a, b) => a.score - b.score).slice(0, 10);
   const blowouts = [...weekly]
     .filter((w) => w.margin > 0)
     .sort((a, b) => b.margin - a.margin)
     .slice(0, 10);
-  // Closest games — dedupe by (year, week, low team id)
+  // Dedupe close games by (year, week, low team id)
   const closeSeen = new Set<string>();
   const close: WeeklyScore[] = [];
   for (const w of [...weekly].sort((a, b) => Math.abs(a.margin) - Math.abs(b.margin))) {
@@ -175,6 +193,14 @@ export function buildRecords(): Records {
     close.push(w);
     if (close.length === 10) break;
   }
+  return { highestScore: high, lowestScore: low, biggestBlowout: blowouts, closestGame: close };
+}
+
+export function buildRecords(): Records {
+  const weekly = allWeeklyScores();
+  const regular = weekly.filter((w) => w.category === "regular");
+  // Treat consolation alongside playoff for "postseason" — exclude if you want strict.
+  const postseason = weekly.filter((w) => w.category !== "regular");
 
   const seasonPF: { year: number; team: Team }[] = [];
   for (const s of seasons) {
@@ -184,10 +210,8 @@ export function buildRecords(): Records {
   }
 
   return {
-    highestScore: sortedHigh,
-    lowestScore: sortedLow,
-    biggestBlowout: blowouts,
-    closestGame: close,
+    regularSeason: bucketFor(regular),
+    playoffs: bucketFor(postseason),
     highestSeasonPF: [...seasonPF].sort((a, b) => b.team.points_for - a.team.points_for).slice(0, 10),
     lowestSeasonPF: [...seasonPF].sort((a, b) => a.team.points_for - b.team.points_for).slice(0, 10),
   };
