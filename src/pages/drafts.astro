@@ -24,25 +24,6 @@ for (const s of seasons) {
 const firstRoundOrdered = Object.entries(firstRoundAllTime).sort((a, b) => b[1] - a[1]);
 const firstRoundTotal = firstRoundOrdered.reduce((s, [, n]) => s + n, 0);
 
-// Average pick by position across all years
-const posPicks: Record<string, number[]> = {};
-for (const s of seasons) {
-  const teamCount = s.teams.length || 10;
-  for (const p of s.draft) {
-    const overall = (p.round - 1) * teamCount + p.pick;
-    const pos = p.position || "?";
-    posPicks[pos] = posPicks[pos] || [];
-    posPicks[pos].push(overall);
-  }
-}
-const avgByPos = Object.entries(posPicks)
-  .map(([pos, picks]) => ({
-    pos,
-    avg: picks.reduce((s, n) => s + n, 0) / picks.length,
-    count: picks.length,
-  }))
-  .filter((r) => r.count >= 5)
-  .sort((a, b) => a.avg - b.avg);
 ---
 
 <Layout title="Drafts · League History" active="drafts">
@@ -54,10 +35,6 @@ const avgByPos = Object.entries(posPicks)
       <thead>
         <tr>
           <th>Manager</th>
-          <th class="num">Drafts</th>
-          <th class="num">Picks</th>
-          <th class="num">Avg Pick</th>
-          <th class="num">Keepers</th>
           {TRACKED_POSITIONS.map((p) => <th class="num">{p}</th>)}
         </tr>
       </thead>
@@ -70,10 +47,6 @@ const avgByPos = Object.entries(posPicks)
                   {ownerLabel(s.owner)}
                 </a>
               </td>
-              <td class="num">{s.drafts}</td>
-              <td class="num">{s.totalPicks}</td>
-              <td class="num">{s.avgPick.toFixed(1)}</td>
-              <td class="num">{s.keepers}</td>
               {TRACKED_POSITIONS.map((pos) => (
                 <td class="num">{s.positionCounts[pos] || 0}</td>
               ))}
@@ -84,54 +57,65 @@ const avgByPos = Object.entries(posPicks)
     </table>
   </div>
 
-  <div class="grid">
-    <div class="card">
-      <h2 style="margin-top:0">First-Round Positions (All Time)</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Position</th>
-            <th class="num">Count</th>
-            <th class="num">%</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            firstRoundOrdered.map(([pos, n]) => (
+  <h2>Most-Drafted Players Per Manager</h2>
+  <p class="muted">Players each manager has drafted in multiple years.</p>
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>Manager</th>
+          <th>Top Picks</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          stats.map((s) => {
+            const repeated = s.topPlayers.filter((p) => p.count > 1);
+            const display = repeated.length > 0 ? repeated : s.topPlayers.slice(0, 1);
+            return (
               <tr>
-                <td>{pos}</td>
-                <td class="num">{n}</td>
-                <td class="num">{((n / firstRoundTotal) * 100).toFixed(1)}%</td>
+                <td>
+                  <a href={`${base}/managers/${ownerKey(s.owner)}`}>{ownerLabel(s.owner)}</a>
+                </td>
+                <td>
+                  {display.map((p, i) => (
+                    <span>
+                      {i > 0 && <span class="muted">, </span>}
+                      <strong>{p.name}</strong>
+                      <span class="muted"> ({p.position ?? "—"}) × {p.count}</span>
+                      <span class="muted" style="font-size:0.8em"> [{p.years.join(", ")}]</span>
+                    </span>
+                  ))}
+                </td>
               </tr>
-            ))
-          }
-        </tbody>
-      </table>
-    </div>
+            );
+          })
+        }
+      </tbody>
+    </table>
+  </div>
 
-    <div class="card">
-      <h2 style="margin-top:0">Average Pick By Position</h2>
-      <p class="muted" style="margin-top:0">Lower = drafted earlier on average.</p>
-      <table>
-        <thead>
-          <tr>
-            <th>Position</th>
-            <th class="num">Avg Pick</th>
-            <th class="num">Picks</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            avgByPos.map((r) => (
-              <tr>
-                <td>{r.pos}</td>
-                <td class="num">{r.avg.toFixed(1)}</td>
-                <td class="num">{r.count}</td>
-              </tr>
-            ))
-          }
-        </tbody>
-      </table>
-    </div>
+  <div class="card">
+    <h2 style="margin-top:0">First-Round Positions (All Time)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Position</th>
+          <th class="num">Count</th>
+          <th class="num">%</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          firstRoundOrdered.map(([pos, n]) => (
+            <tr>
+              <td>{pos}</td>
+              <td class="num">{n}</td>
+              <td class="num">{((n / firstRoundTotal) * 100).toFixed(1)}%</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
   </div>
 </Layout>

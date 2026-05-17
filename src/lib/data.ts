@@ -251,11 +251,17 @@ export type OwnerDraftStats = {
   earliestPick: number;
   positionCounts: Record<string, number>;
   firstRoundPositions: Record<string, number>;
+  topPlayers: { name: string; position: string | null; count: number; years: number[] }[];
 };
 
 export function buildDraftStats(): OwnerDraftStats[] {
   const map = new Map<string, OwnerDraftStats>();
   const draftYearsByOwner = new Map<string, Set<number>>();
+  // owner_key -> player_id -> { name, position, years }
+  const playerCounts = new Map<
+    string,
+    Map<number, { name: string; position: string | null; years: number[] }>
+  >();
 
   for (const season of seasons) {
     const teamOwners = new Map<number, Owner[]>(
@@ -277,6 +283,7 @@ export function buildDraftStats(): OwnerDraftStats[] {
             earliestPick: Infinity,
             positionCounts: {},
             firstRoundPositions: {},
+            topPlayers: [],
           };
           map.set(key, rec);
         }
@@ -297,6 +304,22 @@ export function buildDraftStats(): OwnerDraftStats[] {
           draftYearsByOwner.set(key, years);
         }
         years.add(season.year);
+
+        let pmap = playerCounts.get(key);
+        if (!pmap) {
+          pmap = new Map();
+          playerCounts.set(key, pmap);
+        }
+        let entry = pmap.get(pick.player_id);
+        if (!entry) {
+          entry = {
+            name: pick.player_name,
+            position: pick.position,
+            years: [],
+          };
+          pmap.set(pick.player_id, entry);
+        }
+        entry.years.push(season.year);
       }
     }
   }
@@ -305,6 +328,18 @@ export function buildDraftStats(): OwnerDraftStats[] {
     rec.drafts = draftYearsByOwner.get(key)?.size ?? 0;
     rec.avgPick = rec.totalPicks > 0 ? rec.avgPick / rec.totalPicks : 0;
     if (rec.earliestPick === Infinity) rec.earliestPick = 0;
+    const pmap = playerCounts.get(key);
+    if (pmap) {
+      rec.topPlayers = Array.from(pmap.values())
+        .map((e) => ({
+          name: e.name,
+          position: e.position,
+          count: e.years.length,
+          years: e.years.slice().sort((a, b) => a - b),
+        }))
+        .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
+        .slice(0, 5);
+    }
   }
 
   return Array.from(map.values()).sort((a, b) => b.totalPicks - a.totalPicks);
