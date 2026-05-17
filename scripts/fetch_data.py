@@ -18,8 +18,8 @@ LEAGUE_ID = int(os.environ.get("LEAGUE_ID", "14250"))
 ESPN_S2 = os.environ.get("ESPN_S2") or None
 SWID = os.environ.get("SWID") or None
 
-# ESPN's v3 fantasy API reliably serves data from 2018 onward.
-EARLIEST_YEAR = int(os.environ.get("EARLIEST_YEAR", "2018"))
+# Earliest league year. Invalid/missing seasons are skipped automatically.
+EARLIEST_YEAR = int(os.environ.get("EARLIEST_YEAR", "2015"))
 LATEST_YEAR = int(os.environ.get("LATEST_YEAR", str(datetime.now().year)))
 
 ROOT = Path(__file__).resolve().parent.parent

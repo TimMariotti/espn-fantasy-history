@@ -42,7 +42,14 @@ const ordered = [...seasons].sort((a, b) => b.year - a.year);
                     </>
                   ) : "—"}
                 </td>
-                <td>{runner ? runner.name : "—"}</td>
+                <td>
+                  {runner ? (
+                    <>
+                      <strong>{runner.name}</strong>
+                      <span class="muted"> · {runner.owners.map(ownerLabel).join(", ")}</span>
+                    </>
+                  ) : "—"}
+                </td>
                 <td class="num">{s.teams.length}</td>
                 <td class="num">{fmtScore(high)}</td>
               </tr>
