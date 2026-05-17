@@ -93,8 +93,8 @@ const firstRoundTotal = firstRoundOrdered.reduce((s, [, n]) => s + n, 0);
     High VODP = drafted late, played like a star. Keepers excluded.
   </p>
 
-  <div class="grid">
-    <div class="card">
+  <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(480px,1fr))">
+    <div class="card" style="overflow-x:auto">
       <h3 style="margin-top:0">All-Time Biggest Steals</h3>
       <table>
         <thead>
@@ -125,7 +125,7 @@ const firstRoundTotal = firstRoundOrdered.reduce((s, [, n]) => s + n, 0);
       </table>
     </div>
 
-    <div class="card">
+    <div class="card" style="overflow-x:auto">
       <h3 style="margin-top:0">All-Time Biggest Busts</h3>
       <p class="muted" style="margin-top:-0.5rem;font-size:0.85em">Top-2-rounds-ish picks who flopped.</p>
       <table>
@@ -157,7 +157,7 @@ const firstRoundTotal = firstRoundOrdered.reduce((s, [, n]) => s + n, 0);
       </table>
     </div>
 
-    <div class="card">
+    <div class="card" style="overflow-x:auto">
       <h3 style="margin-top:0">Best Late-Round Picks (R8+)</h3>
       <table>
         <thead>
@@ -186,7 +186,7 @@ const firstRoundTotal = firstRoundOrdered.reduce((s, [, n]) => s + n, 0);
       </table>
     </div>
 
-    <div class="card">
+    <div class="card" style="overflow-x:auto">
       <h3 style="margin-top:0">Steal & Bust of the Year</h3>
       <table>
         <thead>
