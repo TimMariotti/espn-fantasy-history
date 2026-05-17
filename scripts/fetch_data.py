@@ -7,8 +7,12 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+from dotenv import load_dotenv
 from espn_api.football import League
 from espn_api.requests.espn_requests import ESPNAccessDenied, ESPNInvalidLeague
+
+# Load .env from repo root if present (gitignored).
+load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
 LEAGUE_ID = int(os.environ.get("LEAGUE_ID", "14250"))
 ESPN_S2 = os.environ.get("ESPN_S2") or None

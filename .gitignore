@@ -6,6 +6,7 @@ dist/
 .astro/
 .env
 .env.local
+.env.example
 *.log
 
 # Python

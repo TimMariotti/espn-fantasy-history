@@ -1,0 +1,1739 @@
+{
+  "year": 2026,
+  "league_id": 14250,
+  "league_name": "Zach Likes Peen II",
+  "settings": {
+    "reg_season_count": 14,
+    "playoff_team_count": 4,
+    "team_count": 10,
+    "scoring_type": "H2H_POINTS"
+  },
+  "teams": [
+    {
+      "id": 1,
+      "name": "New York Jest",
+      "abbrev": "NYJ",
+      "owners": [
+        {
+          "id": "{79284CD3-256E-4EAC-BCC0-F52613E4635D}",
+          "first_name": "Bill",
+          "last_name": "Clinton",
+          "display_name": "echo36c"
+        }
+      ],
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "standing": 0,
+      "final_standing": 0,
+      "playoff_pct": 0,
+      "logo_url": "https://g.espncdn.com/s/ffllm/logos/CoachGruden-ChipWass/gruden-06.svg",
+      "division_id": 0,
+      "division_name": "ZLPII",
+      "schedule": [
+        {
+          "week": 1,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 2,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 3,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 4,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 5,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 6,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 7,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 8,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 9,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 10,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 11,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 12,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 13,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 14,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Herbert: 2 Full 2 Loaded ",
+      "abbrev": "HERB",
+      "owners": [
+        {
+          "id": "{EF01AB47-D1B5-4C52-A754-5F1AC1045E9D}",
+          "first_name": "Paul",
+          "last_name": "Hilton",
+          "display_name": "CPT KAZAKHSTAN"
+        }
+      ],
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "standing": 0,
+      "final_standing": 0,
+      "playoff_pct": 0,
+      "logo_url": "https://g.espncdn.com/lm-static/logo-packs/ffl/AtTheStadium-RobbHarskamp/At_The_Stadium_13.svg",
+      "division_id": 0,
+      "division_name": "ZLPII",
+      "schedule": [
+        {
+          "week": 1,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 2,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 3,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 4,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 5,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 6,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 7,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 8,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 9,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 10,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 11,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 12,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 13,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 14,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Baker's Dozen",
+      "abbrev": "BAKE",
+      "owners": [
+        {
+          "id": "{FB01717A-774F-4D56-8902-08E49DC12266}",
+          "first_name": "Vinny",
+          "last_name": "Tesoriero",
+          "display_name": "Wayne Brady666"
+        }
+      ],
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "standing": 0,
+      "final_standing": 0,
+      "playoff_pct": 0,
+      "logo_url": "https://api.deepai.org/job-view-file/738b7cbf-5364-48a5-a155-62f5c88dc1a0/outputs/output.jpg",
+      "division_id": 0,
+      "division_name": "ZLPII",
+      "schedule": [
+        {
+          "week": 1,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 2,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 3,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 4,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 5,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 6,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 7,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 8,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 9,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 10,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 11,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 12,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 13,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 14,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Redarted",
+      "abbrev": "HARV",
+      "owners": [
+        {
+          "id": "{345FFE7D-A0F1-43C1-8CA8-7C9A7CE43ABA}",
+          "first_name": "John",
+          "last_name": "Shea",
+          "display_name": "xxmaggotxxraftxx"
+        }
+      ],
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "standing": 0,
+      "final_standing": 0,
+      "playoff_pct": 0,
+      "logo_url": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/24f49f00-a339-11f0-b1c3-bf61c28fbeb9",
+      "division_id": 0,
+      "division_name": "ZLPII",
+      "schedule": [
+        {
+          "week": 1,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 2,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 3,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 4,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 5,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 6,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 7,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 8,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 9,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 10,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 11,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 12,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 13,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 14,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "The Hall Monitor",
+      "abbrev": "BROW",
+      "owners": [
+        {
+          "id": "{1238052B-B76F-4EBE-B1FE-F0F717C34B2E}",
+          "first_name": "Zachary",
+          "last_name": "Brown",
+          "display_name": "Zachisgod4"
+        }
+      ],
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "standing": 0,
+      "final_standing": 0,
+      "playoff_pct": 0,
+      "logo_url": "https://i.imgur.com/vP0RgIh.png",
+      "division_id": 0,
+      "division_name": "ZLPII",
+      "schedule": [
+        {
+          "week": 1,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 2,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 3,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 4,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 5,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 6,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 7,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 8,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 9,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 10,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 11,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 12,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 13,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 14,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Tri-County Tim ",
+      "abbrev": "TCT",
+      "owners": [
+        {
+          "id": "{D447D741-373D-4377-B7CE-B579C6B23723}",
+          "first_name": "Tim",
+          "last_name": "Mariotti",
+          "display_name": "Timmy The Tree"
+        }
+      ],
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "standing": 0,
+      "final_standing": 0,
+      "playoff_pct": 0,
+      "logo_url": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/679b0ee0-a37d-11f0-afb5-e14f006a2a34",
+      "division_id": 0,
+      "division_name": "ZLPII",
+      "schedule": [
+        {
+          "week": 1,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 2,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 3,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 4,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 5,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 6,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 7,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 8,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 9,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 10,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 11,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 12,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 13,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 14,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "The Freeloading Upperclassmen",
+      "abbrev": "WEB",
+      "owners": [
+        {
+          "id": "{C9FAD47B-AC39-49DE-B092-7AAD2C2CBA4A}",
+          "first_name": "Daniel",
+          "last_name": "Weber",
+          "display_name": "pmdy"
+        }
+      ],
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "standing": 0,
+      "final_standing": 0,
+      "playoff_pct": 0,
+      "logo_url": "https://g.espncdn.com/lm-static/logo-packs/ffl/OldeTymeFootball-AndrewJanik/Warriors_09.svg",
+      "division_id": 0,
+      "division_name": "ZLPII",
+      "schedule": [
+        {
+          "week": 1,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 2,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 3,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 4,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 5,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 6,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 7,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 8,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 9,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 10,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 11,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 12,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 13,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 14,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Nicotine Laddiction",
+      "abbrev": "\ud83d\udc8b ",
+      "owners": [
+        {
+          "id": "{3491FAC0-7C4B-46EB-A6CC-0810183201DF}",
+          "first_name": "Matt",
+          "last_name": "A Dolley",
+          "display_name": "dolley1714"
+        }
+      ],
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "standing": 0,
+      "final_standing": 0,
+      "playoff_pct": 0,
+      "logo_url": "https://g.espncdn.com/s/ffllm/logos/CoachHerm-ChipWass/edwards-14.svg",
+      "division_id": 0,
+      "division_name": "ZLPII",
+      "schedule": [
+        {
+          "week": 1,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 2,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 3,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 4,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 5,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 6,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 7,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 8,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 9,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 10,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 11,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 12,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 13,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 14,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Team 9",
+      "abbrev": "TM9",
+      "owners": [],
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "standing": 0,
+      "final_standing": 0,
+      "playoff_pct": 0,
+      "logo_url": "https://g.espncdn.com/lm-static/ffl/images/default_logos/6.svg",
+      "division_id": 0,
+      "division_name": "ZLPII",
+      "schedule": [
+        {
+          "week": 1,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 2,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 3,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 4,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 5,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 6,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 7,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 8,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 9,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 10,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 11,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 12,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 13,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 14,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Clay's Competitive Team",
+      "abbrev": "CCT",
+      "owners": [
+        {
+          "id": "{B34441DB-600D-4205-8441-DB600DD205F8}",
+          "first_name": "Clay",
+          "last_name": "Reichart",
+          "display_name": "Cl4y"
+        }
+      ],
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "standing": 0,
+      "final_standing": 0,
+      "playoff_pct": 0,
+      "logo_url": "https://g.espncdn.com/lm-static/ffl/images/default_logos/19.svg",
+      "division_id": 0,
+      "division_name": "ZLPII",
+      "schedule": [
+        {
+          "week": 1,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 2,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 3,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 4,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 5,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 6,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 7,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 8,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 9,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 10,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 11,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 12,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 13,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 14,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        }
+      ]
+    }
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "matchups": [
+        {
+          "home_team_id": 6,
+          "away_team_id": 7,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 3,
+          "away_team_id": 5,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 2,
+          "away_team_id": 4,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 9,
+          "away_team_id": 8,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 1,
+          "away_team_id": 10,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "matchups": [
+        {
+          "home_team_id": 7,
+          "away_team_id": 5,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 4,
+          "away_team_id": 6,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 8,
+          "away_team_id": 3,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 10,
+          "away_team_id": 2,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 1,
+          "away_team_id": 9,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "matchups": [
+        {
+          "home_team_id": 4,
+          "away_team_id": 7,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 5,
+          "away_team_id": 8,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 6,
+          "away_team_id": 10,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 3,
+          "away_team_id": 1,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 2,
+          "away_team_id": 9,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "matchups": [
+        {
+          "home_team_id": 7,
+          "away_team_id": 8,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 10,
+          "away_team_id": 4,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 1,
+          "away_team_id": 5,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 9,
+          "away_team_id": 6,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 2,
+          "away_team_id": 3,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "matchups": [
+        {
+          "home_team_id": 10,
+          "away_team_id": 7,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 8,
+          "away_team_id": 1,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 4,
+          "away_team_id": 9,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 5,
+          "away_team_id": 2,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 6,
+          "away_team_id": 3,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "matchups": [
+        {
+          "home_team_id": 7,
+          "away_team_id": 1,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 9,
+          "away_team_id": 10,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 2,
+          "away_team_id": 8,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 3,
+          "away_team_id": 4,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 6,
+          "away_team_id": 5,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "matchups": [
+        {
+          "home_team_id": 9,
+          "away_team_id": 7,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 1,
+          "away_team_id": 2,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 10,
+          "away_team_id": 3,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 8,
+          "away_team_id": 6,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 4,
+          "away_team_id": 5,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "matchups": [
+        {
+          "home_team_id": 7,
+          "away_team_id": 2,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 3,
+          "away_team_id": 9,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 6,
+          "away_team_id": 1,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 5,
+          "away_team_id": 10,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 4,
+          "away_team_id": 8,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "matchups": [
+        {
+          "home_team_id": 3,
+          "away_team_id": 7,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 2,
+          "away_team_id": 6,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 9,
+          "away_team_id": 5,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 1,
+          "away_team_id": 4,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 10,
+          "away_team_id": 8,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "matchups": [
+        {
+          "home_team_id": 7,
+          "away_team_id": 6,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 5,
+          "away_team_id": 3,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 4,
+          "away_team_id": 2,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 8,
+          "away_team_id": 9,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 10,
+          "away_team_id": 1,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "matchups": [
+        {
+          "home_team_id": 5,
+          "away_team_id": 7,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 6,
+          "away_team_id": 4,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 3,
+          "away_team_id": 8,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 2,
+          "away_team_id": 10,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 9,
+          "away_team_id": 1,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "matchups": [
+        {
+          "home_team_id": 7,
+          "away_team_id": 4,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 8,
+          "away_team_id": 5,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 10,
+          "away_team_id": 6,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 1,
+          "away_team_id": 3,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 9,
+          "away_team_id": 2,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 13,
+      "matchups": [
+        {
+          "home_team_id": 8,
+          "away_team_id": 7,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 4,
+          "away_team_id": 10,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 5,
+          "away_team_id": 1,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 6,
+          "away_team_id": 9,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 3,
+          "away_team_id": 2,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 14,
+      "matchups": [
+        {
+          "home_team_id": 7,
+          "away_team_id": 10,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 1,
+          "away_team_id": 8,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 9,
+          "away_team_id": 4,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 2,
+          "away_team_id": 5,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 3,
+          "away_team_id": 6,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    }
+  ],
+  "draft": []
+}
