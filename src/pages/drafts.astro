@@ -10,6 +10,7 @@ import {
   teamOwnerLabel,
   TRACKED_POSITIONS,
 } from "../lib/data";
+import type { Owner } from "../lib/types";
 
 const stats = buildDraftStats();
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
@@ -58,38 +59,198 @@ for (const s of seasons) {
 const firstRoundOrdered = Object.entries(firstRoundAllTime).sort((a, b) => b[1] - a[1]);
 const firstRoundTotal = firstRoundOrdered.reduce((s, [, n]) => s + n, 0);
 
+// Position tendency by round, per manager (counts across all years)
+const POSITION_ORDER = ["QB", "RB", "WR", "TE", "K", "D/ST"] as const;
+const POSITION_COLORS: Record<string, string> = {
+  QB: "#58a6ff",
+  RB: "#3fb950",
+  WR: "#f0883e",
+  TE: "#bc8cff",
+  K: "#d29922",
+  "D/ST": "#f85149",
+  "?": "#8b949e",
+};
+
+type RoundCounts = Record<string, number>;
+type OwnerRoundData = {
+  ownerKey: string;
+  ownerLabel: string;
+  rounds: RoundCounts[]; // rounds[roundIndex] -> positionCounts; rounds[0] is round 1
+  maxRoundTotal: number;
+};
+
+const ownerRoundMap = new Map<string, OwnerRoundData>();
+let globalMaxRound = 0;
+for (const s of seasons) {
+  const teamOwners = new Map<number, Owner[]>(s.teams.map((t) => [t.id, t.owners]));
+  for (const pick of s.draft) {
+    if (pick.team_id === null) continue;
+    const owners = teamOwners.get(pick.team_id) || [];
+    if (pick.round > globalMaxRound) globalMaxRound = pick.round;
+    const pos = pick.position || "?";
+    for (const owner of owners) {
+      const key = ownerKey(owner);
+      let rec = ownerRoundMap.get(key);
+      if (!rec) {
+        rec = { ownerKey: key, ownerLabel: ownerLabel(owner), rounds: [], maxRoundTotal: 0 };
+        ownerRoundMap.set(key, rec);
+      }
+      const idx = pick.round - 1;
+      while (rec.rounds.length <= idx) rec.rounds.push({});
+      rec.rounds[idx][pos] = (rec.rounds[idx][pos] || 0) + 1;
+    }
+  }
+}
+for (const rec of ownerRoundMap.values()) {
+  while (rec.rounds.length < globalMaxRound) rec.rounds.push({});
+  for (const r of rec.rounds) {
+    const total = Object.values(r).reduce((a, b) => a + b, 0);
+    if (total > rec.maxRoundTotal) rec.maxRoundTotal = total;
+  }
+}
+const ownerCharts: OwnerRoundData[] = Array.from(ownerRoundMap.values()).sort((a, b) =>
+  a.ownerLabel.localeCompare(b.ownerLabel),
+);
+const defaultOwnerKey = ownerCharts[0]?.ownerKey ?? "";
+
+// SVG geometry for position bar chart
+const PB_W = 800;
+const PB_H = 340;
+const PB_PAD_L = 40;
+const PB_PAD_R = 16;
+const PB_PAD_T = 16;
+const PB_PAD_B = 32;
+const PB_PLOT_W = PB_W - PB_PAD_L - PB_PAD_R;
+const PB_PLOT_H = PB_H - PB_PAD_T - PB_PAD_B;
+
+type BarSegment = { pos: string; y: number; h: number; count: number };
+type BarChart = {
+  ownerKey: string;
+  ownerLabel: string;
+  rounds: number;
+  yMax: number;
+  yTicks: number[];
+  bars: { round: number; x: number; w: number; total: number; segments: BarSegment[] }[];
+};
+
+function tickValues(max: number): number[] {
+  if (max <= 0) return [0];
+  const target = 5;
+  const raw = max / target;
+  const mag = Math.pow(10, Math.floor(Math.log10(raw)));
+  const norm = raw / mag;
+  const step = (norm < 1.5 ? 1 : norm < 3 ? 2 : norm < 7 ? 5 : 10) * mag;
+  const ticks: number[] = [];
+  for (let v = 0; v <= max + step / 2; v += step) ticks.push(Math.round(v));
+  return ticks;
+}
+
+const barCharts: BarChart[] = ownerCharts.map((rec) => {
+  const yMax = Math.max(1, rec.maxRoundTotal);
+  const ticks = tickValues(yMax);
+  const top = ticks[ticks.length - 1];
+  const rounds = rec.rounds.length;
+  const slot = PB_PLOT_W / rounds;
+  const barW = slot * 0.7;
+  const bars = rec.rounds.map((counts, idx) => {
+    const total = Object.values(counts).reduce((a, b) => a + b, 0);
+    const x = PB_PAD_L + slot * idx + (slot - barW) / 2;
+    let cursor = PB_PAD_T + PB_PLOT_H;
+    const segments: BarSegment[] = [];
+    for (const pos of POSITION_ORDER) {
+      const n = counts[pos] || 0;
+      if (!n) continue;
+      const h = (n / top) * PB_PLOT_H;
+      cursor -= h;
+      segments.push({ pos, y: cursor, h, count: n });
+    }
+    const extras = Object.keys(counts).filter((p) => !POSITION_ORDER.includes(p as any));
+    for (const pos of extras) {
+      const n = counts[pos];
+      const h = (n / top) * PB_PLOT_H;
+      cursor -= h;
+      segments.push({ pos, y: cursor, h, count: n });
+    }
+    return { round: idx + 1, x, w: barW, total, segments };
+  });
+  return { ownerKey: rec.ownerKey, ownerLabel: rec.ownerLabel, rounds, yMax: top, yTicks: ticks, bars };
+});
+
+const positionLegend = POSITION_ORDER.filter((p) =>
+  ownerCharts.some((o) => o.rounds.some((r) => (r[p] || 0) > 0)),
+);
+
 ---
 
 <Layout title="Drafts · League History" active="drafts">
   <h1>Draft Stats</h1>
 
-  <h2>By Manager</h2>
-  <div class="card" style="overflow-x:auto">
-    <table>
-      <thead>
-        <tr>
-          <th>Manager</th>
-          {TRACKED_POSITIONS.map((p) => <th class="num">{p}</th>)}
-        </tr>
-      </thead>
-      <tbody>
-        {
-          stats.map((s) => (
-            <tr>
-              <td>
-                <a href={`${base}/managers/${ownerKey(s.owner)}`}>
-                  {ownerLabel(s.owner)}
-                </a>
-              </td>
-              {TRACKED_POSITIONS.map((pos) => (
-                <td class="num">{s.positionCounts[pos] || 0}</td>
-              ))}
-            </tr>
-          ))
-        }
-      </tbody>
-    </table>
-  </div>
+  {barCharts.length > 0 && (
+    <div class="card position-chart-card">
+      <div class="position-chart-header">
+        <div>
+          <h2 style="margin:0;border:0;padding:0">Position Tendency by Round</h2>
+          <p class="muted" style="margin:0.25rem 0 0;font-size:0.85rem">
+            Total picks by position in each round, across all drafted years.
+          </p>
+        </div>
+        <label class="position-owner-picker">
+          <span class="muted">Manager</span>
+          <select id="position-owner">
+            {barCharts.map((c) => (
+              <option value={c.ownerKey} selected={c.ownerKey === defaultOwnerKey}>{c.ownerLabel}</option>
+            ))}
+          </select>
+        </label>
+      </div>
+
+      {barCharts.map((c) => (
+        <div
+          class="position-chart"
+          data-owner={c.ownerKey}
+          style={c.ownerKey === defaultOwnerKey ? "" : "display:none"}
+        >
+          <svg viewBox={`0 0 ${PB_W} ${PB_H}`} role="img" aria-label={`${c.ownerLabel} position tendency by round`}>
+            {c.yTicks.map((t) => {
+              const y = PB_PAD_T + PB_PLOT_H - (t / c.yMax) * PB_PLOT_H;
+              return (
+                <g>
+                  <line x1={PB_PAD_L} x2={PB_W - PB_PAD_R} y1={y} y2={y} stroke="#30363d" stroke-dasharray={t === 0 ? "" : "2 4"} stroke-width="1" />
+                  <text x={PB_PAD_L - 6} y={y + 4} fill="#8b949e" font-size="10" text-anchor="end">{t}</text>
+                </g>
+              );
+            })}
+            {c.bars.map((b) => (
+              <g>
+                {b.segments.map((seg) => (
+                  <rect x={b.x} y={seg.y} width={b.w} height={seg.h} fill={POSITION_COLORS[seg.pos] || "#8b949e"}>
+                    <title>{`Round ${b.round} · ${seg.pos}: ${seg.count}`}</title>
+                  </rect>
+                ))}
+                <text
+                  x={b.x + b.w / 2}
+                  y={PB_PAD_T + PB_PLOT_H + 14}
+                  fill="#8b949e"
+                  font-size="10"
+                  text-anchor="middle"
+                >
+                  R{b.round}
+                </text>
+              </g>
+            ))}
+          </svg>
+          <ul class="position-legend">
+            {positionLegend.map((p) => (
+              <li>
+                <span class="swatch" style={`background:${POSITION_COLORS[p]}`}></span>
+                {p}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  )}
 
   <h2>Biggest Steals & Busts</h2>
   <p class="muted">
@@ -291,4 +452,90 @@ const firstRoundTotal = firstRoundOrdered.reduce((s, [, n]) => s + n, 0);
       </tbody>
     </table>
   </div>
+
+  <h2 style="margin-top:2rem">By Manager</h2>
+  <div class="card" style="overflow-x:auto">
+    <table>
+      <thead>
+        <tr>
+          <th>Manager</th>
+          {TRACKED_POSITIONS.map((p) => <th class="num">{p}</th>)}
+        </tr>
+      </thead>
+      <tbody>
+        {
+          stats.map((s) => (
+            <tr>
+              <td>
+                <a href={`${base}/managers/${ownerKey(s.owner)}`}>
+                  {ownerLabel(s.owner)}
+                </a>
+              </td>
+              {TRACKED_POSITIONS.map((pos) => (
+                <td class="num">{s.positionCounts[pos] || 0}</td>
+              ))}
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
 </Layout>
+
+<style>
+  .position-chart-card { padding: 1rem 1.25rem 1.25rem; }
+  .position-chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+  }
+  .position-owner-picker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+  }
+  .position-owner-picker select {
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    font: inherit;
+  }
+  .position-chart svg { width: 100%; height: auto; display: block; }
+  .position-legend {
+    list-style: none;
+    margin: 0.5rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.9rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .position-legend li { display: inline-flex; align-items: center; gap: 0.35rem; }
+  .position-legend .swatch {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    display: inline-block;
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    const select = document.getElementById("position-owner");
+    if (!select) return;
+    const charts = document.querySelectorAll(".position-chart");
+    select.addEventListener("change", function () {
+      const v = select.value;
+      charts.forEach(function (el) {
+        el.style.display = el.getAttribute("data-owner") === v ? "" : "none";
+      });
+    });
+  })();
+</script>
