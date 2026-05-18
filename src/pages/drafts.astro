@@ -210,6 +210,7 @@ const positionLegend = POSITION_ORDER.filter((p) =>
           data-owner={c.ownerKey}
           style={c.ownerKey === defaultOwnerKey ? "" : "display:none"}
         >
+          <div class="chart-tooltip" hidden></div>
           <svg viewBox={`0 0 ${PB_W} ${PB_H}`} role="img" aria-label={`${c.ownerLabel} position tendency by round`}>
             {c.yTicks.map((t) => {
               const y = PB_PAD_T + PB_PLOT_H - (t / c.yMax) * PB_PLOT_H;
@@ -221,12 +222,24 @@ const positionLegend = POSITION_ORDER.filter((p) =>
               );
             })}
             {c.bars.map((b) => (
-              <g>
+              <g
+                class="bar-group"
+                data-round={b.round}
+                data-breakdown={JSON.stringify(b.segments.map((s) => ({ pos: s.pos, count: s.count })))}
+              >
                 {b.segments.map((seg) => (
                   <rect x={b.x} y={seg.y} width={b.w} height={seg.h} fill={POSITION_COLORS[seg.pos] || "#8b949e"}>
                     <title>{`Round ${b.round} · ${seg.pos}: ${seg.count}`}</title>
                   </rect>
                 ))}
+                <rect
+                  class="bar-hit"
+                  x={b.x - 4}
+                  y={PB_PAD_T}
+                  width={b.w + 8}
+                  height={PB_PLOT_H}
+                  fill="transparent"
+                />
                 <text
                   x={b.x + b.w / 2}
                   y={PB_PAD_T + PB_PLOT_H + 14}
@@ -506,7 +519,33 @@ const positionLegend = POSITION_ORDER.filter((p) =>
     padding: 0.25rem 0.5rem;
     font: inherit;
   }
+  .position-chart { position: relative; }
   .position-chart svg { width: 100%; height: auto; display: block; }
+  .position-chart .bar-hit { cursor: pointer; pointer-events: all; }
+  .position-chart .bar-group:hover .bar-hit { fill: rgba(255, 255, 255, 0.04); }
+  .chart-tooltip {
+    position: absolute;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    z-index: 5;
+    pointer-events: none;
+    transform: translate(-50%, -100%);
+    white-space: nowrap;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+  }
+  .chart-tooltip[hidden] { display: none; }
+  .chart-tooltip .tt-title { font-weight: 600; margin-bottom: 0.25rem; }
+  .chart-tooltip .tt-row { display: flex; align-items: center; gap: 0.4rem; }
+  .chart-tooltip .tt-swatch {
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    display: inline-block;
+  }
   .position-legend {
     list-style: none;
     margin: 0.5rem 0 0;
@@ -528,14 +567,86 @@ const positionLegend = POSITION_ORDER.filter((p) =>
 
 <script is:inline>
   (function () {
-    const select = document.getElementById("position-owner");
-    if (!select) return;
+    const POSITION_COLORS = {
+      QB: "#58a6ff",
+      RB: "#3fb950",
+      WR: "#f0883e",
+      TE: "#bc8cff",
+      K: "#d29922",
+      "D/ST": "#f85149",
+      "?": "#8b949e",
+    };
     const charts = document.querySelectorAll(".position-chart");
-    select.addEventListener("change", function () {
-      const v = select.value;
-      charts.forEach(function (el) {
-        el.style.display = el.getAttribute("data-owner") === v ? "" : "none";
+
+    function hideAllTooltips() {
+      charts.forEach(function (c) {
+        const t = c.querySelector(".chart-tooltip");
+        if (t) t.hidden = true;
+      });
+    }
+
+    charts.forEach(function (chart) {
+      const tooltip = chart.querySelector(".chart-tooltip");
+      if (!tooltip) return;
+      chart.querySelectorAll(".bar-group").forEach(function (group) {
+        const hit = group.querySelector(".bar-hit");
+        if (!hit) return;
+        hit.addEventListener("click", function (e) {
+          e.stopPropagation();
+          const round = group.getAttribute("data-round");
+          let breakdown;
+          try {
+            breakdown = JSON.parse(group.getAttribute("data-breakdown") || "[]");
+          } catch (_) {
+            breakdown = [];
+          }
+          const total = breakdown.reduce(function (s, b) { return s + b.count; }, 0);
+          const rows = breakdown
+            .slice()
+            .sort(function (a, b) { return b.count - a.count; })
+            .map(function (b) {
+              const color = POSITION_COLORS[b.pos] || "#8b949e";
+              return '<div class="tt-row"><span class="tt-swatch" style="background:' + color + '"></span>' +
+                b.pos + ': <strong>' + b.count + '</strong></div>';
+            })
+            .join("");
+          tooltip.innerHTML =
+            '<div class="tt-title">Round ' + round + ' · ' + total + ' pick' + (total === 1 ? '' : 's') + '</div>' +
+            rows;
+
+          const hitRect = hit.getBoundingClientRect();
+          const chartRect = chart.getBoundingClientRect();
+          tooltip.hidden = false;
+          tooltip.style.visibility = "hidden";
+          tooltip.style.left = "0px";
+          tooltip.style.top = "0px";
+          const ttW = tooltip.offsetWidth;
+          let left = hitRect.left + hitRect.width / 2 - chartRect.left;
+          const half = ttW / 2;
+          if (left - half < 4) left = half + 4;
+          if (left + half > chartRect.width - 4) left = chartRect.width - half - 4;
+          const top = hitRect.top - chartRect.top - 8;
+          tooltip.style.left = left + "px";
+          tooltip.style.top = top + "px";
+          tooltip.style.visibility = "";
+        });
       });
     });
+
+    document.addEventListener("click", function (e) {
+      if (e.target && e.target.classList && e.target.classList.contains("bar-hit")) return;
+      hideAllTooltips();
+    });
+
+    const select = document.getElementById("position-owner");
+    if (select) {
+      select.addEventListener("change", function () {
+        const v = select.value;
+        charts.forEach(function (el) {
+          el.style.display = el.getAttribute("data-owner") === v ? "" : "none";
+        });
+        hideAllTooltips();
+      });
+    }
   })();
 </script>
