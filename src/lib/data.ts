@@ -349,41 +349,61 @@ export type DraftValueEntry = {
   season: Season;
   pick: DraftPick;
   overall: number;
-  actualRank: number;
-  vodp: number; // overall pick number - actual scoring rank within the draft pool
+  posDraftOrder: number; // 1 = first player at this position drafted in this league
+  posFinishRank: number; // 1 = top scorer at this position among drafted players
+  vodp: number; // posDraftOrder - posFinishRank (positional). Positive = steal.
   team: Team | undefined;
 };
 
 /**
- * Compute "Value Over Draft Position" for every drafted player who has season points.
- * Higher VODP = steal (drafted late, scored high). Lower VODP = bust.
+ * Compute positional "Value Over Draft Position" for every drafted player who
+ * has season points. Within each season+position bucket we rank players by
+ * draft order and by season points; VODP is the difference. Higher = steal.
+ * Keepers are excluded — their slot is fixed, not a value choice.
  */
 export function buildDraftValues(): DraftValueEntry[] {
   const out: DraftValueEntry[] = [];
   for (const season of seasons) {
     const teamCount = season.teams.length || 10;
     const teamMap = new Map(season.teams.map((t) => [t.id, t]));
-    // Sort the season's picks by season_points desc to assign actual rank.
-    const scored = season.draft
-      .filter((p) => p.season_points !== null && p.season_points !== undefined)
-      .slice()
-      .sort((a, b) => (b.season_points ?? 0) - (a.season_points ?? 0));
-    const rankByPlayer = new Map<number, number>();
-    scored.forEach((p, i) => rankByPlayer.set(p.player_id, i + 1));
+    const overallOf = (p: DraftPick) => (p.round - 1) * teamCount + p.pick;
+
+    const byPos = new Map<string, DraftPick[]>();
     for (const p of season.draft) {
-      const rank = rankByPlayer.get(p.player_id);
-      if (rank === undefined) continue;
-      // Exclude keepers — their draft position is locked, not a choice based on value.
       if (p.keeper) continue;
-      const overall = (p.round - 1) * teamCount + p.pick;
-      out.push({
-        season,
-        pick: p,
-        overall,
-        actualRank: rank,
-        vodp: overall - rank,
-        team: p.team_id !== null ? teamMap.get(p.team_id) : undefined,
-      });
+      if (p.season_points === null || p.season_points === undefined) continue;
+      const pos = p.position || "?";
+      let bucket = byPos.get(pos);
+      if (!bucket) {
+        bucket = [];
+        byPos.set(pos, bucket);
+      }
+      bucket.push(p);
+    }
+
+    for (const picks of byPos.values()) {
+      const draftOrder = new Map<number, number>();
+      [...picks]
+        .sort((a, b) => overallOf(a) - overallOf(b))
+        .forEach((p, i) => draftOrder.set(p.player_id, i + 1));
+      const finishRank = new Map<number, number>();
+      [...picks]
+        .sort((a, b) => (b.season_points ?? 0) - (a.season_points ?? 0))
+        .forEach((p, i) => finishRank.set(p.player_id, i + 1));
+
+      for (const p of picks) {
+        const pdo = draftOrder.get(p.player_id)!;
+        const pfr = finishRank.get(p.player_id)!;
+        out.push({
+          season,
+          pick: p,
+          overall: overallOf(p),
+          posDraftOrder: pdo,
+          posFinishRank: pfr,
+          vodp: pdo - pfr,
+          team: p.team_id !== null ? teamMap.get(p.team_id) : undefined,
+        });
+      }
     }
   }
   return out;
@@ -419,6 +439,85 @@ export function ownerSeasons(key: string): { season: Season; team: Team }[] {
     }
   }
   return out.sort((a, b) => b.season.year - a.season.year);
+}
+
+export type WeeklyStanding = {
+  team: Team;
+  wins: number;
+  losses: number;
+  ties: number;
+  points_for: number;
+  rank: number;
+};
+
+export type SeasonStandingsHistory = {
+  year: number;
+  teams: Team[];
+  regSeasonWeeks: number;
+  weeks: { week: number; standings: WeeklyStanding[] }[];
+};
+
+/**
+ * Walk regular-season weeks in order and produce the cumulative standings
+ * after each completed week. Rank uses win% then PF — the common fantasy tiebreak.
+ */
+export function buildSeasonStandingsHistory(year: number): SeasonStandingsHistory | undefined {
+  const season = getSeason(year);
+  if (!season) return undefined;
+  const regWeeks = season.settings.reg_season_count ?? 0;
+  const totals = new Map<number, { wins: number; losses: number; ties: number; pf: number }>();
+  for (const t of season.teams) totals.set(t.id, { wins: 0, losses: 0, ties: 0, pf: 0 });
+
+  const orderedWeeks = [...season.weeks].sort((a, b) => a.week - b.week);
+  const history: { week: number; standings: WeeklyStanding[] }[] = [];
+  for (const w of orderedWeeks) {
+    if (regWeeks && w.week > regWeeks) break;
+    let counted = 0;
+    for (const m of w.matchups) {
+      if (m.home_team_id === null || m.away_team_id === null) continue;
+      if (categorize(m.matchup_type) !== "regular") continue;
+      if (m.home_score === 0 && m.away_score === 0) continue;
+      const home = totals.get(m.home_team_id);
+      const away = totals.get(m.away_team_id);
+      if (!home || !away) continue;
+      home.pf += m.home_score;
+      away.pf += m.away_score;
+      if (m.home_score > m.away_score) {
+        home.wins += 1;
+        away.losses += 1;
+      } else if (m.home_score < m.away_score) {
+        away.wins += 1;
+        home.losses += 1;
+      } else {
+        home.ties += 1;
+        away.ties += 1;
+      }
+      counted += 1;
+    }
+    if (!counted) continue;
+    const ranked = season.teams
+      .map((t) => {
+        const r = totals.get(t.id)!;
+        return {
+          team: t,
+          wins: r.wins,
+          losses: r.losses,
+          ties: r.ties,
+          points_for: r.pf,
+        };
+      })
+      .sort((a, b) => {
+        const aWp = a.wins + 0.5 * a.ties;
+        const bWp = b.wins + 0.5 * b.ties;
+        if (bWp !== aWp) return bWp - aWp;
+        return b.points_for - a.points_for;
+      });
+    history.push({
+      week: w.week,
+      standings: ranked.map((r, i) => ({ ...r, rank: i + 1 })),
+    });
+  }
+  return { year: season.year, teams: season.teams, regSeasonWeeks: regWeeks, weeks: history };
 }
 
 export type H2HCell = { wins: number; losses: number; ties: number; pf: number; pa: number };

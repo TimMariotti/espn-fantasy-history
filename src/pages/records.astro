@@ -1,15 +1,214 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { buildRecords, fmtScore, ownerLabel } from "../lib/data";
-import type { RecordBucket } from "../lib/data";
+import {
+  buildRecords,
+  buildSeasonStandingsHistory,
+  fmtScore,
+  ownerLabel,
+  seasons,
+  teamOwnerLabel,
+} from "../lib/data";
+import type { RecordBucket, SeasonStandingsHistory } from "../lib/data";
 
 const r = buildRecords();
 
 const unknownOwner = { display_name: "?", first_name: null, last_name: null, id: null };
+
+// Standings history charts — one per season, year selector swaps between them.
+const TEAM_COLORS = [
+  "#58a6ff", "#d29922", "#3fb950", "#f85149",
+  "#bc8cff", "#f0883e", "#39c5cf", "#e3b341",
+  "#ff7b72", "#a371f7", "#7ee787", "#db61a2",
+];
+
+const standingsByYear: SeasonStandingsHistory[] = [...seasons]
+  .map((s) => buildSeasonStandingsHistory(s.year))
+  .filter((s): s is SeasonStandingsHistory => !!s && s.weeks.length > 0)
+  .sort((a, b) => b.year - a.year);
+
+const defaultYear = standingsByYear[0]?.year ?? null;
+
+// SVG geometry
+const VB_W = 800;
+const VB_H = 360;
+const PAD_L = 40;
+const PAD_R = 24;
+const PAD_T = 20;
+const PAD_B = 36;
+const PLOT_W = VB_W - PAD_L - PAD_R;
+const PLOT_H = VB_H - PAD_T - PAD_B;
+
+type ChartSeries = {
+  teamId: number;
+  label: string;
+  color: string;
+  points: { week: number; rank: number; record: string; pf: number }[];
+  path: string;
+};
+
+type Chart = {
+  year: number;
+  weeks: number[];
+  teamCount: number;
+  series: ChartSeries[];
+};
+
+const charts: Chart[] = standingsByYear.map((s) => {
+  const weeks = s.weeks.map((w) => w.week);
+  const maxWeek = weeks[weeks.length - 1];
+  const minWeek = weeks[0];
+  const weekSpan = Math.max(1, maxWeek - minWeek);
+  const teamCount = s.teams.length;
+  const rankSpan = Math.max(1, teamCount - 1);
+  const x = (week: number) =>
+    PAD_L + ((week - minWeek) / weekSpan) * PLOT_W;
+  const y = (rank: number) =>
+    PAD_T + ((rank - 1) / rankSpan) * PLOT_H;
+
+  const series: ChartSeries[] = s.teams.map((t, i) => {
+    const points = s.weeks.map((w) => {
+      const row = w.standings.find((r) => r.team.id === t.id);
+      const rank = row?.rank ?? teamCount;
+      return {
+        week: w.week,
+        rank,
+        record: row ? `${row.wins}-${row.losses}${row.ties ? `-${row.ties}` : ""}` : "—",
+        pf: row?.points_for ?? 0,
+      };
+    });
+    const path = points
+      .map((p, idx) => `${idx === 0 ? "M" : "L"} ${x(p.week).toFixed(1)} ${y(p.rank).toFixed(1)}`)
+      .join(" ");
+    return {
+      teamId: t.id,
+      label: teamOwnerLabel(t),
+      color: TEAM_COLORS[i % TEAM_COLORS.length],
+      points,
+      path,
+    };
+  });
+
+  return { year: s.year, weeks, teamCount, series };
+});
+
+const chartXForWeek = (chart: Chart, week: number) => {
+  const minWeek = chart.weeks[0];
+  const maxWeek = chart.weeks[chart.weeks.length - 1];
+  const span = Math.max(1, maxWeek - minWeek);
+  return PAD_L + ((week - minWeek) / span) * PLOT_W;
+};
+
+const chartYForRank = (chart: Chart, rank: number) => {
+  const span = Math.max(1, chart.teamCount - 1);
+  return PAD_T + ((rank - 1) / span) * PLOT_H;
+};
 ---
 
 <Layout title="Records · League History" active="records">
   <h1>League Records</h1>
+
+  {charts.length > 0 && (
+    <div class="card standings-chart-card">
+      <div class="standings-chart-header">
+        <div>
+          <h2 style="margin:0;border:0;padding:0">Standings Over Time</h2>
+          <p class="muted" style="margin:0.25rem 0 0;font-size:0.85rem">
+            Regular-season rank after each week. 1 = top of the league.
+          </p>
+        </div>
+        <label class="standings-year-picker">
+          <span class="muted">Season</span>
+          <select id="standings-year">
+            {charts.map((c) => (
+              <option value={c.year} selected={c.year === defaultYear}>{c.year}</option>
+            ))}
+          </select>
+        </label>
+      </div>
+
+      {charts.map((c) => (
+        <div
+          class="standings-chart"
+          data-year={c.year}
+          style={c.year === defaultYear ? "" : "display:none"}
+        >
+          <svg viewBox={`0 0 ${VB_W} ${VB_H}`} role="img" aria-label={`${c.year} weekly standings`}>
+            {/* horizontal gridlines + rank labels */}
+            {Array.from({ length: c.teamCount }, (_, i) => i + 1).map((rank) => {
+              const y = chartYForRank(c, rank);
+              return (
+                <g>
+                  <line
+                    x1={PAD_L}
+                    x2={VB_W - PAD_R}
+                    y1={y}
+                    y2={y}
+                    stroke="#30363d"
+                    stroke-dasharray={rank === 1 || rank === c.teamCount ? "" : "2 4"}
+                    stroke-width="1"
+                  />
+                  <text x={PAD_L - 8} y={y + 4} fill="#8b949e" font-size="10" text-anchor="end">
+                    {rank}
+                  </text>
+                </g>
+              );
+            })}
+            {/* vertical week labels */}
+            {c.weeks.map((wk) => {
+              const x = chartXForWeek(c, wk);
+              return (
+                <g>
+                  <line
+                    x1={x}
+                    x2={x}
+                    y1={PAD_T}
+                    y2={VB_H - PAD_B}
+                    stroke="#30363d"
+                    stroke-dasharray="2 4"
+                    stroke-width="1"
+                    opacity="0.5"
+                  />
+                  <text
+                    x={x}
+                    y={VB_H - PAD_B + 16}
+                    fill="#8b949e"
+                    font-size="10"
+                    text-anchor="middle"
+                  >
+                    W{wk}
+                  </text>
+                </g>
+              );
+            })}
+            {/* lines */}
+            {c.series.map((s) => (
+              <g class="series" data-team={s.teamId}>
+                <path d={s.path} fill="none" stroke={s.color} stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+                {s.points.map((p) => (
+                  <circle
+                    cx={chartXForWeek(c, p.week)}
+                    cy={chartYForRank(c, p.rank)}
+                    r="3"
+                    fill={s.color}
+                  >
+                    <title>{`${s.label} — W${p.week}: #${p.rank} (${p.record}, ${fmtScore(p.pf)} PF)`}</title>
+                  </circle>
+                ))}
+              </g>
+            ))}
+          </svg>
+          <ul class="standings-legend">
+            {c.series.map((s) => (
+              <li>
+                <span class="swatch" style={`background:${s.color}`}></span>
+                {s.label}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  )}
 
   {
     [
@@ -137,3 +336,65 @@ const unknownOwner = { display_name: "?", first_name: null, last_name: null, id:
     </div>
   </div>
 </Layout>
+
+<style>
+  .standings-chart-card { padding: 1rem 1.25rem 1.25rem; }
+  .standings-chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+  }
+  .standings-year-picker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+  }
+  .standings-year-picker select {
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    font: inherit;
+  }
+  .standings-chart svg { width: 100%; height: auto; display: block; }
+  .standings-chart .series { transition: opacity 0.15s ease; }
+  .standings-chart:hover .series { opacity: 0.25; }
+  .standings-chart .series:hover { opacity: 1; }
+  .standings-chart .series:hover path { stroke-width: 3; }
+  .standings-legend {
+    list-style: none;
+    margin: 0.5rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.9rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .standings-legend li { display: inline-flex; align-items: center; gap: 0.35rem; }
+  .standings-legend .swatch {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    display: inline-block;
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    const select = document.getElementById("standings-year");
+    if (!select) return;
+    const charts = document.querySelectorAll(".standings-chart");
+    select.addEventListener("change", function () {
+      const v = select.value;
+      charts.forEach(function (el) {
+        el.style.display = el.getAttribute("data-year") === v ? "" : "none";
+      });
+    });
+  })();
+</script>

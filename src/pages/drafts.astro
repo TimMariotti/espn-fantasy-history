@@ -15,12 +15,16 @@ const stats = buildDraftStats();
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 const values = buildDraftValues();
-const biggestSteals = [...values].sort((a, b) => b.vodp - a.vodp).slice(0, 10);
-const biggestBusts = [...values]
+// Steals/Busts cover real fantasy roster positions. K and D/ST are excluded —
+// their week-to-week scoring is noise, not a draft skill signal.
+const INCLUDED_POSITIONS = new Set(["QB", "RB", "WR", "TE"]);
+const skillValues = values.filter((v) => v.pick.position !== null && INCLUDED_POSITIONS.has(v.pick.position));
+const biggestSteals = [...skillValues].sort((a, b) => b.vodp - a.vodp).slice(0, 10);
+const biggestBusts = [...skillValues]
   .filter((v) => v.overall <= 24) // top-2-rounds-ish, captures early-round flops
   .sort((a, b) => a.vodp - b.vodp)
   .slice(0, 10);
-const bestLate = [...values]
+const bestLate = [...skillValues]
   .filter((v) => v.pick.round >= 8)
   .sort((a, b) => (b.pick.season_points ?? 0) - (a.pick.season_points ?? 0))
   .slice(0, 10);
@@ -28,7 +32,7 @@ const bestLate = [...values]
 // Per-season MVP + bust per year
 type AwardRow = { year: number; steal?: typeof values[number]; bust?: typeof values[number] };
 const byYear = new Map<number, typeof values>();
-for (const v of values) {
+for (const v of skillValues) {
   const arr = byYear.get(v.season.year) ?? [];
   arr.push(v);
   byYear.set(v.season.year, arr);
@@ -89,8 +93,9 @@ const firstRoundTotal = firstRoundOrdered.reduce((s, [, n]) => s + n, 0);
 
   <h2>Biggest Steals & Busts</h2>
   <p class="muted">
-    VODP (Value Over Draft Position) = pick number − actual rank by points that season.
-    High VODP = drafted late, played like a star. Keepers excluded.
+    VODP (Value Over Draft Position) = positional draft order − positional finish rank.
+    e.g. drafted 8th QB of the year, finished QB1 → +7. Positive = steal, negative = bust.
+    Limited to QB/RB/WR/TE; keepers excluded.
   </p>
 
   <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(480px,1fr))">
@@ -113,7 +118,7 @@ const firstRoundTotal = firstRoundOrdered.reduce((s, [, n]) => s + n, 0);
               <td>{i + 1}</td>
               <td>
                 <strong>{v.pick.player_name}</strong>
-                <span class="muted"> ({v.pick.position ?? "—"})</span>
+                <span class="muted"> ({v.pick.position}{v.posDraftOrder} → {v.pick.position}{v.posFinishRank})</span>
               </td>
               <td class="muted">{v.team ? teamOwnerLabel(v.team) : "?"} · {v.season.year}</td>
               <td class="num">#{v.overall}</td>
@@ -145,7 +150,7 @@ const firstRoundTotal = firstRoundOrdered.reduce((s, [, n]) => s + n, 0);
               <td>{i + 1}</td>
               <td>
                 <strong>{v.pick.player_name}</strong>
-                <span class="muted"> ({v.pick.position ?? "—"})</span>
+                <span class="muted"> ({v.pick.position}{v.posDraftOrder} → {v.pick.position}{v.posFinishRank})</span>
               </td>
               <td class="muted">{v.team ? teamOwnerLabel(v.team) : "?"} · {v.season.year}</td>
               <td class="num">#{v.overall}</td>
@@ -204,7 +209,7 @@ const firstRoundTotal = firstRoundOrdered.reduce((s, [, n]) => s + n, 0);
                 {a.steal ? (
                   <>
                     <strong>{a.steal.pick.player_name}</strong>
-                    <span class="muted"> · #{a.steal.overall} · </span>
+                    <span class="muted"> · {a.steal.pick.position}{a.steal.posDraftOrder}→{a.steal.pick.position}{a.steal.posFinishRank} · </span>
                     <span class="win">+{a.steal.vodp}</span>
                   </>
                 ) : "—"}
@@ -213,7 +218,7 @@ const firstRoundTotal = firstRoundOrdered.reduce((s, [, n]) => s + n, 0);
                 {a.bust ? (
                   <>
                     <strong>{a.bust.pick.player_name}</strong>
-                    <span class="muted"> · #{a.bust.overall} · </span>
+                    <span class="muted"> · {a.bust.pick.position}{a.bust.posDraftOrder}→{a.bust.pick.position}{a.bust.posFinishRank} · </span>
                     <span class="loss">{a.bust.vodp}</span>
                   </>
                 ) : "—"}
