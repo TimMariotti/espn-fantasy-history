@@ -29,14 +29,20 @@ const links = [
   <body>
     <nav class="nav">
       <div class="nav-inner">
-        <span class="nav-brand">League History</span>
-        {
-          links.map((l) => (
-            <a href={`${base}${l.href}`} class={active === l.key ? "active" : ""}>
-              {l.label}
-            </a>
-          ))
-        }
+        <a href={`${base}/`} class="nav-brand">League History</a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+        <label for="nav-toggle" class="nav-burger" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </label>
+        <div class="nav-links">
+          {
+            links.map((l) => (
+              <a href={`${base}${l.href}`} class={active === l.key ? "active" : ""}>
+                {l.label}
+              </a>
+            ))
+          }
+        </div>
       </div>
     </nav>
     <main class="container">
