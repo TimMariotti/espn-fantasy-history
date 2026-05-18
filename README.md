@@ -18,6 +18,7 @@ Set in `.github/workflows/build-and-deploy.yml` via repo **Variables** and **Sec
 | `ESPN_S2` | secret | only for private leagues | Browser cookie `espn_s2` |
 | `SWID` | secret | only for private leagues | Browser cookie `SWID` (keep the braces) |
 | `ASTRO_SITE` / `ASTRO_BASE` | variable | optional | Override defaults for a custom domain |
+| `REFRESH_ALL` | env | optional | `1` to force `fetch_data.py` to refetch every year. Default skips finalized seasons that already have a JSON on disk. |
 
 To grab cookies: log in to ESPN, open devtools → Application → Cookies → `espn.com`, copy `espn_s2` and `SWID`.
 

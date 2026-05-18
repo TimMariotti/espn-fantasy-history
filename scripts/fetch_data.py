@@ -21,6 +21,10 @@ SWID = os.environ.get("SWID") or None
 # Earliest league year. Invalid/missing seasons are skipped automatically.
 EARLIEST_YEAR = int(os.environ.get("EARLIEST_YEAR", "2015"))
 LATEST_YEAR = int(os.environ.get("LATEST_YEAR", str(datetime.now().year)))
+# Finalized historical seasons don't change — skip the ESPN fetch when a JSON
+# already exists for them. Set REFRESH_ALL=1 to force a full pull.
+REFRESH_ALL = os.environ.get("REFRESH_ALL", "").lower() in ("1", "true", "yes")
+CURRENT_YEAR = datetime.now().year
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT_DIR = ROOT / "src" / "data"
@@ -217,6 +221,16 @@ def main() -> int:
     available_years: list[int] = []
     seasons_data: list[dict] = []
     for year in range(EARLIEST_YEAR, LATEST_YEAR + 1):
+        season_file = SEASONS_DIR / f"{year}.json"
+        if not REFRESH_ALL and year < CURRENT_YEAR and season_file.exists():
+            try:
+                data = json.loads(season_file.read_text())
+                print(f"Using cached {year} (set REFRESH_ALL=1 to refetch)", flush=True)
+                seasons_data.append(data)
+                available_years.append(data["year"])
+                continue
+            except Exception as e:
+                print(f"  cache read failed for {year}, refetching: {e}", flush=True)
         try:
             print(f"Fetching {year}...", flush=True)
             data = fetch_season(year)
