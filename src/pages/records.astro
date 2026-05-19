@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import {
   buildRecords,
   buildSeasonStandingsHistory,
+  buildPythagorean,
+  buildStreaks,
   fmtScore,
   ownerLabel,
   seasons,
@@ -11,6 +13,10 @@ import {
 import type { RecordBucket, SeasonStandingsHistory } from "../lib/data";
 
 const r = buildRecords();
+const pythag = buildPythagorean();
+const luckiest = [...pythag].sort((a, b) => b.delta - a.delta).slice(0, 10);
+const unluckiest = [...pythag].sort((a, b) => a.delta - b.delta).slice(0, 10);
+const { winStreaks, lossStreaks } = buildStreaks();
 
 const unknownOwner = { display_name: "?", first_name: null, last_name: null, id: null };
 
@@ -329,6 +335,115 @@ const chartYForRank = (chart: Chart, rank: number) => {
               <td>{row.team.owners.map(ownerLabel).join(", ")}</td>
               <td class="muted">{row.year}</td>
               <td class="num">{fmtScore(row.team.points_for)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h2 style="margin-top:2rem">Pythagorean Luck</h2>
+  <p class="muted" style="margin-top:-0.25rem">
+    Expected wins from PF/PA only (k=2.37). Delta = actual wins − expected.
+    Positive = won more than the points justified; negative = the schedule screwed them.
+  </p>
+  <div class="grid">
+    <div class="card">
+      <h3 style="margin-top:0">Luckiest Seasons</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th><th>Manager</th><th>Year</th>
+            <th class="num">Actual</th><th class="num">Exp</th><th class="num">Δ</th>
+          </tr>
+        </thead>
+        <tbody>
+          {luckiest.map((row, i) => {
+            const actual = row.wins + row.ties * 0.5;
+            return (
+              <tr>
+                <td>{i + 1}</td>
+                <td>{row.team.owners.map(ownerLabel).join(", ")}</td>
+                <td class="muted">{row.year}</td>
+                <td class="num">{actual.toFixed(1)}</td>
+                <td class="num">{row.expected_wins.toFixed(2)}</td>
+                <td class="num win">+{row.delta.toFixed(2)}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">Unluckiest Seasons</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th><th>Manager</th><th>Year</th>
+            <th class="num">Actual</th><th class="num">Exp</th><th class="num">Δ</th>
+          </tr>
+        </thead>
+        <tbody>
+          {unluckiest.map((row, i) => {
+            const actual = row.wins + row.ties * 0.5;
+            return (
+              <tr>
+                <td>{i + 1}</td>
+                <td>{row.team.owners.map(ownerLabel).join(", ")}</td>
+                <td class="muted">{row.year}</td>
+                <td class="num">{actual.toFixed(1)}</td>
+                <td class="num">{row.expected_wins.toFixed(2)}</td>
+                <td class="num loss">{row.delta.toFixed(2)}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h2 style="margin-top:2rem">Streaks</h2>
+  <p class="muted" style="margin-top:-0.25rem">
+    Longest consecutive regular-season wins / losses; spans across seasons. Ties end a streak.
+  </p>
+  <div class="grid">
+    <div class="card">
+      <h3 style="margin-top:0">Longest Win Streaks</h3>
+      <table>
+        <thead><tr><th>#</th><th>Manager</th><th class="num">W</th><th>Span</th></tr></thead>
+        <tbody>
+          {winStreaks.map((s, i) => (
+            <tr>
+              <td>{i + 1}</td>
+              <td>{ownerLabel(s.owner)}</td>
+              <td class="num win">{s.length}</td>
+              <td class="muted">
+                {s.start.year === s.end.year
+                  ? `${s.start.year} W${s.start.week}–W${s.end.week}`
+                  : `${s.start.year} W${s.start.week} → ${s.end.year} W${s.end.week}`}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">Longest Loss Streaks</h3>
+      <table>
+        <thead><tr><th>#</th><th>Manager</th><th class="num">L</th><th>Span</th></tr></thead>
+        <tbody>
+          {lossStreaks.map((s, i) => (
+            <tr>
+              <td>{i + 1}</td>
+              <td>{ownerLabel(s.owner)}</td>
+              <td class="num loss">{s.length}</td>
+              <td class="muted">
+                {s.start.year === s.end.year
+                  ? `${s.start.year} W${s.start.week}–W${s.end.week}`
+                  : `${s.start.year} W${s.start.week} → ${s.end.year} W${s.end.week}`}
+              </td>
             </tr>
           ))}
         </tbody>

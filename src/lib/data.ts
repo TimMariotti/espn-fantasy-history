@@ -520,6 +520,270 @@ export function buildSeasonStandingsHistory(year: number): SeasonStandingsHistor
   return { year: season.year, teams: season.teams, regSeasonWeeks: regWeeks, weeks: history };
 }
 
+export type AllPlayRecord = {
+  owner: Owner;
+  wins: number;
+  losses: number;
+  ties: number;
+};
+
+/**
+ * All-play: every regular-season week, compare each team's score against every
+ * other team that played. Strips schedule luck — what your record would be if
+ * you played the whole field every week.
+ */
+export function buildAllPlay(): Map<string, AllPlayRecord> {
+  const out = new Map<string, AllPlayRecord>();
+  for (const s of seasons) {
+    const teamMap = new Map(s.teams.map((t) => [t.id, t]));
+    for (const w of s.weeks) {
+      const scores: { teamId: number; score: number }[] = [];
+      for (const m of w.matchups) {
+        if (categorize(m.matchup_type) !== "regular") continue;
+        if (m.home_team_id === null || m.away_team_id === null) continue;
+        if (m.home_score === 0 && m.away_score === 0) continue;
+        scores.push({ teamId: m.home_team_id, score: m.home_score });
+        scores.push({ teamId: m.away_team_id, score: m.away_score });
+      }
+      for (const { teamId, score } of scores) {
+        const team = teamMap.get(teamId);
+        if (!team) continue;
+        let wc = 0, lc = 0, tc = 0;
+        for (const other of scores) {
+          if (other.teamId === teamId) continue;
+          if (score > other.score) wc++;
+          else if (score < other.score) lc++;
+          else tc++;
+        }
+        for (const o of team.owners) {
+          const k = ownerKey(o);
+          let rec = out.get(k);
+          if (!rec) {
+            rec = { owner: o, wins: 0, losses: 0, ties: 0 };
+            out.set(k, rec);
+          }
+          rec.wins += wc;
+          rec.losses += lc;
+          rec.ties += tc;
+          rec.owner = o;
+        }
+      }
+    }
+  }
+  return out;
+}
+
+export type PythagSeason = {
+  year: number;
+  team: Team;
+  reg_pf: number;
+  reg_pa: number;
+  wins: number;
+  losses: number;
+  ties: number;
+  games: number;
+  expected_wins: number;
+  delta: number; // actualWinsWithTies - expectedWins (positive = lucky)
+};
+
+const PYTHAG_EXP = 2.37;
+
+/**
+ * Pythagorean expected wins per team-season using the regular-season schedule.
+ * exp_win_pct = PF^k / (PF^k + PA^k), k = 2.37 (commonly cited for fantasy).
+ * Delta = actual wins (ties counted as 0.5) − expected wins.
+ */
+export function buildPythagorean(): PythagSeason[] {
+  const out: PythagSeason[] = [];
+  for (const s of seasons) {
+    const stats = new Map<number, { pf: number; pa: number; w: number; l: number; t: number }>();
+    for (const t of s.teams) stats.set(t.id, { pf: 0, pa: 0, w: 0, l: 0, t: 0 });
+    for (const w of s.weeks) {
+      for (const m of w.matchups) {
+        if (categorize(m.matchup_type) !== "regular") continue;
+        if (m.home_team_id === null || m.away_team_id === null) continue;
+        if (m.home_score === 0 && m.away_score === 0) continue;
+        const h = stats.get(m.home_team_id);
+        const a = stats.get(m.away_team_id);
+        if (!h || !a) continue;
+        h.pf += m.home_score; h.pa += m.away_score;
+        a.pf += m.away_score; a.pa += m.home_score;
+        if (m.home_score > m.away_score) { h.w++; a.l++; }
+        else if (m.home_score < m.away_score) { a.w++; h.l++; }
+        else { h.t++; a.t++; }
+      }
+    }
+    for (const t of s.teams) {
+      const r = stats.get(t.id)!;
+      const games = r.w + r.l + r.t;
+      if (games === 0) continue;
+      const pfx = Math.pow(r.pf, PYTHAG_EXP);
+      const pax = Math.pow(r.pa, PYTHAG_EXP);
+      const denom = pfx + pax;
+      const expWinPct = denom > 0 ? pfx / denom : 0.5;
+      const expWins = expWinPct * games;
+      const actualWins = r.w + 0.5 * r.t;
+      out.push({
+        year: s.year,
+        team: t,
+        reg_pf: r.pf,
+        reg_pa: r.pa,
+        wins: r.w,
+        losses: r.l,
+        ties: r.t,
+        games,
+        expected_wins: expWins,
+        delta: actualWins - expWins,
+      });
+    }
+  }
+  return out;
+}
+
+export type OwnerStreak = {
+  owner: Owner;
+  kind: "win" | "loss";
+  length: number;
+  start: { year: number; week: number };
+  end: { year: number; week: number };
+};
+
+/**
+ * Longest regular-season win/loss streaks per owner, across all history.
+ * Streaks cross season boundaries; ties terminate a streak.
+ */
+export function buildStreaks(): { winStreaks: OwnerStreak[]; lossStreaks: OwnerStreak[] } {
+  const games = new Map<
+    string,
+    { owner: Owner; year: number; week: number; outcome: -1 | 0 | 1 }[]
+  >();
+  for (const s of seasons) {
+    const teamMap = new Map(s.teams.map((t) => [t.id, t]));
+    const orderedWeeks = [...s.weeks].sort((a, b) => a.week - b.week);
+    for (const w of orderedWeeks) {
+      for (const m of w.matchups) {
+        if (categorize(m.matchup_type) !== "regular") continue;
+        if (m.home_team_id === null || m.away_team_id === null) continue;
+        if (m.home_score === 0 && m.away_score === 0) continue;
+        const home = teamMap.get(m.home_team_id);
+        const away = teamMap.get(m.away_team_id);
+        if (!home || !away) continue;
+        const outcome: -1 | 0 | 1 = m.home_score > m.away_score ? 1
+          : m.home_score < m.away_score ? -1 : 0;
+        for (const o of home.owners) {
+          const k = ownerKey(o);
+          let arr = games.get(k);
+          if (!arr) { arr = []; games.set(k, arr); }
+          arr.push({ owner: o, year: s.year, week: w.week, outcome });
+        }
+        for (const o of away.owners) {
+          const k = ownerKey(o);
+          let arr = games.get(k);
+          if (!arr) { arr = []; games.set(k, arr); }
+          arr.push({ owner: o, year: s.year, week: w.week, outcome: (-outcome) as -1 | 0 | 1 });
+        }
+      }
+    }
+  }
+
+  const all: OwnerStreak[] = [];
+  for (const arr of games.values()) {
+    arr.sort((a, b) => a.year - b.year || a.week - b.week);
+    let cur: OwnerStreak | null = null;
+    const close = () => { if (cur) all.push(cur); cur = null; };
+    for (const g of arr) {
+      if (g.outcome === 0) { close(); continue; }
+      const kind: "win" | "loss" = g.outcome === 1 ? "win" : "loss";
+      if (cur && cur.kind === kind) {
+        cur.length += 1;
+        cur.end = { year: g.year, week: g.week };
+        cur.owner = g.owner;
+      } else {
+        close();
+        cur = {
+          owner: g.owner,
+          kind,
+          length: 1,
+          start: { year: g.year, week: g.week },
+          end: { year: g.year, week: g.week },
+        };
+      }
+    }
+    close();
+  }
+
+  return {
+    winStreaks: all.filter((s) => s.kind === "win").sort((a, b) => b.length - a.length).slice(0, 10),
+    lossStreaks: all.filter((s) => s.kind === "loss").sort((a, b) => b.length - a.length).slice(0, 10),
+  };
+}
+
+export type ScoreDistribution = {
+  owner: Owner;
+  scores: number[];
+  min: number;
+  q1: number;
+  median: number;
+  q3: number;
+  max: number;
+  mean: number;
+  count: number;
+};
+
+export function buildScoreDistributions(): ScoreDistribution[] {
+  const map = new Map<string, { owner: Owner; scores: number[] }>();
+  for (const s of seasons) {
+    const teamMap = new Map(s.teams.map((t) => [t.id, t]));
+    for (const w of s.weeks) {
+      for (const m of w.matchups) {
+        if (categorize(m.matchup_type) !== "regular") continue;
+        if (m.home_team_id === null || m.away_team_id === null) continue;
+        if (m.home_score === 0 && m.away_score === 0) continue;
+        const pairs: [Team | undefined, number][] = [
+          [teamMap.get(m.home_team_id), m.home_score],
+          [teamMap.get(m.away_team_id), m.away_score],
+        ];
+        for (const [team, score] of pairs) {
+          if (!team) continue;
+          for (const o of team.owners) {
+            const k = ownerKey(o);
+            let entry = map.get(k);
+            if (!entry) { entry = { owner: o, scores: [] }; map.set(k, entry); }
+            entry.scores.push(score);
+            entry.owner = o;
+          }
+        }
+      }
+    }
+  }
+  const quantile = (sorted: number[], p: number) => {
+    if (sorted.length === 0) return 0;
+    if (sorted.length === 1) return sorted[0];
+    const idx = (sorted.length - 1) * p;
+    const lo = Math.floor(idx);
+    const hi = Math.ceil(idx);
+    if (lo === hi) return sorted[lo];
+    return sorted[lo] + (sorted[hi] - sorted[lo]) * (idx - lo);
+  };
+  return Array.from(map.values())
+    .map((e) => {
+      const sorted = [...e.scores].sort((a, b) => a - b);
+      const sum = sorted.reduce((a, b) => a + b, 0);
+      return {
+        owner: e.owner,
+        scores: sorted,
+        min: sorted[0] ?? 0,
+        q1: quantile(sorted, 0.25),
+        median: quantile(sorted, 0.5),
+        q3: quantile(sorted, 0.75),
+        max: sorted[sorted.length - 1] ?? 0,
+        mean: sorted.length ? sum / sorted.length : 0,
+        count: sorted.length,
+      };
+    })
+    .sort((a, b) => b.median - a.median);
+}
+
 export type H2HCell = { wins: number; losses: number; ties: number; pf: number; pa: number };
 
 export function buildH2H(): { owners: Owner[]; matrix: Map<string, Map<string, H2HCell>> } {
