@@ -1,9 +1,59 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { seasons, fmtScore, ownerLabel } from "../../lib/data";
+import { seasons, fmtScore, ownerLabel, ownerKey, categorize } from "../../lib/data";
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const ordered = [...seasons].sort((a, b) => b.year - a.year);
+
+type UnluckyRow = {
+  year: number;
+  team: (typeof seasons)[number]["teams"][number];
+  finish: number;
+  regPF: number;
+  regWins: number;
+  regLosses: number;
+  regTies: number;
+};
+const unlucky: UnluckyRow[] = [];
+for (const s of seasons) {
+  const cutoff = s.settings.playoff_team_count;
+  if (!cutoff) continue;
+  const regPF = new Map<number, number>();
+  const rec = new Map<number, { w: number; l: number; t: number }>();
+  for (const team of s.teams) {
+    regPF.set(team.id, 0);
+    rec.set(team.id, { w: 0, l: 0, t: 0 });
+  }
+  for (const w of s.weeks) {
+    for (const m of w.matchups) {
+      if (m.home_team_id === null || m.away_team_id === null) continue;
+      if (m.home_score === 0 && m.away_score === 0) continue;
+      if (categorize(m.matchup_type) !== "regular") continue;
+      regPF.set(m.home_team_id, (regPF.get(m.home_team_id) ?? 0) + m.home_score);
+      regPF.set(m.away_team_id, (regPF.get(m.away_team_id) ?? 0) + m.away_score);
+      const h = rec.get(m.home_team_id)!;
+      const a = rec.get(m.away_team_id)!;
+      if (m.home_score > m.away_score) { h.w++; a.l++; }
+      else if (m.home_score < m.away_score) { a.w++; h.l++; }
+      else { h.t++; a.t++; }
+    }
+  }
+  for (const team of s.teams) {
+    const finish = team.final_standing ?? team.standing;
+    if (!finish || finish <= cutoff) continue;
+    const r = rec.get(team.id)!;
+    unlucky.push({
+      year: s.year,
+      team,
+      finish,
+      regPF: regPF.get(team.id) ?? 0,
+      regWins: r.w,
+      regLosses: r.l,
+      regTies: r.t,
+    });
+  }
+}
+const unluckyTop = unlucky.sort((a, b) => b.regPF - a.regPF).slice(0, 10);
 ---
 
 <Layout title="Seasons · League History" active="seasons">
@@ -55,6 +105,41 @@ const ordered = [...seasons].sort((a, b) => b.year - a.year);
               </tr>
             );
           })
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Most Unlucky</h2>
+  <p class="muted">Highest regular-season points scored by teams that missed the playoffs.</p>
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Team</th>
+          <th>Manager</th>
+          <th class="num">W-L</th>
+          <th class="num">Finish</th>
+          <th class="num">Reg PF</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          unluckyTop.map((u) => (
+            <tr>
+              <td><a href={`${base}/seasons/${u.year}`}>{u.year}</a></td>
+              <td><strong>{u.team.name}</strong></td>
+              <td>
+                {u.team.owners.map((o) => (
+                  <a href={`${base}/managers/${ownerKey(o)}`}>{ownerLabel(o)}</a>
+                ))}
+              </td>
+              <td class="num">{u.regWins}-{u.regLosses}{u.regTies ? `-${u.regTies}` : ""}</td>
+              <td class="num">{u.finish}</td>
+              <td class="num">{fmtScore(u.regPF)}</td>
+            </tr>
+          ))
         }
       </tbody>
     </table>
