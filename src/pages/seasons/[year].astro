@@ -14,6 +14,8 @@ interface Props {
 const { season } = Astro.props as Props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const teamMap = new Map(season.teams.map((t) => [t.id, t]));
+// [ai] Drafted-but-not-played season: hide the 0-0 standings/weekly tables.
+const started = season.started !== false;
 const standings = [...season.teams].sort(
   (a, b) =>
     (a.final_standing ?? a.standing ?? 99) - (b.final_standing ?? b.standing ?? 99),
@@ -25,48 +27,80 @@ const standings = [...season.teams].sort(
   <h1>{season.year} Season</h1>
   <p class="muted">
     {season.league_name} · {season.teams.length} teams · {season.settings.reg_season_count} reg-season weeks
+    {!started && " · draft complete, season not started"}
   </p>
 
-  <h2>Final Standings</h2>
-  <div class="card">
-    <table>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Team</th>
-          <th>Manager</th>
-          <th class="num">W-L</th>
-          <th class="num">PF</th>
-          <th class="num">PA</th>
-        </tr>
-      </thead>
-      <tbody>
-        {
-          standings.map((t) => {
-            const finish = t.final_standing ?? t.standing;
-            return (
-              <tr>
-                <td>
-                  {finish === 1 ? "🏆" : finish}
-                </td>
-                <td><strong>{t.name}</strong></td>
-                <td>
-                  {t.owners.map((o) => (
-                    <a href={`${base}/managers/${ownerKey(o)}`}>{ownerLabel(o)}</a>
-                  ))}
-                </td>
-                <td class="num">{t.wins}-{t.losses}{t.ties ? `-${t.ties}` : ""}</td>
-                <td class="num">{fmtScore(t.points_for)}</td>
-                <td class="num">{fmtScore(t.points_against)}</td>
-              </tr>
-            );
-          })
-        }
-      </tbody>
-    </table>
-  </div>
+  {started ? (
+    <>
+      <h2>Final Standings</h2>
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Team</th>
+              <th>Manager</th>
+              <th class="num">W-L</th>
+              <th class="num">PF</th>
+              <th class="num">PA</th>
+            </tr>
+          </thead>
+          <tbody>
+            {standings.map((t) => {
+              const finish = t.final_standing ?? t.standing;
+              return (
+                <tr>
+                  <td>
+                    {finish === 1 ? "🏆" : finish}
+                  </td>
+                  <td><strong>{t.name}</strong></td>
+                  <td>
+                    {t.owners.map((o) => (
+                      <a href={`${base}/managers/${ownerKey(o)}`}>{ownerLabel(o)}</a>
+                    ))}
+                  </td>
+                  <td class="num">{t.wins}-{t.losses}{t.ties ? `-${t.ties}` : ""}</td>
+                  <td class="num">{fmtScore(t.points_for)}</td>
+                  <td class="num">{fmtScore(t.points_against)}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </>
+  ) : (
+    <>
+      <h2>Teams</h2>
+      <p class="muted">Draft is complete — records appear once games are played.</p>
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th>Team</th>
+              <th>Manager</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[...season.teams]
+              .sort((a, b) => a.name.localeCompare(b.name))
+              .map((t) => (
+                <tr>
+                  <td><strong>{t.name}</strong></td>
+                  <td>
+                    {t.owners.map((o) => (
+                      <a href={`${base}/managers/${ownerKey(o)}`}>{ownerLabel(o)}</a>
+                    ))}
+                  </td>
+                </tr>
+              ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  )}
 
-  <h2>Weekly Results</h2>
+  {started && <h2>Weekly Results</h2>}
   {
     season.weeks.map((w) => (
       <div class="card">

@@ -72,6 +72,9 @@ export type Season = {
   teams: Team[];
   weeks: WeekData[];
   draft: DraftPick[];
+  // Absent on historical seasons (treat as started); false only for a drafted
+  // but not-yet-played season.
+  started?: boolean;
 };
 
 export type IndexFile = {

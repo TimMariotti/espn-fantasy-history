@@ -9,7 +9,11 @@ import {
   ownerLabel,
 } from "../lib/data";
 
-const latest = seasons[seasons.length - 1];
+// [ai] Latest season with an actual champion — skips an in-progress season (2026),
+// which reports final_standing 0, so the card keeps showing the last real winner.
+const latest = [...seasons]
+  .reverse()
+  .find((s) => s.teams.some((t) => (t.final_standing ?? t.standing) === 1));
 const champ = latest?.teams.find((t) => (t.final_standing ?? t.standing) === 1);
 const runnerUp = latest?.teams.find((t) => (t.final_standing ?? t.standing) === 2);
 

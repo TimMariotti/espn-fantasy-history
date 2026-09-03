@@ -1,0 +1,3327 @@
+{
+  "year": 2026,
+  "league_id": 14250,
+  "league_name": "Zach Likes Peen II",
+  "settings": {
+    "reg_season_count": 14,
+    "playoff_team_count": 6,
+    "team_count": 10,
+    "scoring_type": "H2H_POINTS"
+  },
+  "teams": [
+    {
+      "id": 1,
+      "name": "New York Jest",
+      "abbrev": "NYJ",
+      "owners": [
+        {
+          "id": "{79284CD3-256E-4EAC-BCC0-F52613E4635D}",
+          "first_name": "Kevin",
+          "last_name": null,
+          "display_name": "echo36c"
+        }
+      ],
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "standing": 10,
+      "final_standing": 0,
+      "playoff_pct": 58.199999999999996,
+      "logo_url": "https://g.espncdn.com/s/ffllm/logos/CoachGruden-ChipWass/gruden-06.svg",
+      "division_id": 0,
+      "division_name": "ZLPII",
+      "schedule": [
+        {
+          "week": 1,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 2,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 3,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 4,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 5,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 6,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 7,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 8,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 9,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 10,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 11,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 12,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 13,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 14,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Herbert: 2 Full 2 Loaded ",
+      "abbrev": "HERB",
+      "owners": [
+        {
+          "id": "{EF01AB47-D1B5-4C52-A754-5F1AC1045E9D}",
+          "first_name": "Paul",
+          "last_name": null,
+          "display_name": "CPT KAZAKHSTAN"
+        }
+      ],
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "standing": 9,
+      "final_standing": 0,
+      "playoff_pct": 55.2,
+      "logo_url": "https://g.espncdn.com/lm-static/logo-packs/ffl/AtTheStadium-RobbHarskamp/At_The_Stadium_13.svg",
+      "division_id": 0,
+      "division_name": "ZLPII",
+      "schedule": [
+        {
+          "week": 1,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 2,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 3,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 4,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 5,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 6,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 7,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 8,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 9,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 10,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 11,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 12,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 13,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 14,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Baker's Dozen",
+      "abbrev": "BAKE",
+      "owners": [
+        {
+          "id": "{FB01717A-774F-4D56-8902-08E49DC12266}",
+          "first_name": "Vinny",
+          "last_name": null,
+          "display_name": "Wayne Brady666"
+        }
+      ],
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "standing": 8,
+      "final_standing": 0,
+      "playoff_pct": 63.1,
+      "logo_url": "https://api.deepai.org/job-view-file/738b7cbf-5364-48a5-a155-62f5c88dc1a0/outputs/output.jpg",
+      "division_id": 0,
+      "division_name": "ZLPII",
+      "schedule": [
+        {
+          "week": 1,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 2,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 3,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 4,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 5,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 6,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 7,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 8,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 9,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 10,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 11,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 12,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 13,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 14,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Redarted",
+      "abbrev": "HARV",
+      "owners": [
+        {
+          "id": "{345FFE7D-A0F1-43C1-8CA8-7C9A7CE43ABA}",
+          "first_name": "John",
+          "last_name": null,
+          "display_name": "xxmaggotxxraftxx"
+        }
+      ],
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "standing": 7,
+      "final_standing": 0,
+      "playoff_pct": 54.37499999999999,
+      "logo_url": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/24f49f00-a339-11f0-b1c3-bf61c28fbeb9",
+      "division_id": 0,
+      "division_name": "ZLPII",
+      "schedule": [
+        {
+          "week": 1,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 2,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 3,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 4,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 5,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 6,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 7,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 8,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 9,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 10,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 11,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 12,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 13,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 14,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Too Many Cooks III",
+      "abbrev": "BROW",
+      "owners": [
+        {
+          "id": "{1238052B-B76F-4EBE-B1FE-F0F717C34B2E}",
+          "first_name": "Zach",
+          "last_name": null,
+          "display_name": "Zachisgod4"
+        }
+      ],
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "standing": 6,
+      "final_standing": 0,
+      "playoff_pct": 62.150000000000006,
+      "logo_url": "https://i.imgur.com/vP0RgIh.png",
+      "division_id": 0,
+      "division_name": "ZLPII",
+      "schedule": [
+        {
+          "week": 1,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 2,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 3,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 4,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 5,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 6,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 7,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 8,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 9,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 10,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 11,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 12,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 13,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 14,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Tri-County Tim ",
+      "abbrev": "TCT",
+      "owners": [
+        {
+          "id": "{D447D741-373D-4377-B7CE-B579C6B23723}",
+          "first_name": "Tim",
+          "last_name": null,
+          "display_name": "Timmy The Tree"
+        }
+      ],
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "standing": 5,
+      "final_standing": 0,
+      "playoff_pct": 60.62499999999999,
+      "logo_url": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/679b0ee0-a37d-11f0-afb5-e14f006a2a34",
+      "division_id": 0,
+      "division_name": "ZLPII",
+      "schedule": [
+        {
+          "week": 1,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 2,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 3,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 4,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 5,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 6,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 7,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 8,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 9,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 10,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 11,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 12,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 13,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 14,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "The Freeloading Upperclassmen",
+      "abbrev": "WEB",
+      "owners": [
+        {
+          "id": "{C9FAD47B-AC39-49DE-B092-7AAD2C2CBA4A}",
+          "first_name": "Web",
+          "last_name": null,
+          "display_name": "pmdy"
+        }
+      ],
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "standing": 4,
+      "final_standing": 0,
+      "playoff_pct": 68.22500000000001,
+      "logo_url": "https://g.espncdn.com/lm-static/logo-packs/ffl/OldeTymeFootball-AndrewJanik/Warriors_09.svg",
+      "division_id": 0,
+      "division_name": "ZLPII",
+      "schedule": [
+        {
+          "week": 1,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 2,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 3,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 4,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 5,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 6,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 7,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 8,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 9,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 10,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 11,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 12,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 13,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 14,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Puka's Reasonable Opinions",
+      "abbrev": "N",
+      "owners": [
+        {
+          "id": "{3491FAC0-7C4B-46EB-A6CC-0810183201DF}",
+          "first_name": "Dolley",
+          "last_name": null,
+          "display_name": "dolley1714"
+        }
+      ],
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "standing": 3,
+      "final_standing": 0,
+      "playoff_pct": 62.0,
+      "logo_url": "https://g.espncdn.com/s/ffllm/logos/CoachHerm-ChipWass/edwards-14.svg",
+      "division_id": 0,
+      "division_name": "ZLPII",
+      "schedule": [
+        {
+          "week": 1,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 2,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 3,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 4,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 5,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 6,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 7,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 8,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 9,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 10,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 11,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 12,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 13,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 14,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Every Villian Is Lemon(s)",
+      "abbrev": "EVIL",
+      "owners": [
+        {
+          "id": "{872504EE-A4C0-4F3A-A504-EEA4C05F3A90}",
+          "first_name": "Billy",
+          "last_name": null,
+          "display_name": "billytes37"
+        }
+      ],
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "standing": 2,
+      "final_standing": 0,
+      "playoff_pct": 56.775,
+      "logo_url": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/17cdc620-a61d-11f1-bc05-dd37ff031f6c",
+      "division_id": 0,
+      "division_name": "ZLPII",
+      "schedule": [
+        {
+          "week": 1,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 2,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 3,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 4,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 5,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 6,
+          "opponent_id": 10,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 7,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 8,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 9,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 10,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 11,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 12,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 13,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 14,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "The Heinicke's ",
+      "abbrev": "HEIN",
+      "owners": [
+        {
+          "id": "{B34441DB-600D-4205-8441-DB600DD205F8}",
+          "first_name": "Clay",
+          "last_name": null,
+          "display_name": "Cl4y"
+        }
+      ],
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "standing": 1,
+      "final_standing": 0,
+      "playoff_pct": 59.35,
+      "logo_url": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/359b3500-a4c6-11f1-8623-4f919cfbc4d9",
+      "division_id": 0,
+      "division_name": "ZLPII",
+      "schedule": [
+        {
+          "week": 1,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 2,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 3,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 4,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 5,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 6,
+          "opponent_id": 9,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 7,
+          "opponent_id": 3,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 8,
+          "opponent_id": 5,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 9,
+          "opponent_id": 8,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 10,
+          "opponent_id": 1,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 11,
+          "opponent_id": 2,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 12,
+          "opponent_id": 6,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 13,
+          "opponent_id": 4,
+          "score": 0.0,
+          "outcome": "U"
+        },
+        {
+          "week": 14,
+          "opponent_id": 7,
+          "score": 0.0,
+          "outcome": "U"
+        }
+      ]
+    }
+  ],
+  "weeks": [],
+  "draft": [
+    {
+      "round": 1,
+      "pick": 1,
+      "team_id": 8,
+      "player_id": 4242335,
+      "player_name": "Jonathan Taylor",
+      "position": "RB",
+      "pro_team": "IND",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 1,
+      "pick": 2,
+      "team_id": 4,
+      "player_id": 4430807,
+      "player_name": "Bijan Robinson",
+      "position": "RB",
+      "pro_team": "ATL",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 1,
+      "pick": 3,
+      "team_id": 3,
+      "player_id": 4362628,
+      "player_name": "Ja'Marr Chase",
+      "position": "WR",
+      "pro_team": "CIN",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 1,
+      "pick": 4,
+      "team_id": 7,
+      "player_id": 4429795,
+      "player_name": "Jahmyr Gibbs",
+      "position": "RB",
+      "pro_team": "DET",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 1,
+      "pick": 5,
+      "team_id": 1,
+      "player_id": 4431452,
+      "player_name": "Drake Maye",
+      "position": "QB",
+      "pro_team": "NE",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 1,
+      "pick": 6,
+      "team_id": 2,
+      "player_id": 3916387,
+      "player_name": "Lamar Jackson",
+      "position": "QB",
+      "pro_team": "BAL",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 1,
+      "pick": 7,
+      "team_id": 5,
+      "player_id": 3117251,
+      "player_name": "Christian McCaffrey",
+      "position": "RB",
+      "pro_team": "CAR",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 1,
+      "pick": 8,
+      "team_id": 6,
+      "player_id": 3918298,
+      "player_name": "Josh Allen",
+      "position": "QB",
+      "pro_team": "BUF",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 1,
+      "pick": 9,
+      "team_id": 9,
+      "player_id": 4430878,
+      "player_name": "Jaxon Smith-Njigba",
+      "position": "WR",
+      "pro_team": "SEA",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 1,
+      "pick": 10,
+      "team_id": 10,
+      "player_id": 4426348,
+      "player_name": "Jayden Daniels",
+      "position": "QB",
+      "pro_team": "WSH",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 2,
+      "pick": 1,
+      "team_id": 10,
+      "player_id": 3915511,
+      "player_name": "Joe Burrow",
+      "position": "QB",
+      "pro_team": "CIN",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 2,
+      "pick": 2,
+      "team_id": 9,
+      "player_id": 4429160,
+      "player_name": "De'Von Achane",
+      "position": "RB",
+      "pro_team": "MIA",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 2,
+      "pick": 3,
+      "team_id": 6,
+      "player_id": 3043078,
+      "player_name": "Derrick Henry",
+      "position": "RB",
+      "pro_team": "TEN",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 2,
+      "pick": 4,
+      "team_id": 5,
+      "player_id": 4379399,
+      "player_name": "James Cook III",
+      "position": "RB",
+      "pro_team": "BUF",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 2,
+      "pick": 5,
+      "team_id": 2,
+      "player_id": 4241389,
+      "player_name": "CeeDee Lamb",
+      "position": "WR",
+      "pro_team": "DAL",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 2,
+      "pick": 6,
+      "team_id": 1,
+      "player_id": 4374302,
+      "player_name": "Amon-Ra St. Brown",
+      "position": "WR",
+      "pro_team": "DET",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 2,
+      "pick": 7,
+      "team_id": 7,
+      "player_id": 4689114,
+      "player_name": "Jaxson Dart",
+      "position": "QB",
+      "pro_team": "NYG",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 2,
+      "pick": 8,
+      "team_id": 3,
+      "player_id": 4040715,
+      "player_name": "Jalen Hurts",
+      "position": "QB",
+      "pro_team": "PHI",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 2,
+      "pick": 9,
+      "team_id": 4,
+      "player_id": 4262921,
+      "player_name": "Justin Jefferson",
+      "position": "WR",
+      "pro_team": "MIN",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 2,
+      "pick": 10,
+      "team_id": 8,
+      "player_id": 4426515,
+      "player_name": "Puka Nacua",
+      "position": "WR",
+      "pro_team": "LAR",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 3,
+      "pick": 1,
+      "team_id": 8,
+      "player_id": 3929630,
+      "player_name": "Saquon Barkley",
+      "position": "RB",
+      "pro_team": "NYG",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 3,
+      "pick": 2,
+      "team_id": 4,
+      "player_id": 2577417,
+      "player_name": "Dak Prescott",
+      "position": "QB",
+      "pro_team": "DAL",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 3,
+      "pick": 3,
+      "team_id": 3,
+      "player_id": 4427366,
+      "player_name": "Breece Hall",
+      "position": "RB",
+      "pro_team": "NYJ",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 3,
+      "pick": 4,
+      "team_id": 7,
+      "player_id": 4047646,
+      "player_name": "A.J. Brown",
+      "position": "WR",
+      "pro_team": "TEN",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 3,
+      "pick": 5,
+      "team_id": 1,
+      "player_id": 4870808,
+      "player_name": "Jeremiyah Love",
+      "position": "RB",
+      "pro_team": "ARI",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 3,
+      "pick": 6,
+      "team_id": 2,
+      "player_id": 4567048,
+      "player_name": "Kenneth Walker III",
+      "position": "RB",
+      "pro_team": "SEA",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 3,
+      "pick": 7,
+      "team_id": 5,
+      "player_id": 4426354,
+      "player_name": "George Pickens",
+      "position": "WR",
+      "pro_team": "PIT",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 3,
+      "pick": 8,
+      "team_id": 6,
+      "player_id": 4426502,
+      "player_name": "Drake London",
+      "position": "WR",
+      "pro_team": "ATL",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 3,
+      "pick": 9,
+      "team_id": 9,
+      "player_id": 4431611,
+      "player_name": "Caleb Williams",
+      "position": "QB",
+      "pro_team": "CHI",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 3,
+      "pick": 10,
+      "team_id": 10,
+      "player_id": 4362238,
+      "player_name": "Chase Brown",
+      "position": "RB",
+      "pro_team": "CIN",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 4,
+      "pick": 1,
+      "team_id": 10,
+      "player_id": 4432665,
+      "player_name": "Brock Bowers",
+      "position": "TE",
+      "pro_team": "LV",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 4,
+      "pick": 2,
+      "team_id": 9,
+      "player_id": 4361579,
+      "player_name": "Javonte Williams",
+      "position": "RB",
+      "pro_team": "DEN",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 4,
+      "pick": 3,
+      "team_id": 6,
+      "player_id": 4890973,
+      "player_name": "Ashton Jeanty",
+      "position": "RB",
+      "pro_team": "LV",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 4,
+      "pick": 4,
+      "team_id": 5,
+      "player_id": 12483,
+      "player_name": "Matthew Stafford",
+      "position": "QB",
+      "pro_team": "DET",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 4,
+      "pick": 5,
+      "team_id": 2,
+      "player_id": 4361741,
+      "player_name": "Brock Purdy",
+      "position": "QB",
+      "pro_team": "SF",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 4,
+      "pick": 6,
+      "team_id": 1,
+      "player_id": 4361307,
+      "player_name": "Trey McBride",
+      "position": "TE",
+      "pro_team": "ARI",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 4,
+      "pick": 7,
+      "team_id": 7,
+      "player_id": 4685382,
+      "player_name": "Omarion Hampton",
+      "position": "RB",
+      "pro_team": "LAC",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 4,
+      "pick": 8,
+      "team_id": 3,
+      "player_id": 4428331,
+      "player_name": "Rashee Rice",
+      "position": "WR",
+      "pro_team": "KC",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 4,
+      "pick": 9,
+      "team_id": 4,
+      "player_id": 4360310,
+      "player_name": "Trevor Lawrence",
+      "position": "QB",
+      "pro_team": "JAX",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 4,
+      "pick": 10,
+      "team_id": 8,
+      "player_id": 4038941,
+      "player_name": "Justin Herbert",
+      "position": "QB",
+      "pro_team": "LAC",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 5,
+      "pick": 1,
+      "team_id": 8,
+      "player_id": 3046779,
+      "player_name": "Jared Goff",
+      "position": "QB",
+      "pro_team": "LAR",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 5,
+      "pick": 2,
+      "team_id": 4,
+      "player_id": 4595348,
+      "player_name": "Malik Nabers",
+      "position": "WR",
+      "pro_team": "NYG",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 5,
+      "pick": 3,
+      "team_id": 3,
+      "player_id": 4239996,
+      "player_name": "Travis Etienne Jr.",
+      "position": "RB",
+      "pro_team": "JAX",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 5,
+      "pick": 4,
+      "team_id": 7,
+      "player_id": 4426338,
+      "player_name": "Bo Nix",
+      "position": "QB",
+      "pro_team": "DEN",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 5,
+      "pick": 5,
+      "team_id": 1,
+      "player_id": 3139477,
+      "player_name": "Patrick Mahomes",
+      "position": "QB",
+      "pro_team": "KC",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 5,
+      "pick": 6,
+      "team_id": 2,
+      "player_id": 4569618,
+      "player_name": "Garrett Wilson",
+      "position": "WR",
+      "pro_team": "NYJ",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 5,
+      "pick": 7,
+      "team_id": 5,
+      "player_id": 4361370,
+      "player_name": "Chris Olave",
+      "position": "WR",
+      "pro_team": "NO",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 5,
+      "pick": 8,
+      "team_id": 6,
+      "player_id": 4258173,
+      "player_name": "Nico Collins",
+      "position": "WR",
+      "pro_team": "HOU",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 5,
+      "pick": 9,
+      "team_id": 9,
+      "player_id": 3917315,
+      "player_name": "Kyler Murray",
+      "position": "QB",
+      "pro_team": "ARI",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 5,
+      "pick": 10,
+      "team_id": 10,
+      "player_id": 4429615,
+      "player_name": "Zay Flowers",
+      "position": "WR",
+      "pro_team": "BAL",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 6,
+      "pick": 1,
+      "team_id": 10,
+      "player_id": 4430737,
+      "player_name": "Kyren Williams",
+      "position": "RB",
+      "pro_team": "LAR",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 6,
+      "pick": 2,
+      "team_id": 9,
+      "player_id": 4567750,
+      "player_name": "Emeka Egbuka",
+      "position": "WR",
+      "pro_team": "TB",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 6,
+      "pick": 3,
+      "team_id": 6,
+      "player_id": 4259545,
+      "player_name": "D'Andre Swift",
+      "position": "RB",
+      "pro_team": "DET",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 6,
+      "pick": 4,
+      "team_id": 5,
+      "player_id": 3917792,
+      "player_name": "Daniel Jones",
+      "position": "QB",
+      "pro_team": "NYG",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 6,
+      "pick": 5,
+      "team_id": 2,
+      "player_id": 4685702,
+      "player_name": "Quinshon Judkins",
+      "position": "RB",
+      "pro_team": "CLE",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 6,
+      "pick": 6,
+      "team_id": 1,
+      "player_id": 4685472,
+      "player_name": "Tetairoa McMillan",
+      "position": "WR",
+      "pro_team": "CAR",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 6,
+      "pick": 7,
+      "team_id": 7,
+      "player_id": 4047365,
+      "player_name": "Josh Jacobs",
+      "position": "RB",
+      "pro_team": "LV",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 6,
+      "pick": 8,
+      "team_id": 3,
+      "player_id": 3052587,
+      "player_name": "Baker Mayfield",
+      "position": "QB",
+      "pro_team": "CLE",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 6,
+      "pick": 9,
+      "team_id": 4,
+      "player_id": 4360689,
+      "player_name": "Tyler Shough",
+      "position": "QB",
+      "pro_team": "NO",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 6,
+      "pick": 10,
+      "team_id": 8,
+      "player_id": 3915416,
+      "player_name": "DJ Moore",
+      "position": "WR",
+      "pro_team": "CAR",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 7,
+      "pick": 1,
+      "team_id": 8,
+      "player_id": 4239993,
+      "player_name": "Tee Higgins",
+      "position": "WR",
+      "pro_team": "CIN",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 7,
+      "pick": 2,
+      "team_id": 4,
+      "player_id": 4685512,
+      "player_name": "Jadarian Price",
+      "position": "RB",
+      "pro_team": "SEA",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 7,
+      "pick": 3,
+      "team_id": 3,
+      "player_id": 4372016,
+      "player_name": "Jaylen Waddle",
+      "position": "WR",
+      "pro_team": "MIA",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 7,
+      "pick": 4,
+      "team_id": 7,
+      "player_id": 4241478,
+      "player_name": "DeVonta Smith",
+      "position": "WR",
+      "pro_team": "PHI",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 7,
+      "pick": 5,
+      "team_id": 1,
+      "player_id": 4882093,
+      "player_name": "Bhayshul Tuten",
+      "position": "RB",
+      "pro_team": "JAX",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 7,
+      "pick": 6,
+      "team_id": 2,
+      "player_id": 4596448,
+      "player_name": "Bucky Irving",
+      "position": "RB",
+      "pro_team": "TB",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 7,
+      "pick": 7,
+      "team_id": 5,
+      "player_id": 4696981,
+      "player_name": "Cam Skattebo",
+      "position": "RB",
+      "pro_team": "NYG",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 7,
+      "pick": 8,
+      "team_id": 6,
+      "player_id": 4612826,
+      "player_name": "Ladd McConkey",
+      "position": "WR",
+      "pro_team": "LAC",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 7,
+      "pick": 9,
+      "team_id": 9,
+      "player_id": 4723086,
+      "player_name": "Colston Loveland",
+      "position": "TE",
+      "pro_team": "CHI",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 7,
+      "pick": 10,
+      "team_id": 10,
+      "player_id": 16800,
+      "player_name": "Davante Adams",
+      "position": "WR",
+      "pro_team": "GB",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 8,
+      "pick": 1,
+      "team_id": 10,
+      "player_id": 4035538,
+      "player_name": "David Montgomery",
+      "position": "RB",
+      "pro_team": "CHI",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 8,
+      "pick": 2,
+      "team_id": 9,
+      "player_id": 4608686,
+      "player_name": "Kyle Monangai",
+      "position": "RB",
+      "pro_team": "CHI",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 8,
+      "pick": 3,
+      "team_id": 6,
+      "player_id": 4569173,
+      "player_name": "Rhamondre Stevenson",
+      "position": "RB",
+      "pro_team": "NE",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 8,
+      "pick": 4,
+      "team_id": 5,
+      "player_id": 4431299,
+      "player_name": "Rome Odunze",
+      "position": "WR",
+      "pro_team": "CHI",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 8,
+      "pick": 5,
+      "team_id": 2,
+      "player_id": 4685278,
+      "player_name": "Luther Burden III",
+      "position": "WR",
+      "pro_team": "CHI",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 8,
+      "pick": 6,
+      "team_id": 1,
+      "player_id": 3121422,
+      "player_name": "Terry McLaurin",
+      "position": "WR",
+      "pro_team": "WSH",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 8,
+      "pick": 7,
+      "team_id": 7,
+      "player_id": 4431459,
+      "player_name": "Tyler Warren",
+      "position": "TE",
+      "pro_team": "IND",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 8,
+      "pick": 8,
+      "team_id": 3,
+      "player_id": 4426388,
+      "player_name": "Jameson Williams",
+      "position": "WR",
+      "pro_team": "DET",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 8,
+      "pick": 9,
+      "team_id": 4,
+      "player_id": 4678008,
+      "player_name": "Jonathon Brooks",
+      "position": "RB",
+      "pro_team": "CAR",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 8,
+      "pick": 10,
+      "team_id": 8,
+      "player_id": 4038815,
+      "player_name": "Rico Dowdle",
+      "position": "RB",
+      "pro_team": "DAL",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 9,
+      "pick": 1,
+      "team_id": 8,
+      "player_id": 4575131,
+      "player_name": "Jacory Croskey-Merritt",
+      "position": "RB",
+      "pro_team": "WSH",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 9,
+      "pick": 2,
+      "team_id": 4,
+      "player_id": 4432710,
+      "player_name": "TreVeyon Henderson",
+      "position": "RB",
+      "pro_team": "NE",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 9,
+      "pick": 3,
+      "team_id": 3,
+      "player_id": 3040151,
+      "player_name": "George Kittle",
+      "position": "TE",
+      "pro_team": "SF",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 9,
+      "pick": 4,
+      "team_id": 7,
+      "player_id": 4242512,
+      "player_name": "Malik Willis",
+      "position": "QB",
+      "pro_team": "MIA",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 9,
+      "pick": 5,
+      "team_id": 1,
+      "player_id": 3128429,
+      "player_name": "Courtland Sutton",
+      "position": "WR",
+      "pro_team": "DEN",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 9,
+      "pick": 6,
+      "team_id": 2,
+      "player_id": 4360248,
+      "player_name": "Kyle Pitts Sr.",
+      "position": "TE",
+      "pro_team": "ATL",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 9,
+      "pick": 7,
+      "team_id": 5,
+      "player_id": 4430027,
+      "player_name": "Sam LaPorta",
+      "position": "TE",
+      "pro_team": "DET",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 9,
+      "pick": 8,
+      "team_id": 6,
+      "player_id": 4036378,
+      "player_name": "Jordan Love",
+      "position": "QB",
+      "pro_team": "GB",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 9,
+      "pick": 9,
+      "team_id": 9,
+      "player_id": 4871023,
+      "player_name": "Carnell Tate",
+      "position": "WR",
+      "pro_team": "TEN",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 9,
+      "pick": 10,
+      "team_id": 10,
+      "player_id": 16737,
+      "player_name": "Mike Evans",
+      "position": "WR",
+      "pro_team": "TB",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 10,
+      "pick": 1,
+      "team_id": 10,
+      "player_id": 3916148,
+      "player_name": "Tony Pollard",
+      "position": "RB",
+      "pro_team": "DAL",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 10,
+      "pick": 2,
+      "team_id": 9,
+      "player_id": 4241416,
+      "player_name": "Chuba Hubbard",
+      "position": "RB",
+      "pro_team": "CAR",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 10,
+      "pick": 3,
+      "team_id": 6,
+      "player_id": 4432708,
+      "player_name": "Marvin Harrison Jr.",
+      "position": "WR",
+      "pro_team": "ARI",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 10,
+      "pick": 4,
+      "team_id": 5,
+      "player_id": 4241985,
+      "player_name": "J.K. Dobbins",
+      "position": "RB",
+      "pro_team": "BAL",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 10,
+      "pick": 5,
+      "team_id": 2,
+      "player_id": 4047650,
+      "player_name": "DK Metcalf",
+      "position": "WR",
+      "pro_team": "SEA",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 10,
+      "pick": 6,
+      "team_id": 1,
+      "player_id": 4569987,
+      "player_name": "Jaylen Warren",
+      "position": "RB",
+      "pro_team": "PIT",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 10,
+      "pick": 7,
+      "team_id": 7,
+      "player_id": 4360569,
+      "player_name": "Jordan Mason",
+      "position": "RB",
+      "pro_team": "MIN",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 10,
+      "pick": 8,
+      "team_id": 3,
+      "player_id": 4697815,
+      "player_name": "Rachaad White",
+      "position": "RB",
+      "pro_team": "TB",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 10,
+      "pick": 9,
+      "team_id": 4,
+      "player_id": 4572680,
+      "player_name": "Tucker Kraft",
+      "position": "TE",
+      "pro_team": "GB",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 10,
+      "pick": 10,
+      "team_id": 8,
+      "player_id": 4432620,
+      "player_name": "Parker Washington",
+      "position": "WR",
+      "pro_team": "JAX",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 11,
+      "pick": 1,
+      "team_id": 8,
+      "player_id": 4432577,
+      "player_name": "C.J. Stroud",
+      "position": "QB",
+      "pro_team": "HOU",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 11,
+      "pick": 2,
+      "team_id": 4,
+      "player_id": 4429205,
+      "player_name": "Jordan Addison",
+      "position": "WR",
+      "pro_team": "MIN",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 11,
+      "pick": 3,
+      "team_id": 3,
+      "player_id": 4686658,
+      "player_name": "Mike Washington Jr.",
+      "position": "RB",
+      "pro_team": "LV",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 11,
+      "pick": 4,
+      "team_id": 7,
+      "player_id": 4360078,
+      "player_name": "Alec Pierce",
+      "position": "WR",
+      "pro_team": "IND",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 11,
+      "pick": 5,
+      "team_id": 1,
+      "player_id": 4373626,
+      "player_name": "Tyler Allgeier",
+      "position": "RB",
+      "pro_team": "ATL",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 11,
+      "pick": 6,
+      "team_id": 2,
+      "player_id": 3912547,
+      "player_name": "Sam Darnold",
+      "position": "QB",
+      "pro_team": "NYJ",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 11,
+      "pick": 7,
+      "team_id": 5,
+      "player_id": 4035687,
+      "player_name": "Michael Pittman Jr.",
+      "position": "WR",
+      "pro_team": "IND",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 11,
+      "pick": 8,
+      "team_id": 6,
+      "player_id": 4568490,
+      "player_name": "RJ Harvey",
+      "position": "RB",
+      "pro_team": "DEN",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 11,
+      "pick": 9,
+      "team_id": 9,
+      "player_id": 4685720,
+      "player_name": "Bryce Young",
+      "position": "QB",
+      "pro_team": "CAR",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 11,
+      "pick": 10,
+      "team_id": 10,
+      "player_id": 4248528,
+      "player_name": "Christian Watson",
+      "position": "WR",
+      "pro_team": "GB",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 12,
+      "pick": 1,
+      "team_id": 10,
+      "player_id": 4688380,
+      "player_name": "Cam Ward",
+      "position": "QB",
+      "pro_team": "TEN",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 12,
+      "pick": 2,
+      "team_id": 9,
+      "player_id": 3916433,
+      "player_name": "Jakobi Meyers",
+      "position": "WR",
+      "pro_team": "LV",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 12,
+      "pick": 3,
+      "team_id": 6,
+      "player_id": 4837248,
+      "player_name": "Fernando Mendoza",
+      "position": "QB",
+      "pro_team": "LV",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 12,
+      "pick": 4,
+      "team_id": 5,
+      "player_id": 4429059,
+      "player_name": "Woody Marks",
+      "position": "RB",
+      "pro_team": "HOU",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 12,
+      "pick": 5,
+      "team_id": 2,
+      "player_id": 4371733,
+      "player_name": "Kenny Gainwell",
+      "position": "RB",
+      "pro_team": "TB",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 12,
+      "pick": 6,
+      "team_id": 1,
+      "player_id": 4701936,
+      "player_name": "Matthew Golden",
+      "position": "WR",
+      "pro_team": "GB",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 12,
+      "pick": 7,
+      "team_id": 7,
+      "player_id": 4360761,
+      "player_name": "Michael Wilson",
+      "position": "WR",
+      "pro_team": "ARI",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 12,
+      "pick": 8,
+      "team_id": 3,
+      "player_id": 4373678,
+      "player_name": "Khalil Shakir",
+      "position": "WR",
+      "pro_team": "BUF",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 12,
+      "pick": 9,
+      "team_id": 4,
+      "player_id": 4432773,
+      "player_name": "Brian Thomas Jr.",
+      "position": "WR",
+      "pro_team": "JAX",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 12,
+      "pick": 10,
+      "team_id": 8,
+      "player_id": 4710714,
+      "player_name": "De'Zhaun Stribling",
+      "position": "WR",
+      "pro_team": "SF",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 13,
+      "pick": 1,
+      "team_id": 8,
+      "player_id": 4429025,
+      "player_name": "Quentin Johnston",
+      "position": "WR",
+      "pro_team": "LAC",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 13,
+      "pick": 2,
+      "team_id": 4,
+      "player_id": 4429096,
+      "player_name": "Blake Corum",
+      "position": "RB",
+      "pro_team": "LAR",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 13,
+      "pick": 3,
+      "team_id": 3,
+      "player_id": -16007,
+      "player_name": "Broncos D/ST",
+      "position": "D/ST",
+      "pro_team": "DEN",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 13,
+      "pick": 4,
+      "team_id": 7,
+      "player_id": 4429023,
+      "player_name": "MarShawn Lloyd",
+      "position": "RB",
+      "pro_team": "GB",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 13,
+      "pick": 5,
+      "team_id": 1,
+      "player_id": 2578570,
+      "player_name": "Jacoby Brissett",
+      "position": "QB",
+      "pro_team": "ARI",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 13,
+      "pick": 6,
+      "team_id": 2,
+      "player_id": 2976212,
+      "player_name": "Stefon Diggs",
+      "position": "WR",
+      "pro_team": "MIN",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 13,
+      "pick": 7,
+      "team_id": 5,
+      "player_id": 8439,
+      "player_name": "Aaron Rodgers",
+      "position": "QB",
+      "pro_team": "GB",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 13,
+      "pick": 8,
+      "team_id": 6,
+      "player_id": 4569587,
+      "player_name": "Wan'Dale Robinson",
+      "position": "WR",
+      "pro_team": "TEN",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 13,
+      "pick": 9,
+      "team_id": 9,
+      "player_id": 4696044,
+      "player_name": "Kaelon Black",
+      "position": "RB",
+      "pro_team": "SF",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 13,
+      "pick": 10,
+      "team_id": 10,
+      "player_id": 3116165,
+      "player_name": "Chris Godwin Jr.",
+      "position": "WR",
+      "pro_team": "TB",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 14,
+      "pick": 1,
+      "team_id": 10,
+      "player_id": 3953687,
+      "player_name": "Brandon Aubrey",
+      "position": "K",
+      "pro_team": "DAL",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 14,
+      "pick": 2,
+      "team_id": 9,
+      "player_id": -16033,
+      "player_name": "Ravens D/ST",
+      "position": "D/ST",
+      "pro_team": "BAL",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 14,
+      "pick": 3,
+      "team_id": 6,
+      "player_id": 2473037,
+      "player_name": "Jason Myers",
+      "position": "K",
+      "pro_team": "SEA",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 14,
+      "pick": 4,
+      "team_id": 5,
+      "player_id": -16014,
+      "player_name": "Rams D/ST",
+      "position": "D/ST",
+      "pro_team": "LAR",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 14,
+      "pick": 5,
+      "team_id": 2,
+      "player_id": 4426385,
+      "player_name": "Zach Charbonnet",
+      "position": "RB",
+      "pro_team": "SEA",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 14,
+      "pick": 6,
+      "team_id": 1,
+      "player_id": 4362619,
+      "player_name": "Chris Rodriguez Jr.",
+      "position": "RB",
+      "pro_team": "WSH",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 14,
+      "pick": 7,
+      "team_id": 7,
+      "player_id": 4362081,
+      "player_name": "Cameron Dicker",
+      "position": "K",
+      "pro_team": "LAC",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 14,
+      "pick": 8,
+      "team_id": 3,
+      "player_id": 4032473,
+      "player_name": "Rashid Shaheed",
+      "position": "WR",
+      "pro_team": "SEA",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 14,
+      "pick": 9,
+      "team_id": 4,
+      "player_id": -16026,
+      "player_name": "Seahawks D/ST",
+      "position": "D/ST",
+      "pro_team": "SEA",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 14,
+      "pick": 10,
+      "team_id": 8,
+      "player_id": -16034,
+      "player_name": "Texans D/ST",
+      "position": "D/ST",
+      "pro_team": "HOU",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 15,
+      "pick": 1,
+      "team_id": 8,
+      "player_id": 4686361,
+      "player_name": "Cam Little",
+      "position": "K",
+      "pro_team": "JAX",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 15,
+      "pick": 2,
+      "team_id": 4,
+      "player_id": 3042519,
+      "player_name": "Aaron Jones Sr.",
+      "position": "RB",
+      "pro_team": "GB",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 15,
+      "pick": 3,
+      "team_id": 3,
+      "player_id": 2971573,
+      "player_name": "Ka'imi Fairbairn",
+      "position": "K",
+      "pro_team": "HOU",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 15,
+      "pick": 4,
+      "team_id": 7,
+      "player_id": -16030,
+      "player_name": "Jaguars D/ST",
+      "position": "D/ST",
+      "pro_team": "JAX",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 15,
+      "pick": 5,
+      "team_id": 1,
+      "player_id": -16005,
+      "player_name": "Browns D/ST",
+      "position": "D/ST",
+      "pro_team": "CLE",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 15,
+      "pick": 6,
+      "team_id": 2,
+      "player_id": -16021,
+      "player_name": "Eagles D/ST",
+      "position": "D/ST",
+      "pro_team": "PHI",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 15,
+      "pick": 7,
+      "team_id": 5,
+      "player_id": 4574716,
+      "player_name": "Harrison Mevis",
+      "position": "K",
+      "pro_team": "LAR",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 15,
+      "pick": 8,
+      "team_id": 6,
+      "player_id": 5083076,
+      "player_name": "Harold Fannin Jr.",
+      "position": "TE",
+      "pro_team": "CLE",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 15,
+      "pick": 9,
+      "team_id": 9,
+      "player_id": 4870795,
+      "player_name": "Makai Lemon",
+      "position": "WR",
+      "pro_team": "PHI",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 15,
+      "pick": 10,
+      "team_id": 10,
+      "player_id": -16023,
+      "player_name": "Steelers D/ST",
+      "position": "D/ST",
+      "pro_team": "PIT",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 16,
+      "pick": 1,
+      "team_id": 10,
+      "player_id": 4596334,
+      "player_name": "Keaton Mitchell",
+      "position": "RB",
+      "pro_team": "BAL",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 16,
+      "pick": 2,
+      "team_id": 9,
+      "player_id": 3055899,
+      "player_name": "Harrison Butker",
+      "position": "K",
+      "pro_team": "KC",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 16,
+      "pick": 3,
+      "team_id": 6,
+      "player_id": -16017,
+      "player_name": "Patriots D/ST",
+      "position": "D/ST",
+      "pro_team": "NE",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 16,
+      "pick": 4,
+      "team_id": 5,
+      "player_id": 4362249,
+      "player_name": "Jayden Reed",
+      "position": "WR",
+      "pro_team": "GB",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 16,
+      "pick": 5,
+      "team_id": 2,
+      "player_id": 4689936,
+      "player_name": "Jake Bates",
+      "position": "K",
+      "pro_team": "DET",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 16,
+      "pick": 6,
+      "team_id": 1,
+      "player_id": 4034949,
+      "player_name": "Eddy Pineiro",
+      "position": "K",
+      "pro_team": "SF",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 16,
+      "pick": 7,
+      "team_id": 7,
+      "player_id": 4366031,
+      "player_name": "Tank Dell",
+      "position": "WR",
+      "pro_team": "HOU",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 16,
+      "pick": 8,
+      "team_id": 3,
+      "player_id": 4361529,
+      "player_name": "Isiah Pacheco",
+      "position": "RB",
+      "pro_team": "KC",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 16,
+      "pick": 9,
+      "team_id": 4,
+      "player_id": 3917232,
+      "player_name": "Tyler Bass",
+      "position": "K",
+      "pro_team": "BUF",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 16,
+      "pick": 10,
+      "team_id": 8,
+      "player_id": 15847,
+      "player_name": "Travis Kelce",
+      "position": "TE",
+      "pro_team": "KC",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 17,
+      "pick": 1,
+      "team_id": 8,
+      "player_id": 2574808,
+      "player_name": "Robbie Chosen",
+      "position": "WR",
+      "pro_team": "NYJ",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 17,
+      "pick": 2,
+      "team_id": 4,
+      "player_id": 4361372,
+      "player_name": "Jeremy Ruckert",
+      "position": "TE",
+      "pro_team": "NYJ",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 17,
+      "pick": 3,
+      "team_id": 3,
+      "player_id": 16757,
+      "player_name": "Derek Carr",
+      "position": "QB",
+      "pro_team": "LV",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 17,
+      "pick": 4,
+      "team_id": 7,
+      "player_id": 16728,
+      "player_name": "Teddy Bridgewater",
+      "position": "QB",
+      "pro_team": "MIN",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 17,
+      "pick": 5,
+      "team_id": 1,
+      "player_id": 3932442,
+      "player_name": "Equanimeous St. Brown",
+      "position": "WR",
+      "pro_team": "None",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 17,
+      "pick": 6,
+      "team_id": 2,
+      "player_id": 4361417,
+      "player_name": "Zack Kuntz",
+      "position": "TE",
+      "pro_team": "NYJ",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 17,
+      "pick": 7,
+      "team_id": 5,
+      "player_id": 3128720,
+      "player_name": "Nick Chubb",
+      "position": "RB",
+      "pro_team": "CLE",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 17,
+      "pick": 8,
+      "team_id": 6,
+      "player_id": 2975417,
+      "player_name": "Patrick Ricard",
+      "position": "RB",
+      "pro_team": "NYG",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 17,
+      "pick": 9,
+      "team_id": 9,
+      "player_id": 4360698,
+      "player_name": "Joe Milton III",
+      "position": "QB",
+      "pro_team": "None",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    },
+    {
+      "round": 17,
+      "pick": 10,
+      "team_id": 10,
+      "player_id": 2565969,
+      "player_name": "Taylor Heinicke",
+      "position": "QB",
+      "pro_team": "None",
+      "season_points": 0.0,
+      "avg_points": 0.0,
+      "bid_amount": 0,
+      "keeper": false
+    }
+  ],
+  "started": false
+}

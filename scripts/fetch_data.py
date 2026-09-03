@@ -242,15 +242,21 @@ def main() -> int:
             continue
         if not data:
             continue
-        # Skip seasons with no games actually played (e.g., upcoming season pre-kickoff).
+        # [ai] Keep a drafted-but-unplayed season (in-progress) but still drop a truly
+        # empty upcoming one. started=False lets pages hide the 0-0 tables; blank the
+        # weeks so the JSON doesn't carry ~20 rounds of 0-0 matchups.
         played = any(
             m["home_score"] > 0 or m["away_score"] > 0
             for w in data["weeks"]
             for m in w["matchups"]
         )
-        if not played:
-            print(f"  skip {year}: no games played yet", flush=True)
+        has_draft = bool(data.get("draft"))
+        if not played and not has_draft:
+            print(f"  skip {year}: no games or draft yet", flush=True)
             continue
+        data["started"] = played
+        if not played:
+            data["weeks"] = []
         seasons_data.append(data)
         available_years.append(data["year"])
 

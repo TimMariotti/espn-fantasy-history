@@ -21,17 +21,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      # [ai] Bumped to Node 24-based majors; GitHub drops Node 20 from runners 2026-09-16.
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
           cache-dependency-path: scripts/requirements.txt
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: "20"
+          node-version: "22"
 
       - name: Install Python deps
         run: pip install -r scripts/requirements.txt
@@ -53,7 +54,7 @@ jobs:
           ASTRO_BASE: ${{ vars.ASTRO_BASE || format('/{0}/', github.event.repository.name) }}
         run: npm run build
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: dist
 
