@@ -1,11 +1,13 @@
+# Refresh ESPN data, build the Astro site, and deploy to GitHub Pages.
+# Triggers: push to main/master, a weekly Wednesday cron, or manual dispatch.
 name: Build and Deploy
 
 on:
   push:
     branches: [main, master]
   schedule:
-    # Tuesdays 14:00 UTC (mornings after Monday Night Football US-East).
-    - cron: "0 14 * * 2"
+    # Wednesdays 14:00 UTC (~9-10am ET, after Monday Night Football wraps the week).
+    - cron: "0 14 * * 3"
   workflow_dispatch:
 
 concurrency:
@@ -13,7 +15,9 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: read
+  # write so the scheduled run can commit refreshed data back — keeps the repo
+  # active (GitHub disables schedules after 60 days idle) and versions the JSON.
+  contents: write
   pages: write
   id-token: write
 
@@ -21,7 +25,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # [ai] Bumped to Node 24-based majors; GitHub drops Node 20 from runners 2026-09-16.
+      # Node 24-based majors; GitHub drops Node 20 from runners 2026-09-16.
       - uses: actions/checkout@v5
 
       - uses: actions/setup-python@v6
@@ -43,6 +47,22 @@ jobs:
           ESPN_S2: ${{ secrets.ESPN_S2 }}
           SWID: ${{ secrets.SWID }}
         run: python scripts/fetch_data.py
+
+      # Commit the refreshed JSON on scheduled/manual runs (not on push, to avoid a
+      # loop). A GITHUB_TOKEN commit doesn't re-trigger workflows, so this is safe and
+      # the weekly commit resets the 60-day scheduled-workflow idle timer.
+      - name: Commit refreshed data
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+          else
+            git commit -m "Weekly data refresh [skip ci]"
+            git push
+          fi
 
       - name: Install Node deps
         run: npm ci || npm install

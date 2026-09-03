@@ -1,3 +1,5 @@
+// TypeScript shapes for the season JSON produced by scripts/fetch_data.py.
+
 export type Owner = {
   id: string | null;
   first_name: string | null;

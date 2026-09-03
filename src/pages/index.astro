@@ -1,4 +1,5 @@
 ---
+// Home page: latest champion card, all-time leaderboard, and top regular-season scores.
 import Layout from "../layouts/Layout.astro";
 import {
   seasons,
@@ -9,7 +10,7 @@ import {
   ownerLabel,
 } from "../lib/data";
 
-// [ai] Latest season with an actual champion — skips an in-progress season (2026),
+// Latest season with an actual champion — skips an in-progress season (2026),
 // which reports final_standing 0, so the card keeps showing the last real winner.
 const latest = [...seasons]
   .reverse()

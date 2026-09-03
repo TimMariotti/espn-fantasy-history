@@ -242,7 +242,7 @@ def main() -> int:
             continue
         if not data:
             continue
-        # [ai] Keep a drafted-but-unplayed season (in-progress) but still drop a truly
+        # Keep a drafted-but-unplayed season (in-progress) but still drop a truly
         # empty upcoming one. started=False lets pages hide the 0-0 tables; blank the
         # weeks so the JSON doesn't carry ~20 rounds of 0-0 matchups.
         played = any(
