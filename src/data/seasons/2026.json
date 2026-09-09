@@ -121,8 +121,8 @@
     },
     {
       "id": 2,
-      "name": "Herbert: 2 Full 2 Loaded ",
-      "abbrev": "HERB",
+      "name": "Martin Luther Burdens Dream",
+      "abbrev": "MLB",
       "owners": [
         {
           "id": "{EF01AB47-D1B5-4C52-A754-5F1AC1045E9D}",
@@ -139,7 +139,7 @@
       "standing": 9,
       "final_standing": 0,
       "playoff_pct": 55.2,
-      "logo_url": "https://g.espncdn.com/lm-static/logo-packs/ffl/AtTheStadium-RobbHarskamp/At_The_Stadium_13.svg",
+      "logo_url": "https://g.espncdn.com/lm-static/logo-packs/ffl/1stStringAllStars-SportsManias-QB/darnold-01.svg",
       "division_id": 0,
       "division_name": "ZLPII",
       "schedule": [
@@ -469,7 +469,7 @@
       "standing": 6,
       "final_standing": 0,
       "playoff_pct": 62.150000000000006,
-      "logo_url": "https://i.imgur.com/vP0RgIh.png",
+      "logo_url": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/6a44c300-a874-11f1-b3fa-cd9add676ca8",
       "division_id": 0,
       "division_name": "ZLPII",
       "schedule": [
