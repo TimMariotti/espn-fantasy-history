@@ -22,13 +22,13 @@
         }
       ],
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "points_for": 0.0,
-      "points_against": 0.0,
-      "standing": 10,
+      "points_for": 115.88,
+      "points_against": 144.32,
+      "standing": 7,
       "final_standing": 0,
-      "playoff_pct": 58.199999999999996,
+      "playoff_pct": 42.825,
       "logo_url": "https://g.espncdn.com/s/ffllm/logos/CoachGruden-ChipWass/gruden-06.svg",
       "division_id": 0,
       "division_name": "ZLPII",
@@ -36,8 +36,8 @@
         {
           "week": 1,
           "opponent_id": 10,
-          "score": 0.0,
-          "outcome": "U"
+          "score": 115.88,
+          "outcome": "L"
         },
         {
           "week": 2,
@@ -132,13 +132,13 @@
         }
       ],
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "points_for": 0.0,
-      "points_against": 0.0,
-      "standing": 9,
+      "points_for": 137.26,
+      "points_against": 153.4,
+      "standing": 6,
       "final_standing": 0,
-      "playoff_pct": 55.2,
+      "playoff_pct": 59.52499999999999,
       "logo_url": "https://g.espncdn.com/lm-static/logo-packs/ffl/1stStringAllStars-SportsManias-QB/darnold-01.svg",
       "division_id": 0,
       "division_name": "ZLPII",
@@ -146,8 +146,8 @@
         {
           "week": 1,
           "opponent_id": 4,
-          "score": 0.0,
-          "outcome": "U"
+          "score": 137.26,
+          "outcome": "L"
         },
         {
           "week": 2,
@@ -241,14 +241,14 @@
           "display_name": "Wayne Brady666"
         }
       ],
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0,
-      "points_for": 0.0,
-      "points_against": 0.0,
-      "standing": 8,
+      "points_for": 108.56,
+      "points_against": 83.74,
+      "standing": 5,
       "final_standing": 0,
-      "playoff_pct": 63.1,
+      "playoff_pct": 67.175,
       "logo_url": "https://api.deepai.org/job-view-file/738b7cbf-5364-48a5-a155-62f5c88dc1a0/outputs/output.jpg",
       "division_id": 0,
       "division_name": "ZLPII",
@@ -256,8 +256,8 @@
         {
           "week": 1,
           "opponent_id": 5,
-          "score": 0.0,
-          "outcome": "U"
+          "score": 108.56,
+          "outcome": "W"
         },
         {
           "week": 2,
@@ -351,14 +351,14 @@
           "display_name": "xxmaggotxxraftxx"
         }
       ],
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0,
-      "points_for": 0.0,
-      "points_against": 0.0,
-      "standing": 7,
+      "points_for": 153.4,
+      "points_against": 137.26,
+      "standing": 2,
       "final_standing": 0,
-      "playoff_pct": 54.37499999999999,
+      "playoff_pct": 65.3,
       "logo_url": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/24f49f00-a339-11f0-b1c3-bf61c28fbeb9",
       "division_id": 0,
       "division_name": "ZLPII",
@@ -366,8 +366,8 @@
         {
           "week": 1,
           "opponent_id": 2,
-          "score": 0.0,
-          "outcome": "U"
+          "score": 153.4,
+          "outcome": "W"
         },
         {
           "week": 2,
@@ -462,13 +462,13 @@
         }
       ],
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "points_for": 0.0,
-      "points_against": 0.0,
-      "standing": 6,
+      "points_for": 83.74,
+      "points_against": 108.56,
+      "standing": 10,
       "final_standing": 0,
-      "playoff_pct": 62.150000000000006,
+      "playoff_pct": 47.65,
       "logo_url": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/6a44c300-a874-11f1-b3fa-cd9add676ca8",
       "division_id": 0,
       "division_name": "ZLPII",
@@ -476,8 +476,8 @@
         {
           "week": 1,
           "opponent_id": 3,
-          "score": 0.0,
-          "outcome": "U"
+          "score": 83.74,
+          "outcome": "L"
         },
         {
           "week": 2,
@@ -571,14 +571,14 @@
           "display_name": "Timmy The Tree"
         }
       ],
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0,
-      "points_for": 0.0,
-      "points_against": 0.0,
-      "standing": 5,
+      "points_for": 183.84,
+      "points_against": 110.84,
+      "standing": 1,
       "final_standing": 0,
-      "playoff_pct": 60.62499999999999,
+      "playoff_pct": 73.575,
       "logo_url": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/679b0ee0-a37d-11f0-afb5-e14f006a2a34",
       "division_id": 0,
       "division_name": "ZLPII",
@@ -586,8 +586,8 @@
         {
           "week": 1,
           "opponent_id": 7,
-          "score": 0.0,
-          "outcome": "U"
+          "score": 183.84,
+          "outcome": "W"
         },
         {
           "week": 2,
@@ -682,13 +682,13 @@
         }
       ],
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "points_for": 0.0,
-      "points_against": 0.0,
-      "standing": 4,
+      "points_for": 110.84,
+      "points_against": 183.84,
+      "standing": 9,
       "final_standing": 0,
-      "playoff_pct": 68.22500000000001,
+      "playoff_pct": 48.449999999999996,
       "logo_url": "https://g.espncdn.com/lm-static/logo-packs/ffl/OldeTymeFootball-AndrewJanik/Warriors_09.svg",
       "division_id": 0,
       "division_name": "ZLPII",
@@ -696,8 +696,8 @@
         {
           "week": 1,
           "opponent_id": 6,
-          "score": 0.0,
-          "outcome": "U"
+          "score": 110.84,
+          "outcome": "L"
         },
         {
           "week": 2,
@@ -792,13 +792,13 @@
         }
       ],
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "points_for": 0.0,
-      "points_against": 0.0,
-      "standing": 3,
+      "points_for": 114.2,
+      "points_against": 132.58,
+      "standing": 8,
       "final_standing": 0,
-      "playoff_pct": 62.0,
+      "playoff_pct": 57.49999999999999,
       "logo_url": "https://g.espncdn.com/s/ffllm/logos/CoachHerm-ChipWass/edwards-14.svg",
       "division_id": 0,
       "division_name": "ZLPII",
@@ -806,8 +806,8 @@
         {
           "week": 1,
           "opponent_id": 9,
-          "score": 0.0,
-          "outcome": "U"
+          "score": 114.2,
+          "outcome": "L"
         },
         {
           "week": 2,
@@ -901,14 +901,14 @@
           "display_name": "billytes37"
         }
       ],
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0,
-      "points_for": 0.0,
-      "points_against": 0.0,
-      "standing": 2,
+      "points_for": 132.58,
+      "points_against": 114.2,
+      "standing": 4,
       "final_standing": 0,
-      "playoff_pct": 56.775,
+      "playoff_pct": 74.45,
       "logo_url": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/17cdc620-a61d-11f1-bc05-dd37ff031f6c",
       "division_id": 0,
       "division_name": "ZLPII",
@@ -916,8 +916,8 @@
         {
           "week": 1,
           "opponent_id": 8,
-          "score": 0.0,
-          "outcome": "U"
+          "score": 132.58,
+          "outcome": "W"
         },
         {
           "week": 2,
@@ -1001,7 +1001,7 @@
     },
     {
       "id": 10,
-      "name": "The Heinicke's ",
+      "name": "General Taylor's Army",
       "abbrev": "HEIN",
       "owners": [
         {
@@ -1011,23 +1011,23 @@
           "display_name": "Cl4y"
         }
       ],
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0,
-      "points_for": 0.0,
-      "points_against": 0.0,
-      "standing": 1,
+      "points_for": 144.32,
+      "points_against": 115.88,
+      "standing": 3,
       "final_standing": 0,
-      "playoff_pct": 59.35,
-      "logo_url": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/359b3500-a4c6-11f1-8623-4f919cfbc4d9",
+      "playoff_pct": 63.55,
+      "logo_url": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/dfae8ac0-af92-11f1-99a7-6332d6932d0f",
       "division_id": 0,
       "division_name": "ZLPII",
       "schedule": [
         {
           "week": 1,
           "opponent_id": 1,
-          "score": 0.0,
-          "outcome": "U"
+          "score": 144.32,
+          "outcome": "W"
         },
         {
           "week": 2,
@@ -1110,7 +1110,638 @@
       ]
     }
   ],
-  "weeks": [],
+  "weeks": [
+    {
+      "week": 1,
+      "matchups": [
+        {
+          "home_team_id": 6,
+          "away_team_id": 7,
+          "home_score": 183.84,
+          "away_score": 110.84,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 3,
+          "away_team_id": 5,
+          "home_score": 108.56,
+          "away_score": 83.74,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 2,
+          "away_team_id": 4,
+          "home_score": 137.26,
+          "away_score": 153.4,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 9,
+          "away_team_id": 8,
+          "home_score": 132.58,
+          "away_score": 114.2,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 1,
+          "away_team_id": 10,
+          "home_score": 115.88,
+          "away_score": 144.32,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "matchups": [
+        {
+          "home_team_id": 7,
+          "away_team_id": 5,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 4,
+          "away_team_id": 6,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 8,
+          "away_team_id": 3,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 10,
+          "away_team_id": 2,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 1,
+          "away_team_id": 9,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "matchups": [
+        {
+          "home_team_id": 4,
+          "away_team_id": 7,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 5,
+          "away_team_id": 8,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 6,
+          "away_team_id": 10,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 3,
+          "away_team_id": 1,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 2,
+          "away_team_id": 9,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "matchups": [
+        {
+          "home_team_id": 7,
+          "away_team_id": 8,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 10,
+          "away_team_id": 4,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 1,
+          "away_team_id": 5,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 9,
+          "away_team_id": 6,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 2,
+          "away_team_id": 3,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "matchups": [
+        {
+          "home_team_id": 10,
+          "away_team_id": 7,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 8,
+          "away_team_id": 1,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 4,
+          "away_team_id": 9,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 5,
+          "away_team_id": 2,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 6,
+          "away_team_id": 3,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "matchups": [
+        {
+          "home_team_id": 7,
+          "away_team_id": 1,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 9,
+          "away_team_id": 10,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 2,
+          "away_team_id": 8,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 3,
+          "away_team_id": 4,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 6,
+          "away_team_id": 5,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "matchups": [
+        {
+          "home_team_id": 9,
+          "away_team_id": 7,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 1,
+          "away_team_id": 2,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 10,
+          "away_team_id": 3,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 8,
+          "away_team_id": 6,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 4,
+          "away_team_id": 5,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "matchups": [
+        {
+          "home_team_id": 7,
+          "away_team_id": 2,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 3,
+          "away_team_id": 9,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 6,
+          "away_team_id": 1,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 5,
+          "away_team_id": 10,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 4,
+          "away_team_id": 8,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "matchups": [
+        {
+          "home_team_id": 3,
+          "away_team_id": 7,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 2,
+          "away_team_id": 6,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 9,
+          "away_team_id": 5,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 1,
+          "away_team_id": 4,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 10,
+          "away_team_id": 8,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "matchups": [
+        {
+          "home_team_id": 7,
+          "away_team_id": 6,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 5,
+          "away_team_id": 3,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 4,
+          "away_team_id": 2,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 8,
+          "away_team_id": 9,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 10,
+          "away_team_id": 1,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "matchups": [
+        {
+          "home_team_id": 5,
+          "away_team_id": 7,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 6,
+          "away_team_id": 4,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 3,
+          "away_team_id": 8,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 2,
+          "away_team_id": 10,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 9,
+          "away_team_id": 1,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "matchups": [
+        {
+          "home_team_id": 7,
+          "away_team_id": 4,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 8,
+          "away_team_id": 5,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 10,
+          "away_team_id": 6,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 1,
+          "away_team_id": 3,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 9,
+          "away_team_id": 2,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 13,
+      "matchups": [
+        {
+          "home_team_id": 8,
+          "away_team_id": 7,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 4,
+          "away_team_id": 10,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 5,
+          "away_team_id": 1,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 6,
+          "away_team_id": 9,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 3,
+          "away_team_id": 2,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    },
+    {
+      "week": 14,
+      "matchups": [
+        {
+          "home_team_id": 7,
+          "away_team_id": 10,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 1,
+          "away_team_id": 8,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 9,
+          "away_team_id": 4,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 2,
+          "away_team_id": 5,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        },
+        {
+          "home_team_id": 3,
+          "away_team_id": 6,
+          "home_score": 0.0,
+          "away_score": 0.0,
+          "is_playoff": false,
+          "matchup_type": "NONE"
+        }
+      ]
+    }
+  ],
   "draft": [
     {
       "round": 1,
@@ -3323,5 +3954,5 @@
       "keeper": false
     }
   ],
-  "started": false
+  "started": true
 }
