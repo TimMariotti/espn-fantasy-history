@@ -21,14 +21,14 @@
           "display_name": "echo36c"
         }
       ],
-      "wins": 1,
+      "wins": 2,
       "losses": 2,
       "ties": 0,
-      "points_for": 350.28,
-      "points_against": 382.52,
-      "standing": 8,
+      "points_for": 486.93999999999994,
+      "points_against": 497.52,
+      "standing": 5,
       "final_standing": 0,
-      "playoff_pct": 52.800000000000004,
+      "playoff_pct": 61.3,
       "logo_url": "https://g.espncdn.com/s/ffllm/logos/CoachGruden-ChipWass/gruden-06.svg",
       "division_id": 0,
       "division_name": "ZLPII",
@@ -54,8 +54,8 @@
         {
           "week": 4,
           "opponent_id": 5,
-          "score": 0.0,
-          "outcome": "U"
+          "score": 136.66,
+          "outcome": "W"
         },
         {
           "week": 5,
@@ -131,14 +131,14 @@
           "display_name": "CPT KAZAKHSTAN"
         }
       ],
-      "wins": 2,
+      "wins": 3,
       "losses": 1,
       "ties": 0,
-      "points_for": 431.76,
-      "points_against": 375.34,
-      "standing": 2,
+      "points_for": 588.26,
+      "points_against": 454.92,
+      "standing": 1,
       "final_standing": 0,
-      "playoff_pct": 78.075,
+      "playoff_pct": 84.85000000000001,
       "logo_url": "https://g.espncdn.com/lm-static/logo-packs/ffl/1stStringAllStars-SportsManias-QB/darnold-01.svg",
       "division_id": 0,
       "division_name": "ZLPII",
@@ -164,8 +164,8 @@
         {
           "week": 4,
           "opponent_id": 3,
-          "score": 0.0,
-          "outcome": "U"
+          "score": 156.5,
+          "outcome": "W"
         },
         {
           "week": 5,
@@ -242,13 +242,13 @@
         }
       ],
       "wins": 2,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "points_for": 326.79999999999995,
-      "points_against": 318.7,
-      "standing": 4,
+      "points_for": 406.37999999999994,
+      "points_against": 475.2,
+      "standing": 8,
       "final_standing": 0,
-      "playoff_pct": 70.89999999999999,
+      "playoff_pct": 57.375,
       "logo_url": "https://api.deepai.org/job-view-file/738b7cbf-5364-48a5-a155-62f5c88dc1a0/outputs/output.jpg",
       "division_id": 0,
       "division_name": "ZLPII",
@@ -274,8 +274,8 @@
         {
           "week": 4,
           "opponent_id": 2,
-          "score": 0.0,
-          "outcome": "U"
+          "score": 79.58,
+          "outcome": "L"
         },
         {
           "week": 5,
@@ -352,13 +352,13 @@
         }
       ],
       "wins": 1,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "points_for": 355.06,
-      "points_against": 394.64,
-      "standing": 7,
+      "points_for": 501.44,
+      "points_against": 542.18,
+      "standing": 9,
       "final_standing": 0,
-      "playoff_pct": 42.699999999999996,
+      "playoff_pct": 34.9,
       "logo_url": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/24f49f00-a339-11f0-b1c3-bf61c28fbeb9",
       "division_id": 0,
       "division_name": "ZLPII",
@@ -384,8 +384,8 @@
         {
           "week": 4,
           "opponent_id": 10,
-          "score": 0.0,
-          "outcome": "U"
+          "score": 146.38,
+          "outcome": "L"
         },
         {
           "week": 5,
@@ -462,13 +462,13 @@
         }
       ],
       "wins": 2,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "points_for": 368.48,
-      "points_against": 319.88,
-      "standing": 3,
+      "points_for": 483.48,
+      "points_against": 456.54,
+      "standing": 6,
       "final_standing": 0,
-      "playoff_pct": 73.575,
+      "playoff_pct": 64.05,
       "logo_url": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/6a44c300-a874-11f1-b3fa-cd9add676ca8",
       "division_id": 0,
       "division_name": "ZLPII",
@@ -494,8 +494,8 @@
         {
           "week": 4,
           "opponent_id": 1,
-          "score": 0.0,
-          "outcome": "U"
+          "score": 115.0,
+          "outcome": "L"
         },
         {
           "week": 5,
@@ -572,13 +572,13 @@
         }
       ],
       "wins": 3,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "points_for": 456.0,
-      "points_against": 333.88,
-      "standing": 1,
+      "points_for": 580.1,
+      "points_against": 469.32,
+      "standing": 2,
       "final_standing": 0,
-      "playoff_pct": 89.725,
+      "playoff_pct": 85.925,
       "logo_url": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/679b0ee0-a37d-11f0-afb5-e14f006a2a34",
       "division_id": 0,
       "division_name": "ZLPII",
@@ -604,8 +604,8 @@
         {
           "week": 4,
           "opponent_id": 9,
-          "score": 0.0,
-          "outcome": "U"
+          "score": 124.1,
+          "outcome": "L"
         },
         {
           "week": 5,
@@ -681,14 +681,14 @@
           "display_name": "pmdy"
         }
       ],
-      "wins": 1,
+      "wins": 2,
       "losses": 2,
       "ties": 0,
-      "points_for": 343.21999999999997,
-      "points_against": 440.56,
-      "standing": 10,
+      "points_for": 462.17999999999995,
+      "points_against": 546.22,
+      "standing": 7,
       "final_standing": 0,
-      "playoff_pct": 41.65,
+      "playoff_pct": 54.15,
       "logo_url": "https://g.espncdn.com/lm-static/logo-packs/ffl/OldeTymeFootball-AndrewJanik/Warriors_09.svg",
       "division_id": 0,
       "division_name": "ZLPII",
@@ -714,8 +714,8 @@
         {
           "week": 4,
           "opponent_id": 8,
-          "score": 0.0,
-          "outcome": "U"
+          "score": 118.96,
+          "outcome": "W"
         },
         {
           "week": 5,
@@ -792,13 +792,13 @@
         }
       ],
       "wins": 1,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "points_for": 348.26,
-      "points_against": 383.78,
-      "standing": 9,
+      "points_for": 453.91999999999996,
+      "points_against": 502.74,
+      "standing": 10,
       "final_standing": 0,
-      "playoff_pct": 50.575,
+      "playoff_pct": 43.15,
       "logo_url": "https://g.espncdn.com/s/ffllm/logos/CoachHerm-ChipWass/edwards-14.svg",
       "division_id": 0,
       "division_name": "ZLPII",
@@ -824,8 +824,8 @@
         {
           "week": 4,
           "opponent_id": 7,
-          "score": 0.0,
-          "outcome": "U"
+          "score": 105.66,
+          "outcome": "L"
         },
         {
           "week": 5,
@@ -901,14 +901,14 @@
           "display_name": "billytes37"
         }
       ],
-      "wins": 1,
+      "wins": 2,
       "losses": 2,
       "ties": 0,
-      "points_for": 372.0,
-      "points_against": 388.22,
-      "standing": 6,
+      "points_for": 507.44,
+      "points_against": 512.32,
+      "standing": 4,
       "final_standing": 0,
-      "playoff_pct": 47.525,
+      "playoff_pct": 53.925,
       "logo_url": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/17cdc620-a61d-11f1-bc05-dd37ff031f6c",
       "division_id": 0,
       "division_name": "ZLPII",
@@ -934,8 +934,8 @@
         {
           "week": 4,
           "opponent_id": 6,
-          "score": 0.0,
-          "outcome": "U"
+          "score": 135.44,
+          "outcome": "W"
         },
         {
           "week": 5,
@@ -1011,14 +1011,14 @@
           "display_name": "Cl4y"
         }
       ],
-      "wins": 1,
+      "wins": 2,
       "losses": 2,
       "ties": 0,
-      "points_for": 391.36,
-      "points_against": 405.7,
-      "standing": 5,
+      "points_for": 538.9,
+      "points_against": 552.08,
+      "standing": 3,
       "final_standing": 0,
-      "playoff_pct": 52.47500000000001,
+      "playoff_pct": 60.375,
       "logo_url": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/dfae8ac0-af92-11f1-99a7-6332d6932d0f",
       "division_id": 0,
       "division_name": "ZLPII",
@@ -1044,8 +1044,8 @@
         {
           "week": 4,
           "opponent_id": 4,
-          "score": 0.0,
-          "outcome": "U"
+          "score": 147.54,
+          "outcome": "W"
         },
         {
           "week": 5,
@@ -1252,40 +1252,40 @@
         {
           "home_team_id": 7,
           "away_team_id": 8,
-          "home_score": 0.0,
-          "away_score": 0.0,
+          "home_score": 118.96,
+          "away_score": 105.66,
           "is_playoff": false,
           "matchup_type": "NONE"
         },
         {
           "home_team_id": 10,
           "away_team_id": 4,
-          "home_score": 0.0,
-          "away_score": 0.0,
+          "home_score": 147.54,
+          "away_score": 146.38,
           "is_playoff": false,
           "matchup_type": "NONE"
         },
         {
           "home_team_id": 1,
           "away_team_id": 5,
-          "home_score": 0.0,
-          "away_score": 0.0,
+          "home_score": 136.66,
+          "away_score": 115.0,
           "is_playoff": false,
           "matchup_type": "NONE"
         },
         {
           "home_team_id": 9,
           "away_team_id": 6,
-          "home_score": 0.0,
-          "away_score": 0.0,
+          "home_score": 135.44,
+          "away_score": 124.1,
           "is_playoff": false,
           "matchup_type": "NONE"
         },
         {
           "home_team_id": 2,
           "away_team_id": 3,
-          "home_score": 0.0,
-          "away_score": 0.0,
+          "home_score": 156.5,
+          "away_score": 79.58,
           "is_playoff": false,
           "matchup_type": "NONE"
         }
